@@ -6,10 +6,17 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->pushButton->setStyleSheet("background-color: yellow");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->pushButton->setStyleSheet("background-color: blue");
 }
 

@@ -1,15 +1,24 @@
 #include "game/Test.h"
 #include "game/Monopoly.h"
 
-int main(){
+#include "mainwindow.h"
+
+#include <QApplication>
+
+int main(int argc, char *argv[]){
     
-    Test t;     // testing the program
-    t.tests();
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 
-    Monopoly m; // the game
-    m.menu();
-    m.startGame();
-    m.updateGame();
+  //  Test t;     // testing the program
+  //  t.tests();
 
-    return 0;
+  //  Monopoly m; // the game
+  //  m.menu();
+  //  m.startGame();
+  //  m.updateGame();
+
+  //  return 0;
 }
