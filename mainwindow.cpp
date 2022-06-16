@@ -7,16 +7,31 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->pushButton->setStyleSheet("background-color: yellow");
+
+
+    myMapWindow = new MapWindow();
+
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
+
 }
 
 MainWindow::~MainWindow()
 {
+    delete myMapWindow;
     delete ui;
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::push_button0()
 {
-    ui->pushButton->setStyleSheet("background-color: blue");
+
+    QPushButton *button = (QPushButton *)sender();
+    button->setStyleSheet("background-color: blue");
+    int id = (button->text()).toInt();
+    myMapWindow->push_button0(id);
+    myMapWindow->show();
+
+
+
 }
 

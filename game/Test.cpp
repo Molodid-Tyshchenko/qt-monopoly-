@@ -49,3 +49,22 @@ void Test::test4() {
 	std::cout << "id: " << f.getID() << std::endl;
 	std::cout << "--------------------------------\n";
 }
+
+
+
+
+
+
+
+
+void Test::test5() {
+    MainWindow w;
+
+
+
+
+    w.show();
+}
+
+
+

@@ -1,4 +1,7 @@
 #include "Actions.h"
+#include "QFile"
+#include "QString"
+
 
 #include "../factory/FactoryMethod.h"
 
@@ -17,7 +20,8 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
 
     std::vector<std::unique_ptr<Field>> vec;
 
-    std::ifstream fin("resources/dataFields.json");
+
+    std::ifstream fin("C:/Users/starodubbb/Documents/qt projects/test_monopoly/resources/dataFields.json");
     json data = json::parse(fin);
     fin.close();
 

@@ -24,8 +24,10 @@ SOURCES += \
     game/MonopolyManager.cpp \
     game/Statistik.cpp \
     game/Test.cpp \
+    infowindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    mapwindow.cpp \
     players/AbstractPlayer.cpp \
     players/Bot.cpp \
     players/Player.cpp
@@ -47,14 +49,18 @@ HEADERS += \
     game/MonopolyManager.h \
     game/Statistik.h \
     game/Test.h \
+    infowindow.h \
     lib/json.hpp \
     mainwindow.h \
+    mapwindow.h \
     players/AbstractPlayer.h \
     players/Bot.h \
     players/Player.h
 
 FORMS += \
-    mainwindow.ui
+    infowindow.ui \
+    mainwindow.ui \
+    mapwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

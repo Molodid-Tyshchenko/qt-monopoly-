@@ -9,6 +9,12 @@
 #include "../fields/Field.h"
 #include "../fields/BasicField.h"
 
+
+#include "../game/Monopoly.h"
+
+#include "form.h"
+#include "mainwindow.h"
+
 class Test {
 public:
 	void tests();
@@ -16,6 +22,7 @@ public:
 	void test2();
 	void test3();
  	void test4();
+    void test5();
 
 private:
 };

@@ -9,7 +9,18 @@ int main(int argc, char *argv[]){
     
     QApplication a(argc, argv);
     MainWindow w;
+
+    Monopoly m; // the game
+    m.menu();
+    m.startGame();
+
+
     w.show();
+
+//      Test t;     // testing the program
+//      t.test5();
+
+
     return a.exec();
 
   //  Test t;     // testing the program
