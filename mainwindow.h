@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "game/Monopoly.h"
 #include "mapwindow.h"
 
 QT_BEGIN_NAMESPACE
@@ -16,9 +17,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     MapWindow *myMapWindow = NULL;
+    Monopoly m;
 
 private slots:
     void push_button0();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

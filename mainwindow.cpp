@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     myMapWindow = new MapWindow();
 
-    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
+    //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
 
 }
 
@@ -28,10 +28,14 @@ void MainWindow::push_button0()
     QPushButton *button = (QPushButton *)sender();
     button->setStyleSheet("background-color: blue");
     int id = (button->text()).toInt();
-    myMapWindow->push_button0(id);
-    myMapWindow->show();
+    //myMapWindow->push_button0(id);
+    //myMapWindow->show();
+}
 
 
-
+void MainWindow::on_pushButton_2_clicked()
+{
+    m.menu();
+    m.startGame();
 }
 
