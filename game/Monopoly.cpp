@@ -1,27 +1,28 @@
 #include "Monopoly.h"
 
 void Monopoly::menu(int players_t, int bots_t) {
-    std::cout << "MENU:\n";
-    std::cout << "number of players: ";
-//	int n;
-//	std::cin >> n;
-//	numberPlayers = n;
-    std::cout << "number of bots: ";
-//	std::cin >> n;
-//	numberBots = n;
     numberPlayers = players_t;
     numberBots = bots_t;
 }
 
 void Monopoly::startGame() {
+    //(255,255,255)
+    std::vector <QString> color;
+    color.push_back("red");
+    color.push_back("yellow");
+    color.push_back("blue");
+    color.push_back("green");
+
 	int id = 1;
 	for (int i = 0; i < numberPlayers; i++) {
 		Player a("Human", id);
+        a.setColor(color[i]);
 		players.push_back(std::make_unique<Player>(a));
 		id++;
 	}
 	for (int i = 0; i < numberBots; i++) {
 		Bot a("Bot", id);
+        a.setColor(color[i + numberPlayers]);
 		players.push_back(std::make_unique<Bot>(a));
 		id++;
 	}
@@ -58,3 +59,10 @@ void Monopoly::updateGame() {
   }
 
 }
+
+//std::vector<std::unique_ptr<AbstractPlayer>> Monopoly::get_players(){
+//    return players;
+//}
+//std::vector<std::unique_ptr<Field>> Monopoly::get_map(){
+//    return mapMonopoly;
+//}

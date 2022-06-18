@@ -23,6 +23,10 @@ public:
     void menu(int players_t, int bots_t);
 	void startGame();   // function with initial data
 	void updateGame();	// the game
+    //std::vector<std::unique_ptr<AbstractPlayer>> get_players();
+   // std::vector<std::unique_ptr<Field>> get_map();
+    std::vector<std::unique_ptr<AbstractPlayer>> players;
+    std::vector<std::unique_ptr<Field>> mapMonopoly;
 
 signals:
     // through dice ? може бути може ні, подивимось
@@ -33,8 +37,7 @@ private:
 	Dice Dice1;
 	Dice Dice2;
 
-	std::vector<std::unique_ptr<AbstractPlayer>> players;
-	std::vector<std::unique_ptr<Field>> mapMonopoly;
+
 };
 
 class View {
