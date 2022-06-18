@@ -1,6 +1,6 @@
 #include "Monopoly.h"
 
-void Monopoly::menu() {
+void Monopoly::menu(int players_t, int bots_t) {
     std::cout << "MENU:\n";
     std::cout << "number of players: ";
 //	int n;
@@ -9,8 +9,8 @@ void Monopoly::menu() {
     std::cout << "number of bots: ";
 //	std::cin >> n;
 //	numberBots = n;
-    numberPlayers = 2;
-    numberBots = 2;
+    numberPlayers = players_t;
+    numberBots = bots_t;
 }
 
 void Monopoly::startGame() {

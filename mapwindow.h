@@ -15,6 +15,9 @@ public:
     explicit MapWindow(QWidget *parent = nullptr);
     ~MapWindow();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MapWindow *ui;
 };

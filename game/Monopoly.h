@@ -15,13 +15,17 @@
 #include "../fields/Field.h"
 #include "../game/Statistik.h"
 
-class Monopoly {
-  
+#include <QObject>
+
+class Monopoly : QObject {
+  Q_OBJECT
 public:
-	void menu();
+    void menu(int players_t, int bots_t);
 	void startGame();   // function with initial data
 	void updateGame();	// the game
 
+signals:
+    // through dice ? може бути може ні, подивимось
 private:
 	int numberPlayers = 0;
 	int numberBots = 0;
