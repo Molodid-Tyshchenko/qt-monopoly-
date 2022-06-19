@@ -13,20 +13,29 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="bRollDice">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>10</y>
-     <width>101</width>
-     <height>41</height>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable Small Semilig</family>
+     <pointsize>13</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>ROLL THE DICE</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="field0">
+  <widget class="QPushButton" name="bField0">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -59,9 +68,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>318</y>
+     <y>242</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -80,9 +89,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>199</y>
+     <y>161</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -103,7 +112,7 @@
      <x>40</x>
      <y>80</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -122,9 +131,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>437</y>
+     <y>323</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -139,7 +148,7 @@
     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="field1">
+  <widget class="QPushButton" name="bField1">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -155,7 +164,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field2">
+  <widget class="QPushButton" name="bField2">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -171,7 +180,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field3">
+  <widget class="QPushButton" name="bField3">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -187,7 +196,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field4">
+  <widget class="QPushButton" name="bField4">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -203,7 +212,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field5">
+  <widget class="QPushButton" name="bField5">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -219,7 +228,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field6">
+  <widget class="QPushButton" name="bField6">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -235,7 +244,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field7">
+  <widget class="QPushButton" name="bField7">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -251,7 +260,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field8">
+  <widget class="QPushButton" name="bField8">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -267,7 +276,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field9">
+  <widget class="QPushButton" name="bField9">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -283,7 +292,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="filed10">
+  <widget class="QPushButton" name="bField10">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -299,7 +308,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field11">
+  <widget class="QPushButton" name="bField11">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -315,7 +324,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field12">
+  <widget class="QPushButton" name="bField12">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -331,7 +340,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field16">
+  <widget class="QPushButton" name="bField16">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -347,7 +356,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field15">
+  <widget class="QPushButton" name="bField15">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -363,7 +372,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field13">
+  <widget class="QPushButton" name="bField13">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -379,7 +388,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field14">
+  <widget class="QPushButton" name="bField14">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -395,7 +404,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field18">
+  <widget class="QPushButton" name="bField18">
    <property name="geometry">
     <rect>
      <x>485</x>
@@ -411,7 +420,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field20">
+  <widget class="QPushButton" name="bField20">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -427,7 +436,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field19">
+  <widget class="QPushButton" name="bField19">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -443,7 +452,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field23">
+  <widget class="QPushButton" name="bField23">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -459,7 +468,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field24">
+  <widget class="QPushButton" name="bField24">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -475,7 +484,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field22">
+  <widget class="QPushButton" name="bField22">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -491,7 +500,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field25">
+  <widget class="QPushButton" name="bField25">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -507,7 +516,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field27">
+  <widget class="QPushButton" name="bField27">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -523,7 +532,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field26">
+  <widget class="QPushButton" name="bField26">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -539,7 +548,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field17">
+  <widget class="QPushButton" name="bField17">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -555,7 +564,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field21">
+  <widget class="QPushButton" name="bField21">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -571,7 +580,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field29">
+  <widget class="QPushButton" name="bField29">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -587,7 +596,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field28">
+  <widget class="QPushButton" name="bField28">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -603,7 +612,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field30">
+  <widget class="QPushButton" name="bField30">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -619,7 +628,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field32">
+  <widget class="QPushButton" name="bField32">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -635,7 +644,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field33">
+  <widget class="QPushButton" name="bField33">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -651,7 +660,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field34">
+  <widget class="QPushButton" name="bField34">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -667,7 +676,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field31">
+  <widget class="QPushButton" name="bField31">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -683,7 +692,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field36">
+  <widget class="QPushButton" name="bField36">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -699,7 +708,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field35">
+  <widget class="QPushButton" name="bField35">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -715,7 +724,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field38">
+  <widget class="QPushButton" name="bField38">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -731,7 +740,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field37">
+  <widget class="QPushButton" name="bField37">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -747,7 +756,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field40">
+  <widget class="QPushButton" name="bField40">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -763,7 +772,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field39">
+  <widget class="QPushButton" name="bField39">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -779,7 +788,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field42">
+  <widget class="QPushButton" name="bField42">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -795,7 +804,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field41">
+  <widget class="QPushButton" name="bField41">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -811,7 +820,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field43">
+  <widget class="QPushButton" name="bField43">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -831,39 +840,39 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>200</y>
+     <y>156</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money2">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>320</y>
+     <y>237</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money3">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>430</y>
+     <y>318</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money4">
@@ -873,13 +882,65 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>570</y>
+     <y>399</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos1">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>110</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>210</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>270</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>350</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

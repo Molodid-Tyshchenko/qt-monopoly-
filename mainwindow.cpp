@@ -9,8 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->pushButton->setStyleSheet("background-color: yellow");
 
-
-
+    //было не здесь, стало здесь
+//    myMapWindow = new MapWindow(nullptr, &m);
+//    m = new Monopoly(myMapWindow);
 
     //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
 
@@ -54,6 +55,9 @@ void MainWindow::on_pushButton_2_clicked()
     myMapWindow = new MapWindow(nullptr, &m);
     myMapWindow->set_play_num(sum_num);
     myMapWindow->show();
+
+    QMessageBox::information(nullptr, "Info", "Player 1 can start the game!");
+
 }
 
 
