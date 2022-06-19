@@ -9,6 +9,7 @@ AbstractPlayer::AbstractPlayer() {
 	skip = 0;
   bot = true;
   points = 0;
+  QString color = "none";
   
   std::vector<int> tempV = { };
 
@@ -75,6 +76,10 @@ void AbstractPlayer::setPoints(int points) {
 	this->points = points;
 }
 
+void AbstractPlayer::setColor(QString color_t) {
+    this->color = color_t;
+}
+
 void AbstractPlayer::setBusiness(std::string key) {
 	business[key].push_back(1);
 }
@@ -91,6 +96,10 @@ int AbstractPlayer::getID() {
 
 int AbstractPlayer::getCash() {
 	return cash;
+}
+
+QString AbstractPlayer::getColor(){
+    return color;
 }
 
 bool AbstractPlayer::getBankrot() {
@@ -112,6 +121,8 @@ int AbstractPlayer::getPoints()
 {
 	return points;
 }
+
+
 int AbstractPlayer::getBusiness(std::string key) {
 	return business[key].size();
 }

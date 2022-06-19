@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "QMessageBox"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton->setStyleSheet("background-color: yellow");
 
 
-    myMapWindow = new MapWindow();
+
 
     //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
 
@@ -35,7 +36,29 @@ void MainWindow::push_button0()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    m.menu();
+    int play_num = ui->spinBox->value();
+    int bot_num = ui->spinBox_2->value();
+    int sum_num = play_num+bot_num;
+    if (sum_num > 4) {
+        QMessageBox::warning(this, "Warning: Number of active players", "Maximum number of players and bots are four! Please consider it, "
+                                                                      "before choosing numbers in slots!");
+        return;
+    }
+    if (sum_num < 2) {
+        QMessageBox::warning(this, "Warning: Number of active players", "Minimum number of players and bots are two! Please consider it, "
+                                                                      "before choosing numbers in slots!");
+        return;
+    }
+    m.menu(play_num,bot_num);
     m.startGame();
+    myMapWindow = new MapWindow(nullptr, &m);
+    myMapWindow->set_play_num(sum_num);
+    myMapWindow->show();
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    exit(0);
 }
 

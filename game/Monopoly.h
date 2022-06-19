@@ -15,13 +15,21 @@
 #include "../fields/Field.h"
 #include "../game/Statistik.h"
 
-class Monopoly {
-  
+#include <QObject>
+
+class Monopoly : QObject {
+  Q_OBJECT
 public:
-	void menu();
+    void menu(int players_t, int bots_t);
 	void startGame();   // function with initial data
 	void updateGame();	// the game
+    //std::vector<std::unique_ptr<AbstractPlayer>> get_players();
+   // std::vector<std::unique_ptr<Field>> get_map();
+    std::vector<std::unique_ptr<AbstractPlayer>> players;
+    std::vector<std::unique_ptr<Field>> mapMonopoly;
 
+signals:
+    // through dice ? може бути може ні, подивимось
 private:
 	int numberPlayers = 0;
 	int numberBots = 0;
@@ -29,8 +37,7 @@ private:
 	Dice Dice1;
 	Dice Dice2;
 
-	std::vector<std::unique_ptr<AbstractPlayer>> players;
-	std::vector<std::unique_ptr<Field>> mapMonopoly;
+
 };
 
 class View {
