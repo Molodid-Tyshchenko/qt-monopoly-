@@ -5,6 +5,19 @@
 #include "game/Monopoly.h"
 #include <QWidget>
 #include "infowindow.h"
+#include "selectivewindow.h"
+#include "ui_selectivewindow.h"
+#include "questwindow.h"
+#include "ui_questwindow.h"
+#include "game/Monopoly.h"
+#include "vadimwindow.h"
+#include "ui_vadimwindow.h"
+#include "ui_giftwindow.h"
+#include "giftwindow.h"
+#include "portalwindow.h"
+#include "ui_portalwindow.h"
+#include "polyanawindow.h"
+#include "ui_polyanawindow.h"
 
 namespace Ui {
 class MapWindow;
@@ -17,6 +30,12 @@ private:
     int playebles = 0;
     Ui::MapWindow *ui;
     InfoWindow *myInfoWindow;
+    SelectiveWindow *mySelecWin;
+    VadimWindow *myVadimWin;
+    GiftWindow *myGiftWin;
+    PolyanaWindow *myPolyanaWin;
+    QuestWindow *myQWin;
+    PortalWindow *myPortalWin;
     Monopoly* m;
     int mPlayers;
 
@@ -65,6 +84,34 @@ private slots:
 
 
 
+
+    void on_bField14_clicked();
+
+    void on_bField19_clicked();
+
+    void on_bField37_clicked();
+
+    void on_bField4_clicked();
+
+    void on_bField13_clicked();
+
+    void on_bField29_clicked();
+
+    void on_bField39_clicked();
+
+    void on_bField18_clicked();
+
+    void on_bField8_clicked();
+
+    void on_bField24_clicked();
+
+    void on_bField36_clicked();
+
+    void on_bField43_clicked();
+
+    void on_bField38_clicked();
+
+    void on_bField9_clicked();
 
 public slots:
     void diceValue(QString, QString);

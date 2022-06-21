@@ -71,6 +71,6 @@ void QuestionField::deserialize(const json& data) {
 
 void QuestionField::sendSignalToInfo()
 {
-
+    emit signal_question(id);
 }
 // functions for the QuestionField class will be located here

@@ -242,7 +242,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Q</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -330,7 +330,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>P</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -352,7 +352,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Polyana</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -484,7 +484,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Q</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -506,7 +506,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>S</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -528,7 +528,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Vadim</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -572,7 +572,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>S</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -616,7 +616,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>P</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -775,7 +775,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Q</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -929,7 +929,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>P</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -973,7 +973,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Gift</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -995,7 +995,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>S</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1039,7 +1039,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>Q</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1105,7 +1105,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string/>
+    <string>P</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1317,6 +1317,32 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>610</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>info</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>610</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>statistik</string>
    </property>
   </widget>
  </widget>

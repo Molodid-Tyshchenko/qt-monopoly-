@@ -1,4 +1,5 @@
 #include "mapwindow.h"
+#include "myselectwin.h"
 #include "ui_mapwindow.h"
 #include "MapInterface.h"
 
@@ -15,6 +16,7 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->setupUi(this);
 
 
+
 }
 
 MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
@@ -25,9 +27,14 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     m = t_m;
 
     myInfoWindow = new InfoWindow(nullptr, m);
-
-
+    mySelecWin = new SelectiveWindow(nullptr,m);
+    myQWin = new QuestWindow(nullptr, m);
+    myVadimWin = new VadimWindow(nullptr, m);
+    myGiftWin = new GiftWindow(nullptr, m);
+    myPolyanaWin = new PolyanaWindow(nullptr, m);
+    myPortalWin = new PortalWindow(nullptr, m);
     mPlayers = m->getNumberAllPlayers();
+
 
     //вывод на кубики
     connect(m->players[0].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
@@ -346,4 +353,102 @@ void MapWindow::on_bField42_clicked()
 
 
 
+
+
+void MapWindow::on_bField14_clicked()
+{
+    m->mapMonopoly.at(14)->sendSignalToInfo();
+    mySelecWin->show();
+}
+
+
+void MapWindow::on_bField19_clicked()
+{
+    m->mapMonopoly.at(19)->sendSignalToInfo();
+    mySelecWin->show();
+}
+
+
+void MapWindow::on_bField37_clicked()
+{
+    m->mapMonopoly.at(37)->sendSignalToInfo();
+    mySelecWin->show();
+}
+
+
+void MapWindow::on_bField4_clicked()
+{
+    m->mapMonopoly.at(4)->sendSignalToInfo();
+    myQWin->show();
+}
+
+
+void MapWindow::on_bField13_clicked()
+{
+    m->mapMonopoly.at(13)->sendSignalToInfo();
+    myQWin->show();
+}
+
+
+void MapWindow::on_bField29_clicked()
+{
+    m->mapMonopoly.at(29)->sendSignalToInfo();
+    myQWin->show();
+}
+
+
+void MapWindow::on_bField39_clicked()
+{
+    m->mapMonopoly.at(39)->sendSignalToInfo();
+    myQWin->show();
+}
+
+
+void MapWindow::on_bField18_clicked()
+{
+    m->mapMonopoly.at(18)->sendSignalToInfo();
+    myVadimWin->show();
+}
+
+
+void MapWindow::on_bField8_clicked()
+{
+    m->mapMonopoly.at(8)->sendSignalToInfo();
+    myPortalWin->show();
+}
+
+
+void MapWindow::on_bField24_clicked()
+{
+    m->mapMonopoly.at(24)->sendSignalToInfo();
+    myPortalWin->show();
+}
+
+
+void MapWindow::on_bField36_clicked()
+{
+    m->mapMonopoly.at(36)->sendSignalToInfo();
+    myPortalWin->show();
+}
+
+
+void MapWindow::on_bField43_clicked()
+{
+    m->mapMonopoly.at(43)->sendSignalToInfo();
+    myPortalWin->show();
+}
+
+
+void MapWindow::on_bField38_clicked()
+{
+    m->mapMonopoly.at(38)->sendSignalToInfo();
+    myGiftWin->show();
+}
+
+
+void MapWindow::on_bField9_clicked()
+{
+    m->mapMonopoly.at(9)->sendSignalToInfo();
+    myPolyanaWin->show();
+}
 

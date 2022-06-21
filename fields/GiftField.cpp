@@ -17,6 +17,6 @@ void GiftField::deserialize(const json& data) {
 
 void GiftField::sendSignalToInfo()
 {
-
+    emit signal_gift(id);
 }
 // functions for the GiftField class will be located here

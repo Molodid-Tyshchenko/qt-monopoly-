@@ -124,6 +124,6 @@ void SelectiveField::deserialize(const json& data) {
 
 void SelectiveField::sendSignalToInfo()
 {
-
+    emit signal_selective(id, bought, group, cost, tax, amount);
 }
 // functions for the SelectiveField class will be located here

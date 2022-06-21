@@ -15,6 +15,6 @@ void PortalField::deserialize(const json& data) {
 
 void PortalField::sendSignalToInfo()
 {
-
+    emit signal_portal(id);
 }
 // functions for the PortalField class will be located here

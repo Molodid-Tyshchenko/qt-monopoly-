@@ -68,7 +68,11 @@ private:
 
 signals:
     void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
-
-
+    void signal_selective (int, int, std::string, int, int, int);
+    void signal_question(int);
+    void signal_vadim(int);
+    void signal_portal(int);
+    void signal_gift(int);
+    void signal_polyana(int);
 };
 

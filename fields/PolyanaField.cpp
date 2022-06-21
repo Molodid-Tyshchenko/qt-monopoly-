@@ -10,6 +10,6 @@ void PolyanaField::deserialize(const json& data) {
 
 void PolyanaField::sendSignalToInfo()
 {
-
+    emit signal_polyana(id);
 }
 // functions for the PolyanaField class will be located here

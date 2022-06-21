@@ -27,8 +27,8 @@ public:
 	int getAmount();
 
     void info() override{
-	  std::cout << "it's SelectiveField\n";
-	}
+      std::cout << "it's SelectiveField\n";
+    }
 
 	std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
 	std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);

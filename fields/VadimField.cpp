@@ -11,6 +11,6 @@ void VadimField::deserialize(const json& data) {
 
 void VadimField::sendSignalToInfo()
 {
-
+    emit signal_vadim(id);
 }
 // functions for the VadimField class will be located here

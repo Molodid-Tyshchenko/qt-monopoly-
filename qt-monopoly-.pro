@@ -25,13 +25,19 @@ SOURCES += \
     game/MonopolyManager.cpp \
     game/Statistik.cpp \
     game/Test.cpp \
+    giftwindow.cpp \
     infowindow.cpp \
     main.cpp \
     mainwindow.cpp \
     mapwindow.cpp \
     players/AbstractPlayer.cpp \
     players/Bot.cpp \
-    players/Player.cpp
+    players/Player.cpp \
+    polyanawindow.cpp \
+    portalwindow.cpp \
+    questwindow.cpp \
+    selectivewindow.cpp \
+    vadimwindow.cpp
 
 HEADERS += \
     MapInterface.h \
@@ -51,18 +57,30 @@ HEADERS += \
     game/MonopolyManager.h \
     game/Statistik.h \
     game/Test.h \
+    giftwindow.h \
     infowindow.h \
     lib/json.hpp \
     mainwindow.h \
     mapwindow.h \
     players/AbstractPlayer.h \
     players/Bot.h \
-    players/Player.h
+    players/Player.h \
+    polyanawindow.h \
+    portalwindow.h \
+    questwindow.h \
+    selectivewindow.h \
+    vadimwindow.h
 
 FORMS += \
+    giftwindow.ui \
     infowindow.ui \
     mainwindow.ui \
-    mapwindow.ui
+    mapwindow.ui \
+    polyanawindow.ui \
+    portalwindow.ui \
+    questwindow.ui \
+    selectivewindow.ui \
+    vadimwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
