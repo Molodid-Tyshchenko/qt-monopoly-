@@ -14,4 +14,9 @@ std::unique_ptr<AbstractPlayer> GiftField::action(std::unique_ptr<AbstractPlayer
 void GiftField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+void GiftField::sendSignalToInfo()
+{
+
+}
 // functions for the GiftField class will be located here

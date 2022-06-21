@@ -16,18 +16,22 @@ public:
 
 	QuestionField() : Field() {};
 
-  void info(){
+    void info() override{
     std::cout << "it's QuestionField\n";
   }
-  void incident1(std::unique_ptr<AbstractPlayer>& player);
+    void incident1(std::unique_ptr<AbstractPlayer>& player);
 	void incident2(std::unique_ptr<AbstractPlayer>& player);
 	void incident3(std::unique_ptr<AbstractPlayer>& player);
 	void incident4(std::unique_ptr<AbstractPlayer>& player);
 	void incident5(std::unique_ptr<AbstractPlayer>& player);
 
-	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
-  void deserialize(const json& data);
+    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void deserialize(const json& data) override;
+    void sendSignalToInfo();
   
 private:
 
+
+//signals:
+//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

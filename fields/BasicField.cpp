@@ -1,23 +1,56 @@
 #include "BasicField.h"
 
-void BasicField::setGroup(std::string g) {
-	this->group = g;
-}
-
-void BasicField::setCost(int cost) {
-	this->cost = cost;
-}
 
 void BasicField::setTax(int tax) {
-	this->tax = tax;
+    this->tax = tax;
+}
+
+void BasicField::setTax1(int tax1) {
+    this->tax1 = tax1;
+}
+
+void BasicField::setTax2(int tax2) {
+    this->tax2 = tax2;
+}
+
+void BasicField::setTax3(int tax3) {
+    this->tax3 = tax3;
+}
+
+void BasicField::setTax4(int tax4) {
+    this->tax4 = tax4;
+}
+
+void BasicField::setTax5(int tax5) {
+    this->tax5 = tax5;
 }
 
 void BasicField::setAmount(int amount) {
-  this->amount = amount;
+    this->amount = amount;
+}
+
+std::string BasicField::getName()
+{
+    return name;
 }
 
 void BasicField::setLevel(int level) {
-	this->level = level;
+    this->level = level;
+}
+
+void BasicField::setCostUpgrade(int costUpgrade)
+{
+    this->costUpgrade = costUpgrade;
+}
+
+void BasicField::setCostDowngrade(int costDowngrade)
+{
+    this->costDowngrade = costDowngrade;
+}
+
+void BasicField::setCostSell(int costSell)
+{
+    this->costSell = costSell;
 }
 
 std::string BasicField::getGroup() {
@@ -25,11 +58,46 @@ std::string BasicField::getGroup() {
 }
 
 int BasicField::getCost() {
-	return cost;
+    return cost;
+}
+
+int BasicField::getCostUpgrade()
+{
+    return costUpgrade;
+}
+
+int BasicField::getCostDowngrade()
+{
+    return costDowngrade;
+}
+
+int BasicField::getCostSell()
+{
+    return costSell;
 }
 
 int BasicField::getTax() {
-	return tax;
+    return tax;
+}
+
+int BasicField::getTax1() {
+    return tax1;
+}
+
+int BasicField::getTax2() {
+    return tax2;
+}
+
+int BasicField::getTax3() {
+    return tax3;
+}
+
+int BasicField::getTax4() {
+    return tax4;
+}
+
+int BasicField::getTax5() {
+    return tax5;
 }
 
 int BasicField::getLevel() {
@@ -196,12 +264,36 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
 	}
 }
 
-void BasicField::deserialize(const json& data) {
+void BasicField::deserialize(const json& data)  {
     data.at("id").get_to(id);
     data.at("group").get_to(group);
     data.at("cost").get_to(cost);
-    data.at("tax").get_to(tax);
+    data.at("tax").get_to(tax1);
     data.at("amount").get_to(amount);
+    setCostsValues();
 }
+
+void BasicField::sendSignalToInfo()
+{
+    emit signal(name, group, level, cost, costUpgrade,
+                 costDowngrade, costSell, tax1, tax2, tax3, tax4, tax5);
+}
+
+
+
+void BasicField::setCostsValues()
+{
+    this->costUpgrade = cost/2;
+    this->costDowngrade = 0.8*costUpgrade;
+    this->costSell = 0.8*cost;
+    this->tax = tax1;
+    this->tax2 = 1.5*tax1;
+    this->tax3 = 1.5*tax2;
+    this->tax4 = 1.5*tax3;
+    this->tax5 = 1.5*tax4;
+
+}
+
+
 
 // functions for the BasicField class will be located here

@@ -10,8 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton->setStyleSheet("background-color: yellow");
 
     //было не здесь, стало здесь
-//    myMapWindow = new MapWindow(nullptr, &m);
-//    m = new Monopoly(myMapWindow);
+    //myMapWindow = new MapWindow(nullptr, &m);
 
     //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(push_button0()));
 

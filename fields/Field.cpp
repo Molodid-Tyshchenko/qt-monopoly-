@@ -23,5 +23,10 @@ int Field::getID() {
 }
 
 int Field::getBought() {
-	return bought;
+    return bought;
 }
+
+//void Field::sendSignalToInfo()
+//{
+//    emit signal();
+//}

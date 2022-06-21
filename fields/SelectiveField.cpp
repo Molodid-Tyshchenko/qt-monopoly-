@@ -119,6 +119,11 @@ void SelectiveField::deserialize(const json& data) {
 	data.at("group").get_to(group);
 	data.at("cost").get_to(cost);
 	data.at("tax").get_to(tax);
-	data.at("amount").get_to(amount);
+    data.at("amount").get_to(amount);
+}
+
+void SelectiveField::sendSignalToInfo()
+{
+
 }
 // functions for the SelectiveField class will be located here

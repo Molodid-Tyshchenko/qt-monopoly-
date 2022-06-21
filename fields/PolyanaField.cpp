@@ -7,4 +7,9 @@ std::unique_ptr<AbstractPlayer> PolyanaField::action(std::unique_ptr<AbstractPla
 void PolyanaField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+void PolyanaField::sendSignalToInfo()
+{
+
+}
 // functions for the PolyanaField class will be located here

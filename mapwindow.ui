@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MapWindow</class>
  <widget class="QWidget" name="MapWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +12,9 @@
     <width>1248</width>
     <height>673</height>
    </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -43,6 +49,12 @@
      <width>100</width>
      <height>100</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>START</string>
@@ -157,6 +169,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>hum1</string>
    </property>
@@ -172,6 +190,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>hum2</string>
@@ -189,6 +213,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>hum3</string>
    </property>
@@ -204,6 +234,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -221,6 +257,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>PE1</string>
    </property>
@@ -236,6 +278,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>PE2</string>
@@ -253,6 +301,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>PE3</string>
    </property>
@@ -268,6 +322,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -285,6 +345,12 @@
      <height>100</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -300,6 +366,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>DM1</string>
@@ -317,6 +389,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>DM2</string>
    </property>
@@ -332,6 +410,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>DM3</string>
@@ -349,6 +433,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>CM2</string>
    </property>
@@ -364,6 +454,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>CM1</string>
@@ -381,6 +477,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -396,6 +498,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -413,6 +521,12 @@
      <height>100</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -428,6 +542,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy1</string>
@@ -445,6 +565,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -460,6 +586,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy4</string>
@@ -477,6 +609,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -492,6 +630,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy3</string>
@@ -509,6 +653,17 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>prog1</string>
    </property>
@@ -524,6 +679,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>prog3</string>
@@ -541,6 +702,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>prog2</string>
    </property>
@@ -556,6 +723,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>CM3</string>
@@ -573,6 +746,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>phy2</string>
    </property>
@@ -588,6 +767,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -605,6 +790,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>prog4</string>
    </property>
@@ -620,6 +811,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>ASD1</string>
@@ -637,6 +834,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>ASD3</string>
    </property>
@@ -652,6 +855,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>math1</string>
@@ -669,6 +878,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>math2</string>
    </property>
@@ -684,6 +899,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>ASD2</string>
@@ -701,6 +922,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -716,6 +943,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>math3</string>
@@ -733,6 +966,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -748,6 +987,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -765,6 +1010,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo1</string>
    </property>
@@ -780,6 +1031,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -797,6 +1054,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo3</string>
    </property>
@@ -813,6 +1076,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo2</string>
    </property>
@@ -828,6 +1097,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -941,6 +1216,107 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DICE 1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>450</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DICE 2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dice1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>530</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dice2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>530</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
  </widget>

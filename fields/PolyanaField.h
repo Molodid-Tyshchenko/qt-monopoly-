@@ -16,12 +16,16 @@ public:
 
 	PolyanaField() : Field() {};
 
-  void info(){
+    void info() override{
     std::cout << "it's PolyanaField\n";
   }
-	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
-  void deserialize(const json& data);
+    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void deserialize(const json& data) override;
+    void sendSignalToInfo() ;
   
 private:
 
+
+//signals:
+//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

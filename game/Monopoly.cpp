@@ -34,9 +34,18 @@ void Monopoly::startGame() {
 		id++;
 	}
 
+    mapMonopoly = fieldCreation();
 
-mapMonopoly = fieldCreation();
 
+}
+
+AbstractPlayer* Monopoly::getPlayer(int i) {
+    return players.at(i).get();
+}
+
+int Monopoly::getNumberAllPlayers()
+{
+    return numberAllPlayers;
 }
 
 //void Monopoly::updateGame() {
@@ -70,7 +79,7 @@ mapMonopoly = fieldCreation();
 
 void Monopoly::updateGame() {
     //проверить makeTurn
-    //int tmpField = players[currentPlayer]->makeTurn();
+    int tmpField = players[currentPlayer]->makeTurn();
     //проверить action
     //players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
 

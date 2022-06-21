@@ -18,7 +18,7 @@
 #include <QObject>
 #include <QWidget>
 
-class Monopoly : QObject {
+class Monopoly : public QObject {
   Q_OBJECT
 public:
     //Monopoly(QWidget* w);
@@ -30,6 +30,8 @@ public:
     std::vector<std::unique_ptr<AbstractPlayer>> players;
     std::vector<std::unique_ptr<Field>> mapMonopoly;
     QWidget *myMapWindow;
+    AbstractPlayer* getPlayer(int);
+    int getNumberAllPlayers();
 
 signals:
     // through dice ? може бути може ні, подивимось

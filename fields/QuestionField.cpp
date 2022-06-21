@@ -68,4 +68,9 @@ std::unique_ptr<AbstractPlayer> QuestionField::action(std::unique_ptr<AbstractPl
 void QuestionField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+void QuestionField::sendSignalToInfo()
+{
+
+}
 // functions for the QuestionField class will be located here
