@@ -23,7 +23,7 @@ public:
   void setBot(bool bot);
   void setBusiness(std::string key);
   void setPoints(int points);
-  void setColor(QString color_t);
+  void setColor(std::string color_t);
 
 	std::string getName();
 	int getID();
@@ -33,7 +33,7 @@ public:
 	bool getSkip();
 	bool getBot();
 	int getPoints();
-    QString getColor();
+    std::string getColor();
 	int getBusiness(std::string key);
 	void removeBusiness(std::string key);
     int makeTurn();
@@ -47,7 +47,7 @@ protected:
 	bool skip;
 	int points;
     bool bot = true;
-    QString color;
+    std::string color;
 
     std::unordered_map<std::string, std::vector<int>> business;
 

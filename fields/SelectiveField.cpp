@@ -126,4 +126,8 @@ void SelectiveField::sendSignalToInfo()
 {
     emit signal_selective(id, bought, group, cost, tax, amount);
 }
+
+void SelectiveField::changeColor(int pl_id){
+
+}
 // functions for the SelectiveField class will be located here

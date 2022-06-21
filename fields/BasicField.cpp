@@ -109,21 +109,36 @@ int BasicField::getAmount() {
 void BasicField::info() {
 	std::cout << "it's BasicField\n";
 }
+void BasicField::changeColor(int pl_id)
+{
+emit signal_bought(this->id, pl_id);
+}
+
 
 std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> player) {
   View display;
+
 	int moneyPlayer = player->getCash();
  	if (moneyPlayer < getCost()) {
 		display.lowMoney();
 		return std::move(player);
 	}
 	else {
-		moneyPlayer -=  getCost();
-		player->setCash(moneyPlayer);
-		int idPlayer = player->getID();
-		setBought(idPlayer);
-		player->setPoints(player->getPoints() + 10);
-		player->setBusiness(getGroup());
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, "Buying a field", "Do you want to buy this field?",
+                                      QMessageBox::Yes|QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            moneyPlayer -=  getCost();
+            player->setCash(moneyPlayer);
+            int idPlayer = player->getID();
+            setBought(idPlayer);
+            player->setPoints(player->getPoints() + 10);
+            player->setBusiness(getGroup());
+            std::cout << player->getID();
+            changeColor(player->getID()-1);
+
+
+        }
 		return std::move(player);
 	}
 }
@@ -216,7 +231,7 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
     }
 
     display.actionBuyPlayer();
-		switch (option.inputOpt()) {
+        switch (1) { //option.inputOpt()
 		case 1:
 			player = buy(std::move(player));
       return std::move(player);
@@ -276,8 +291,10 @@ void BasicField::deserialize(const json& data)  {
 void BasicField::sendSignalToInfo()
 {
     emit signal(name, group, level, cost, costUpgrade,
-                 costDowngrade, costSell, tax1, tax2, tax3, tax4, tax5);
+                costDowngrade, costSell, tax1, tax2, tax3, tax4, tax5);
 }
+
+
 
 
 

@@ -73,4 +73,9 @@ void QuestionField::sendSignalToInfo()
 {
     emit signal_question(id);
 }
+
+void QuestionField::changeColor(int pl_id)
+{
+
+}
 // functions for the QuestionField class will be located here

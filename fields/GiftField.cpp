@@ -19,4 +19,9 @@ void GiftField::sendSignalToInfo()
 {
     emit signal_gift(id);
 }
+
+void GiftField::changeColor(int pl_id)
+{
+
+}
 // functions for the GiftField class will be located here

@@ -15,4 +15,9 @@ void StartField::sendSignalToInfo()
 {
 
 }
+
+void StartField::changeColor(int pl_id)
+{
+
+}
 // functions for the StartField class will be located here

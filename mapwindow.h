@@ -113,8 +113,12 @@ private slots:
 
     void on_bField9_clicked();
 
+
+
 public slots:
     void diceValue(QString, QString);
+    void changeColor(int, int);
+//    void update_pos(int new_pos);
 //    void infoBasicField();
 };
 

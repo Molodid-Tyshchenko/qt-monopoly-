@@ -46,13 +46,13 @@ private:
 
 };
 
-class View {
+class View : public QWidget {
 public:
   void BotBuy(){
     std::cout << "decided to buy a field\n";
   }
   void actionBuyPlayer() {
-    std::cout << "Choose an action:\n" << "1. Buy the field\n" << "Other value - cancel(skip)\n";
+   // std::cout << "Choose an action:\n" << "1. Buy the field\n" << "Other value - cancel(skip)\n";
   }
   void noEnoughMoney(){
     std::cout << "No enough money :(" << std::endl;
@@ -89,19 +89,26 @@ public:
 		std::cout << "You have the minimum field level " << std::endl;
   }
   void showIncident1() {
-    std::cout << "Today is the IASA event, you spent 1000 money and skip one move because of severe headache :)" << std::endl;
+    QMessageBox::information(this, "IASA event!", "Today is the IASA event, you spent 1000 money and skip one move because "
+                                                  "of severe headache :)", QMessageBox::Ok);
+    //std::cout << "Today is the IASA event, you spent 1000 money and skip one move because of severe headache :)" << std::endl;
   }
   void showIncident2() {
-    std::cout << "You suffered from bullying by Bokhonov and decided to watch the series, so you skip one move" << std::endl;
+      QMessageBox::information(this, "Bokhonov...", "You suffered from bullying by Bokhonov and decided to watch the series, "
+                                                    "so you skip one move", QMessageBox::Ok);
+   // std::cout << "You suffered from bullying by Bokhonov and decided to watch the series, so you skip one move" << std::endl;
   } 
   void showIncident3() {
-    std::cout << "Today is scholarship day and you get +2000 money :)" << std::endl;
+      QMessageBox::information(this, "Scholarship! Yay!", "Today is scholarship day and you get +2000 money :)", QMessageBox::Ok);
+   // std::cout << "Today is scholarship day and you get +2000 money :)" << std::endl;
   } 
   void showIncident4() {
-    std::cout << "You met a friend and you sat in White Naliv, so you lost 500 money" << std::endl;
+      QMessageBox::information(this, "White Naliv", "You met a friend and you sat in White Naliv, so you lost 500 money", QMessageBox::Ok);
+   // std::cout << "You met a friend and you sat in White Naliv, so you lost 500 money" << std::endl;
   } 
   void showIncident5() {
-    std::cout << "You found 1000 money in the grass near the dorm and of course you took them :)))" << std::endl;
+      QMessageBox::information(this, "Money on the grass?...", "You found 1000 money in the grass near the dorm and of course you took them :)))", QMessageBox::Ok);
+    //std::cout << "You found 1000 money in the grass near the dorm and of course you took them :)))" << std::endl;
   } 
   void unknownMove(){
     std::cout << "Unknown (skip)...\n\n";

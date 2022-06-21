@@ -14,11 +14,11 @@ void Monopoly::menu(int players_t, int bots_t) {
 
 void Monopoly::startGame() {
     //(255,255,255)
-    std::vector <QString> color;
-    color.push_back("red");
-    color.push_back("yellow");
-    color.push_back("blue");
-    color.push_back("green");
+    std::vector <std::string> color;
+    color.push_back("QPushButton { background-color: red; }");
+    color.push_back("QPushButton { background-color: yellow; }");
+    color.push_back("QPushButton { background-color: blue; }");
+    color.push_back("QPushButton { background-color: green; }");
 
 	int id = 1;
 	for (int i = 0; i < numberPlayers; i++) {
@@ -81,8 +81,8 @@ void Monopoly::updateGame() {
     //проверить makeTurn
     int tmpField = players[currentPlayer]->makeTurn();
     //проверить action
-    //players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
-
+    players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
+    //mapMonopoly[tmpField]->changeColor(players[currentPlayer]->getColor());
     int attempt = 0;
     while (attempt < numberAllPlayers) {
         currentPlayer++;

@@ -9,7 +9,7 @@ AbstractPlayer::AbstractPlayer() {
 	skip = 0;
   bot = true;
   points = 0;
-  QString color = "none";
+  std::string color = "none";
   
   std::vector<int> tempV = { };
 
@@ -76,7 +76,7 @@ void AbstractPlayer::setPoints(int points) {
 	this->points = points;
 }
 
-void AbstractPlayer::setColor(QString color_t) {
+void AbstractPlayer::setColor(std::string color_t) {
     this->color = color_t;
 }
 
@@ -98,7 +98,7 @@ int AbstractPlayer::getCash() {
 	return cash;
 }
 
-QString AbstractPlayer::getColor(){
+std::string AbstractPlayer::getColor(){
     return color;
 }
 

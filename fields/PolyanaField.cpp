@@ -12,4 +12,9 @@ void PolyanaField::sendSignalToInfo()
 {
     emit signal_polyana(id);
 }
+
+void PolyanaField::changeColor(int pl_id)
+{
+
+}
 // functions for the PolyanaField class will be located here

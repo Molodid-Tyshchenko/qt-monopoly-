@@ -5,6 +5,7 @@
 #include "mapwindow.h"
 
 #include <QApplication>
+#include <QFile>
 
 int main(int argc, char *argv[]){
     
@@ -13,6 +14,10 @@ int main(int argc, char *argv[]){
     w.show();
 //    MapWindow map(&w);
 //    map.show();
+    QFile file("C:/Users/tysya/Documents/GitHub/qt-monopoly-/style.qss");
+    file.open(QIODevice::ReadOnly);
+    QString styleSheet { QLatin1String(file.readAll()) };
+    a.setStyleSheet(styleSheet);
     return a.exec();
 
   //  Test t;     // testing the program

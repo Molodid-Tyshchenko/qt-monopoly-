@@ -5,8 +5,9 @@
 #include "../players/AbstractPlayer.h"
 
 #include "../lib/json.hpp"
+#include <QMessageBox>
 
-class Field : public QObject {
+class Field : public QWidget {
     Q_OBJECT
 public:	
 	Field();
@@ -23,7 +24,7 @@ public:
     //virtual void setCostsValues() = 0;
     virtual void deserialize(const json& data) = 0;
     virtual void sendSignalToInfo() = 0;
-
+    virtual void changeColor(int pl_id) = 0;
 
 
 //    virtual void setLevel(int level);
@@ -74,5 +75,6 @@ signals:
     void signal_portal(int);
     void signal_gift(int);
     void signal_polyana(int);
+    void signal_bought(int, int);
 };
 

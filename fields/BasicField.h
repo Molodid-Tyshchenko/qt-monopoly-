@@ -76,7 +76,7 @@ public:
     void setCostsValues() ;
     void deserialize(const json& data) override;
     void sendSignalToInfo() ;
-
+    void changeColor(int pl_id);
 
 
 protected:

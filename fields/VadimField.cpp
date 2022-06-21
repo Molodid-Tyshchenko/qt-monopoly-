@@ -13,4 +13,9 @@ void VadimField::sendSignalToInfo()
 {
     emit signal_vadim(id);
 }
+
+void VadimField::changeColor(int pl_id)
+{
+
+}
 // functions for the VadimField class will be located here

@@ -7,6 +7,8 @@
 #include <iostream>
 #include <QLabel>
 #include <QMessageBox>
+#include <QFile>
+
 
 MapWindow::MapWindow(QWidget *parent) :
     QWidget(parent),
@@ -36,6 +38,9 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     mPlayers = m->getNumberAllPlayers();
 
 
+
+
+
     //вывод на кубики
     connect(m->players[0].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
     connect(m->players[1].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
@@ -45,70 +50,35 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[2].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
         connect(m->players[3].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
     }
-
-    //нажатие на кнопки basicField(запись информации из BasicField полей в InfoWindow)
-//    connect(m->mapMonopoly.at(1).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(2).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(3).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(5).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(6).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(7).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(10).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(11).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(12).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(15).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(16).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(17).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(20).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(21).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(22).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(23).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(25).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(26).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(27).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(28).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(30).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(31).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(32).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(33).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(34).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(35).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(40).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(41).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-//    connect(m->mapMonopoly.at(42).get(), &Field::sendSignalToInfo, myInfoWindow, &InfoWindow::fromBasicField);
-
-
-
-//    connect(ui->bField1, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField2, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField3, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField5, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField6, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField7, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField10, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField11, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField12, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField15, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField16, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField17, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField20, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField21, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField22, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField23, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField25, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField26, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField27, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField28, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField30, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField31, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField32, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField33, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField34, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField35, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField40, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField41, SIGNAL(clicked()), this, SLOT(infoBasicField));
-//    connect(ui->bField42, SIGNAL(clicked()), this, SLOT(infoBasicField));
-
+    connect(m->mapMonopoly.at(1).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(2).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(3).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(5).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(6).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(7).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(10).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(11).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(12).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(15).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(16).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(17).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(20).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(21).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(22).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(23).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(25).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(26).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(27).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(28).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(30).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(31).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(32).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(33).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(34).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(35).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(40).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(41).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(42).get(), &Field::signal_bought, this, &MapWindow::changeColor);
 
 }
 
@@ -153,13 +123,26 @@ void MapWindow::set_play_num(int p_t){
        ui->pos4->setText(pos);
        ui->money4->setText(money+ "$");
    }
-
+    playebles = p_t;
 
 }
 
 void MapWindow::on_bRollDice_clicked()
 {
     m->updateGame();
+    QString pos;
+    ui->pos1->setText(QString::number(m->getPlayer(0)->getPos()));
+    ui->pos2->setText(QString::number(m->getPlayer(1)->getPos()));
+    if (playebles == 3){
+        pos = QString::number(m->players.at(2)->getPos());
+        ui->pos3->setText(pos);
+    }
+    else if (playebles == 4) {
+        pos = QString::number(m->players.at(2)->getPos());
+        ui->pos3->setText(pos);
+        pos = QString::number(m->players.at(3)->getPos());
+        ui->pos4->setText(pos);
+    }
 }
 
 void MapWindow::diceValue(QString value1, QString value2)
@@ -168,11 +151,149 @@ void MapWindow::diceValue(QString value1, QString value2)
     ui->dice2->setText(value2);
 }
 
-//void MapWindow::infoBasicField()
-//{
-//    QPushButton *button = (QPushButton*)sender();
+void MapWindow::changeColor(int id_t, int color_t){
+    //myPushButton->setStyleSheet("color: blue");
+    QString temp;
+    switch(color_t) {
+    case 0:{
+        temp = "QPushButton { background-color: red; }";
+        break;
+    }
+    case 1:{
+        temp = "QPushButton { background-color: blue; }";
+        break;
+    }
+    case 2:{
+        temp = "QPushButton { background-color: yellow; }";
+        break;
+    }
+    case 3:{
+        temp = "QPushButton { background-color: green; }";
+        break;
+    }
+    default: break;
+    }
+    switch(id_t) {
+        case 1: {
+            ui->bField1->setStyleSheet(temp);
+            break;
+        }
+        case 2: {
+            ui->bField2->setStyleSheet(temp);
+            break;
+        }
+        case 3: {
+            ui->bField3->setStyleSheet(temp);
+            break;
+        }
+        case 5: {
+            ui->bField5->setStyleSheet(temp);
+            break;
+       }
+       case 6: {
+           ui->bField6->setStyleSheet(temp);
+           break;
+       }
+       case 7: {
+           ui->bField7->setStyleSheet(temp);
+           break;
+       }
+    case 10: {
+        ui->bField10->setStyleSheet(temp);
+        break;
+    }
+        case 11: {
+            ui->bField11->setStyleSheet(temp);
+            break;
+        }
+        case 12: {
+            ui->bField12->setStyleSheet(temp);
+            break;
+        }
+        case 15: {
+            ui->bField15->setStyleSheet(temp);
+            break;
+        }
+    case 16: {
+        ui->bField16->setStyleSheet(temp);
+        break;
+    }
+    case 17: {
+        ui->bField17->setStyleSheet(temp);
+        break;
+    }
+    case 20: {
+        ui->bField20->setStyleSheet(temp);
+        break;
+    }
+    case 21: {
+        ui->bField21->setStyleSheet(temp);
+        break;
+    }
+    case 22: {
+        ui->bField22->setStyleSheet(temp);
+        break;
+    }
+    case 23: {
+        ui->bField23->setStyleSheet(temp);
+        break;
+    }
+    case 25: {
+        ui->bField25->setStyleSheet(temp);
+        break;
+    }
+    case 26: {
+        ui->bField26->setStyleSheet(temp);
+        break;
+    }
+    case 27: {
+        ui->bField27->setStyleSheet(temp);
+        break;
+    }
+    case 28: {
+        ui->bField28->setStyleSheet(temp);
+        break;
+    }
+    case 30: {
+        ui->bField30->setStyleSheet(temp);
+        break;
+    }
+    case 31: {
+        ui->bField31->setStyleSheet(temp);
+        break;
+    }
+    case 32: {
+        ui->bField32->setStyleSheet(temp);
+        break;
+    }
+    case 33: {
+        ui->bField33->setStyleSheet(temp);
+        break;
+    }
+    case 34: {
+        ui->bField34->setStyleSheet(temp);
+        break;
+    }
+    case 35: {
+        ui->bField35->setStyleSheet(temp);
+        break;
+    }
+    case 40: {
+        ui->bField40->setStyleSheet(temp);
+        break;
+    }
+    case 41: {
+        ui->bField41->setStyleSheet(temp);
+        break;
+    }
+    case 42: {
+        ui->bField42->setStyleSheet(temp);
+        break;
+    }
+    default: break;
+}
 
-//}
+}
 
 
 void MapWindow::on_bField1_clicked()

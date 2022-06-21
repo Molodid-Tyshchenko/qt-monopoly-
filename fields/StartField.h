@@ -21,6 +21,8 @@ public:
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void deserialize(const json& data) override;
     void sendSignalToInfo();
+    void changeColor(int pl_id);
+
   
 private:
 
