@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MapWindow</class>
  <widget class="QWidget" name="MapWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,23 +13,35 @@
     <height>673</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="bRollDice">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>10</y>
-     <width>101</width>
-     <height>41</height>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable Small Semilig</family>
+     <pointsize>13</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>ROLL THE DICE</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="field0">
+  <widget class="QPushButton" name="bField0">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -34,6 +49,12 @@
      <width>100</width>
      <height>100</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>START</string>
@@ -59,9 +80,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>318</y>
+     <y>242</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -80,9 +101,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>199</y>
+     <y>161</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -103,7 +124,7 @@
      <x>40</x>
      <y>80</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -122,9 +143,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>437</y>
+     <y>323</y>
      <width>199</width>
-     <height>112</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -139,7 +160,7 @@
     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="field1">
+  <widget class="QPushButton" name="bField1">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -147,6 +168,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>hum1</string>
@@ -155,7 +182,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field2">
+  <widget class="QPushButton" name="bField2">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -163,6 +190,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>hum2</string>
@@ -171,7 +204,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field3">
+  <widget class="QPushButton" name="bField3">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -179,6 +212,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>hum3</string>
@@ -187,7 +226,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field4">
+  <widget class="QPushButton" name="bField4">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -196,6 +235,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -203,7 +248,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field5">
+  <widget class="QPushButton" name="bField5">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -211,6 +256,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>PE1</string>
@@ -219,7 +270,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field6">
+  <widget class="QPushButton" name="bField6">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -227,6 +278,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>PE2</string>
@@ -235,7 +292,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field7">
+  <widget class="QPushButton" name="bField7">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -243,6 +300,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>PE3</string>
@@ -251,7 +314,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field8">
+  <widget class="QPushButton" name="bField8">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -260,6 +323,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -267,7 +336,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field9">
+  <widget class="QPushButton" name="bField9">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -276,6 +345,12 @@
      <height>100</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -283,7 +358,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="filed10">
+  <widget class="QPushButton" name="bField10">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -291,6 +366,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>DM1</string>
@@ -299,7 +380,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field11">
+  <widget class="QPushButton" name="bField11">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -307,6 +388,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>DM2</string>
@@ -315,7 +402,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field12">
+  <widget class="QPushButton" name="bField12">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -323,6 +410,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>DM3</string>
@@ -331,7 +424,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field16">
+  <widget class="QPushButton" name="bField16">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -339,6 +432,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>CM2</string>
@@ -347,7 +446,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field15">
+  <widget class="QPushButton" name="bField15">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -355,6 +454,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>CM1</string>
@@ -363,7 +468,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field13">
+  <widget class="QPushButton" name="bField13">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -372,6 +477,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -379,7 +490,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field14">
+  <widget class="QPushButton" name="bField14">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -388,6 +499,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -395,7 +512,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field18">
+  <widget class="QPushButton" name="bField18">
    <property name="geometry">
     <rect>
      <x>485</x>
@@ -404,6 +521,12 @@
      <height>100</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -411,7 +534,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field20">
+  <widget class="QPushButton" name="bField20">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -419,6 +542,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy1</string>
@@ -427,7 +556,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field19">
+  <widget class="QPushButton" name="bField19">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -436,6 +565,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -443,7 +578,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field23">
+  <widget class="QPushButton" name="bField23">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -451,6 +586,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy4</string>
@@ -459,7 +600,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field24">
+  <widget class="QPushButton" name="bField24">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -468,6 +609,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -475,7 +622,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field22">
+  <widget class="QPushButton" name="bField22">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -483,6 +630,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy3</string>
@@ -491,7 +644,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field25">
+  <widget class="QPushButton" name="bField25">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -499,6 +652,17 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>prog1</string>
@@ -507,7 +671,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field27">
+  <widget class="QPushButton" name="bField27">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -515,6 +679,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>prog3</string>
@@ -523,7 +693,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field26">
+  <widget class="QPushButton" name="bField26">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -531,6 +701,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>prog2</string>
@@ -539,7 +715,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field17">
+  <widget class="QPushButton" name="bField17">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -547,6 +723,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>CM3</string>
@@ -555,7 +737,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field21">
+  <widget class="QPushButton" name="bField21">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -563,6 +745,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>phy2</string>
@@ -571,7 +759,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field29">
+  <widget class="QPushButton" name="bField29">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -580,6 +768,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -587,7 +781,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field28">
+  <widget class="QPushButton" name="bField28">
    <property name="geometry">
     <rect>
      <x>1070</x>
@@ -595,6 +789,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>prog4</string>
@@ -603,7 +803,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field30">
+  <widget class="QPushButton" name="bField30">
    <property name="geometry">
     <rect>
      <x>990</x>
@@ -612,6 +812,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>ASD1</string>
    </property>
@@ -619,7 +825,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field32">
+  <widget class="QPushButton" name="bField32">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -628,6 +834,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>ASD3</string>
    </property>
@@ -635,7 +847,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field33">
+  <widget class="QPushButton" name="bField33">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -644,6 +856,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>math1</string>
    </property>
@@ -651,7 +869,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field34">
+  <widget class="QPushButton" name="bField34">
    <property name="geometry">
     <rect>
      <x>670</x>
@@ -660,6 +878,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>math2</string>
    </property>
@@ -667,7 +891,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field31">
+  <widget class="QPushButton" name="bField31">
    <property name="geometry">
     <rect>
      <x>910</x>
@@ -676,6 +900,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>ASD2</string>
    </property>
@@ -683,7 +913,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field36">
+  <widget class="QPushButton" name="bField36">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -692,6 +922,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -699,7 +935,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field35">
+  <widget class="QPushButton" name="bField35">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -708,6 +944,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>math3</string>
    </property>
@@ -715,7 +957,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field38">
+  <widget class="QPushButton" name="bField38">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -724,6 +966,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -731,7 +979,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field37">
+  <widget class="QPushButton" name="bField37">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -740,6 +988,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -747,7 +1001,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field40">
+  <widget class="QPushButton" name="bField40">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -756,6 +1010,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo1</string>
    </property>
@@ -763,7 +1023,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field39">
+  <widget class="QPushButton" name="bField39">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -772,6 +1032,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -779,7 +1045,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field42">
+  <widget class="QPushButton" name="bField42">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -788,6 +1054,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo3</string>
    </property>
@@ -795,7 +1067,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field41">
+  <widget class="QPushButton" name="bField41">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -804,6 +1076,12 @@
      <height>75</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>schemo2</string>
    </property>
@@ -811,7 +1089,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="field43">
+  <widget class="QPushButton" name="bField43">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -819,6 +1097,12 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
@@ -831,39 +1115,39 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>200</y>
+     <y>156</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money2">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>320</y>
+     <y>237</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money3">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>430</y>
+     <y>318</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="money4">
@@ -873,13 +1157,166 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>570</y>
+     <y>399</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string> </string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos1">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>110</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>210</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>270</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pos4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>350</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DICE 1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>450</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DICE 2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dice1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>530</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dice2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>530</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
  </widget>

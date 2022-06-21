@@ -10,4 +10,9 @@ std::unique_ptr<AbstractPlayer> StartField::action(std::unique_ptr<AbstractPlaye
 void StartField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+void StartField::sendSignalToInfo()
+{
+
+}
 // functions for the StartField class will be located here

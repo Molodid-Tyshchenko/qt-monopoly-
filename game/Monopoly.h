@@ -16,10 +16,12 @@
 #include "../game/Statistik.h"
 
 #include <QObject>
+#include <QWidget>
 
-class Monopoly : QObject {
+class Monopoly : public QObject {
   Q_OBJECT
 public:
+    //Monopoly(QWidget* w);
     void menu(int players_t, int bots_t);
 	void startGame();   // function with initial data
 	void updateGame();	// the game
@@ -27,13 +29,17 @@ public:
    // std::vector<std::unique_ptr<Field>> get_map();
     std::vector<std::unique_ptr<AbstractPlayer>> players;
     std::vector<std::unique_ptr<Field>> mapMonopoly;
+    QWidget *myMapWindow;
+    AbstractPlayer* getPlayer(int);
+    int getNumberAllPlayers();
 
 signals:
     // through dice ? може бути може ні, подивимось
 private:
 	int numberPlayers = 0;
 	int numberBots = 0;
-
+    int currentPlayer = 0;
+    int numberAllPlayers = 0;
 	Dice Dice1;
 	Dice Dice2;
 

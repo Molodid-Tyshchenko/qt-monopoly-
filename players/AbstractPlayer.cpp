@@ -126,3 +126,22 @@ int AbstractPlayer::getPoints()
 int AbstractPlayer::getBusiness(std::string key) {
 	return business[key].size();
 }
+
+
+int AbstractPlayer::makeTurn(){
+
+    Dice Dice1, Dice2;
+    Dice1.randValue();
+    Dice2.randValue();
+
+    QString value1 = QString::number(Dice1.getValue());
+    QString value2 = QString::number(Dice2.getValue());
+
+    emit signal(value1, value2);
+
+    pos += Dice1.getValue() + Dice2.getValue();
+    pos %= 44;
+
+
+    return pos;
+}

@@ -36,19 +36,22 @@ public:
     QString getColor();
 	int getBusiness(std::string key);
 	void removeBusiness(std::string key);
-  virtual int makeTurn() = 0;
+    int makeTurn();
   
 protected:
-	std::string name;
+    std::string name;
 	int id;
 	int cash;
 	bool bankrot;
 	int pos;
 	bool skip;
 	int points;
-  bool bot = true;
-  QString color;
+    bool bot = true;
+    QString color;
 
-  std::unordered_map<std::string, std::vector<int>> business;
+    std::unordered_map<std::string, std::vector<int>> business;
+
+signals:
+    void signal(QString, QString);
 
 };

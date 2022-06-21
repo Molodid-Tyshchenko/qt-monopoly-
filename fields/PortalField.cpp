@@ -12,4 +12,9 @@ std::unique_ptr<AbstractPlayer> PortalField::action(std::unique_ptr<AbstractPlay
 void PortalField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+void PortalField::sendSignalToInfo()
+{
+
+}
 // functions for the PortalField class will be located here

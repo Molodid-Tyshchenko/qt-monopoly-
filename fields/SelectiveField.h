@@ -26,7 +26,7 @@ public:
 	int getTax();
 	int getAmount();
 
-	void info(){
+    void info() override{
 	  std::cout << "it's SelectiveField\n";
 	}
 
@@ -34,12 +34,16 @@ public:
 	std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
 	void pay(std::unique_ptr<AbstractPlayer>& player);
 
-	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
-	void deserialize(const json& data);
+    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void deserialize(const json& data) override;
+    void sendSignalToInfo();
   
 protected:
 	std::string group;
 	int cost;
 	int tax;
 	int amount;
+
+//signals:
+//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };
