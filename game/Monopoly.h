@@ -23,8 +23,8 @@ class Monopoly : public QObject {
 public:
     //Monopoly(QWidget* w);
     void menu(int players_t, int bots_t);
-	void startGame();   // function with initial data
-	void updateGame();	// the game
+    void startGame();   // function with initial data
+    void updateGame();	// the game
     //std::vector<std::unique_ptr<AbstractPlayer>> get_players();
    // std::vector<std::unique_ptr<Field>> get_map();
     std::vector<std::unique_ptr<AbstractPlayer>> players;
@@ -32,16 +32,17 @@ public:
     QWidget *myMapWindow;
     AbstractPlayer* getPlayer(int);
     int getNumberAllPlayers();
+    int getCurrentPlayer();
 
 signals:
     // through dice ? може бути може ні, подивимось
 private:
-	int numberPlayers = 0;
-	int numberBots = 0;
+    int numberPlayers = 0;
+    int numberBots = 0;
     int currentPlayer = 0;
     int numberAllPlayers = 0;
-	Dice Dice1;
-	Dice Dice2;
+    Dice Dice1;
+    Dice Dice2;
 
 
 };
@@ -59,10 +60,10 @@ public:
   }
   void playerField(){
     std::cout << "Choose an action:\n"
-				<< "1. Sell the field\n"
-				<< "2. Upgrade the field\n"
-				<< "3. Downgrade the field\n"
-				<< "Other value - cancel(skip)\n";
+                << "1. Sell the field\n"
+                << "2. Upgrade the field\n"
+                << "3. Downgrade the field\n"
+                << "Other value - cancel(skip)\n";
   }
   void alreadyUpgrade(){
     std::cout << "You have already upgrated the field in this step" << std::endl;
@@ -86,7 +87,7 @@ public:
     std::cout << "You cannot downgrade the field\n Tip: you need to own all fields of this monopoly to downgrate\n";
   }
   void minLevel(){
-		std::cout << "You have the minimum field level " << std::endl;
+        std::cout << "You have the minimum field level " << std::endl;
   }
   void showIncident1() {
     QMessageBox::information(this, "IASA event!", "Today is the IASA event, you spent 1000 money and skip one move because "
@@ -97,19 +98,19 @@ public:
       QMessageBox::information(this, "Bokhonov...", "You suffered from bullying by Bokhonov and decided to watch the series, "
                                                     "so you skip one move", QMessageBox::Ok);
    // std::cout << "You suffered from bullying by Bokhonov and decided to watch the series, so you skip one move" << std::endl;
-  } 
+  }
   void showIncident3() {
       QMessageBox::information(this, "Scholarship! Yay!", "Today is scholarship day and you get +2000 money :)", QMessageBox::Ok);
    // std::cout << "Today is scholarship day and you get +2000 money :)" << std::endl;
-  } 
+  }
   void showIncident4() {
       QMessageBox::information(this, "White Naliv", "You met a friend and you sat in White Naliv, so you lost 500 money", QMessageBox::Ok);
    // std::cout << "You met a friend and you sat in White Naliv, so you lost 500 money" << std::endl;
-  } 
+  }
   void showIncident5() {
       QMessageBox::information(this, "Money on the grass?...", "You found 1000 money in the grass near the dorm and of course you took them :)))", QMessageBox::Ok);
     //std::cout << "You found 1000 money in the grass near the dorm and of course you took them :)))" << std::endl;
-  } 
+  }
   void unknownMove(){
     std::cout << "Unknown (skip)...\n\n";
   }
@@ -137,11 +138,11 @@ public:
   void movedField(std::string name, int pos){
     std::cout << name << " moved to field " << pos << "\n";
     std::cout << "---------------------------\n";
-  } 
+  }
   void actionSellPlayer() {
     std::cout << "Choose an action:\n"
-			<< "1. Sell the field\n"
-			<< "Other value - cancel(skip)\n";
+            << "1. Sell the field\n"
+            << "Other value - cancel(skip)\n";
   }
 };
 
@@ -152,7 +153,7 @@ public:
     std::cin >> opt;
     return opt;
   }
-  
+
 };
 
 class Controller {

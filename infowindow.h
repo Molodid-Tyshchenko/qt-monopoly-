@@ -22,7 +22,8 @@ private:
     Monopoly* m;
 
 public slots:
-    void fromBasicField(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
+    void fromBasicField(std::string, std::string, int, int, int, int, int, int, int, int, int, int, int, int, int);
+    void slotForButtons();
 };
 
 

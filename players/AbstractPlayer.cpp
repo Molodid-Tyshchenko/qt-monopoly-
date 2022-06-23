@@ -11,16 +11,16 @@ AbstractPlayer::AbstractPlayer() {
   points = 0;
   std::string color = "none";
   
-  std::vector<int> tempV = { };
+//  std::vector<int> tempV = { };
 
-	std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
-		"Physics",  "DSA",
-	"MathematicalAnalysis", "Circuitry", "Programming" };
-	int k_iter = 0;
-	while (k_iter < 9) {
-		business.insert(std::make_pair(groups[k_iter], tempV));
-		k_iter++;
-	}
+//	std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
+//		"Physics",  "DSA",
+//	"MathematicalAnalysis", "Circuitry", "Programming" };
+//	int k_iter = 0;
+//	while (k_iter < 9) {
+//		business.insert(std::make_pair(groups[k_iter], tempV));
+//		k_iter++;
+//	}
 }
 
 AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
@@ -32,16 +32,16 @@ AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 	points = 0;
     std::string color = "none";
 
-    std::vector<int> tempV = { };
+//    std::vector<int> tempV = { };
 
-      std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
-          "Physics",  "DSA",
-      "MathematicalAnalysis", "Circuitry", "Programming" };
-      int k_iter = 0;
-      while (k_iter < 9) {
-          business.insert(std::make_pair(groups[k_iter], tempV));
-          k_iter++;
-      }
+//      std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
+//          "Physics",  "DSA",
+//      "MathematicalAnalysis", "Circuitry", "Programming" };
+//      int k_iter = 0;
+//      while (k_iter < 9) {
+//          business.insert(std::make_pair(groups[k_iter], tempV));
+//          k_iter++;
+//      }
 
 }
 
@@ -52,9 +52,9 @@ AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {
 	bankrot = p.bankrot;
 	pos = p.pos;
 	skip = p.skip;
-  bot = p.bot;
-  points = p.points;
-  business = p.business;
+    bot = p.bot;
+    points = p.points;
+    business = p.business;
 }
 
 void AbstractPlayer::setName(const std::string name) {
@@ -93,12 +93,34 @@ void AbstractPlayer::setColor(std::string color_t) {
     this->color = color_t;
 }
 
-void AbstractPlayer::setBusiness(std::string key) {
-	business[key].push_back(1);
+void AbstractPlayer::setBusiness(std::string key, int idField) {
+    business.insert(std::make_pair(key, std::make_pair(idField, 1)));
 }
-void AbstractPlayer::removeBusiness(std::string key) {
-	business[key].pop_back();
+
+void AbstractPlayer::SetLevelBusinessField(std::string key, int idField, int level)
+{
+    int count = business.count(key);
+    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    for(int i = 0; i < count ; i++, it++) {
+        if(it->second.first == idField) {
+            it->second.second = level;
+            return;
+        }
+    }
 }
+void AbstractPlayer::removeBusiness(std::string key, int idField) {
+    int count = business.count(key);
+    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+
+    for(int i = 0; i < count ; i++) {
+        if(it->second.first == idField) {
+            business.erase(it);
+            return;
+        }
+        it++;
+    }
+}
+
 std::string AbstractPlayer::getName() {
 	return name;
 }
@@ -137,9 +159,31 @@ int AbstractPlayer::getPoints()
 
 
 int AbstractPlayer::getBusiness(std::string key) {
-	return business[key].size();
+    return business.count(key);
 }
 
+int AbstractPlayer::getLevelBusinessField(std::string key, int idField)
+{
+    int count = business.count(key);
+    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    for(int i = 0; i < count ; i++, it++) {
+        if(it->second.first == idField)
+            return it->second.second;
+    }
+    return -1;
+}
+
+bool AbstractPlayer::checkLevelBusinessField(std::string key, int level)
+{
+    int count = business.count(key);
+    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    for(int i = 0; i < count ; i++, it++) {
+        if(it->second.second != level)
+            return false;
+    }
+
+    return true;
+}
 
 int AbstractPlayer::makeTurn(){
 

@@ -54,7 +54,7 @@ void BasicField::setCostSell(int costSell)
 }
 
 std::string BasicField::getGroup() {
-	return group;
+    return group;
 }
 
 int BasicField::getCost() {
@@ -101,186 +101,196 @@ int BasicField::getTax5() {
 }
 
 int BasicField::getLevel() {
-	return level;
+    return level;
 }
 int BasicField::getAmount() {
   return amount;
 }
 void BasicField::info() {
-	std::cout << "it's BasicField\n";
+    std::cout << "it's BasicField\n";
 }
 void BasicField::changeColor(int pl_id)
 {
-emit signal_bought(this->id, pl_id);
+    emit signal_bought(this->id, pl_id);
+}
+
+std::unique_ptr<AbstractPlayer> BasicField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+{
+
+    if(action == "sell")
+        player = sell(std::move(player));
+    else if (action == "upgrade")
+        player = upgrade(std::move(player));
+    else if (action == "downgrade")
+        player = downgrade(std::move(player));
+
+    sendSignalToInfo(player->getID() - 1);
+    return std::move(player);
 }
 
 
 std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> player) {
-  View display;
 
-	int moneyPlayer = player->getCash();
- 	if (moneyPlayer < getCost()) {
-		display.lowMoney();
-		return std::move(player);
-	}
-	else {
+    int moneyPlayer = player->getCash();
+    if (moneyPlayer < cost) {
+        QString str = "Not enough money to buy a field %1 (cost %2)";
+        QMessageBox::information(nullptr, "Buying a field", str.arg(id).arg(cost));
+        return std::move(player);
+    }
+    else {
         QMessageBox::StandardButton reply;
-        QString field_name = QString::fromStdString(this->name);
-        QString field_id = QString::number(this->id);
-        QString temp ="Do you want to buy field "+ field_name +" id:"+ field_id +"?";
-        reply = QMessageBox::question(this,"Buying a field", temp,
+        QString str = "Do you want to buy this field %1 (cost %2)?";
+        reply = QMessageBox::question(nullptr, "Buying a field", str.arg(id).arg(cost),
                                       QMessageBox::Yes|QMessageBox::No);
-        //auto str = QString("<page pageIndex = \"%1\">").arg(myVar);
         if (reply == QMessageBox::Yes) {
-            moneyPlayer -=  getCost();
+            moneyPlayer -=  cost;
             player->setCash(moneyPlayer);
             int idPlayer = player->getID();
             setBought(idPlayer);
             player->setPoints(player->getPoints() + 10);
-            player->setBusiness(getGroup());
-            std::cout << player->getID();
+            player->setBusiness(getGroup(), id);
             changeColor(player->getID()-1);
 
 
         }
-		return std::move(player);
-	}
+        return std::move(player);
+    }
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer> player) {
-  View display;
-	int level = getLevel();
 
-	if (level < 0) {
-    display.showErr();
-		return std::move(player);
-	}
-	if (level > 0) {
-    display.notSellImField();
-		return std::move(player);
-	}
-	else {  // level == 0
-		int moneyPlayer = player->getCash();
-		int costSell = getCost() * 0.75;
-		moneyPlayer += costSell;
-		setBought(0);
-		//delete remembering the owner of field 
-		std::string group = getGroup();
-		player->removeBusiness(group);
-		player->setPoints(player->getPoints() - 5);
-		/*int amountPlayer = player->getPurchasedField(group);
-		amountPlayer--;
-		player->setPurchasedField(group, amountPlayer);*/
-		return std::move(player);
+    if (player->getBusiness(getGroup()) == amount) {
+        if(!(player->checkLevelBusinessField(group, 1))) {
+            QMessageBox::information(nullptr, "Sell field", "You have improved fields in this group. "
+                                                         "To sell this field, you need all fields in this group to be level 1!");
+            return std::move(player);
+        }
+    }
 
-	}
+    if (level < 1) {
+        QMessageBox::critical(nullptr, "Error", "ERROR!");
+        return std::move(player);
+    }
+    if (level > 1) {
+        QString str = "This field is level %1. To sell a field, you must lower its level!";
+        QMessageBox::information(nullptr, "Sell field", str.arg(level));
+        return std::move(player);
+    }
+//    else {  // level == 1
+
+        QMessageBox::StandardButton reply;
+        QString str = "Are you sure you want to sell field %1?";
+        reply = QMessageBox::question(nullptr, "Upgrade a field", str.arg(id),
+                                      QMessageBox::Yes|QMessageBox::No);
+
+        if (reply == QMessageBox::Yes) {
+            int moneyPlayer = player->getCash();
+
+            moneyPlayer += costSell;
+            player->setCash(moneyPlayer);
+            setBought(0);
+            //delete remembering the owner of field
+            player->removeBusiness(getGroup(), id);
+            player->setPoints(player->getPoints() - 5);
+            changeColor(-1);
+        }
+
+        return std::move(player);
+//	}
 }
 std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlayer> player) {
-  View display;
-	if (player->getBusiness(getGroup()) != getAmount()) {
-    display.notUpgNoMonop();
-		return std::move(player);
-	}
-	
-	int upg_cost = getCost() * 0.5;
-	int pl_cash = player->getCash();
-	if (pl_cash < upg_cost) {
-		
-		return std::move(player);
-	}
-	player->setCash(pl_cash - upg_cost);
-	level++;
-	setTax(getTax() * 1.25);
-	player->setPoints(player->getPoints() + 3);
-  display.sucUpg();
-	return std::move(player);
+
+    if (player->getBusiness(getGroup()) != amount) {
+        QMessageBox::information(this, "Upgrade a field", "You do not have enough fields for this group. You cannot improve the field!");
+        return std::move(player);
+    }
+
+    if (level == 5) {
+        QMessageBox::information(this, "Upgrade a field", "You have the maximum level of this field!");
+        return std::move(player);
+    }
+
+    int moneyPlayer = player->getCash();
+    if (moneyPlayer < costUpgrade) {
+        QString str = "Not enough money to upgrade a field %1 (cost %2)";
+        QMessageBox::information(this, "Upgrade a field", str.arg(id).arg(costUpgrade));
+        return std::move(player);
+    }
+    else {
+
+        QMessageBox::StandardButton reply;
+        QString str = "Are you sure you want to upgrade field %1 to level %2 (cost %3)?";
+        reply = QMessageBox::question(this, "Upgrade a field", str.arg(id).arg(level+1).arg(costUpgrade),
+                                      QMessageBox::Yes|QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            moneyPlayer -=  costUpgrade;
+            player->setCash(moneyPlayer);
+
+            level++;
+            player->SetLevelBusinessField(group, id, level);
+            switch (level) {
+            case 2:
+                currentTax = tax2;
+            case 3:
+                currentTax = tax3;
+            case 4:
+                currentTax = tax4;
+            case 5:
+                currentTax = tax5;
+            }
+
+            player->setPoints(player->getPoints() + 3);
+        }
+        return std::move(player);
+    }
+
 }
 
 
 std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPlayer> player) {
-  View display;
-	if (player->getBusiness(getGroup()) != getAmount()) {
-    display.notDownNoMonop();
-		return std::move(player);
-	}
-	
-	int level_t = getLevel();
-	if (level_t == 0) {
-    display.minLevel();
-		return std::move(player);;
-	}
-	else { //level>0
-		int moneyPlayer = player->getCash();
-		int costDowngrade = getCost() * 1.5;
-		setTax(getTax() / 1.25);
-		player->removeBusiness(getGroup());
-		moneyPlayer += costDowngrade;
-		player->setCash(moneyPlayer);
-		player->setPoints(player->getPoints() - 2);
-		level--;
-	}
-  return std::move(player);
+
+    if (level == 1) {
+        QMessageBox::information(this, "Upgrade a field", "You have the minimum level of this field!");
+        return std::move(player);
+    }
+
+    else { //level>1
+
+        QMessageBox::StandardButton reply;
+        QString str = "Are you sure you want to downgrade field %1 to level %2?";
+        reply = QMessageBox::question(this, "Upgrade a field", str.arg(id).arg(level-1),
+                                      QMessageBox::Yes|QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            int moneyPlayer = player->getCash();
+            moneyPlayer += costDowngrade;
+            player->setCash(moneyPlayer);
+
+            level--;
+            player->SetLevelBusinessField(group, id, level);
+            switch (level) {
+            case 1:
+                currentTax = tax;
+            case 2:
+                currentTax = tax2;
+            case 3:
+                currentTax = tax3;
+            case 4:
+                currentTax = tax4;
+            }
+            player->setPoints(player->getPoints() - 2);
+        }
+    }
+
+    return std::move(player);
+
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlayer> player) {
-  Model option;
-  View display;
-	if (getBought() == 0) {
 
-    if(player->getBot() == true){
-      display.BotBuy();
-     
-      player = buy(std::move(player));
-      return std::move(player);
+    if (getBought() == 0) {
+        player = buy(std::move(player));
     }
-
-    display.actionBuyPlayer();
-        switch (1) { //option.inputOpt()
-		case 1:
-			player = buy(std::move(player));
-      return std::move(player);
-		default: 
-      return std::move(player);
-		}
-	}
-
-
-	int counterUpgrade = 0;
-
-	if (getBought() == player->getID()) {
-
-    if(player->getBot() == true){
-      return std::move(player);
-    }
-
-		while (1) {
-      display.playerField();
-			switch (option.inputOpt()) {
-			case 1:
-        player = sell(std::move(player));
-				return std::move(player);
-			case 2:
-				if (counterUpgrade == 1){
-          display.alreadyUpgrade();
-        }
-				else {
-          player = upgrade(std::move(player));
-					counterUpgrade++;
-				}
-        return std::move(player);	
-			case 3:
-        player = downgrade(std::move(player));
-        return std::move(player);
-        return std::move(player);
-			default:
-				return std::move(player);
-			}
-		}	
-	}
-
-	if (getBought() != 0 && getBought() != player->getID()) {
-		return std::move(player);
-	}
+    return std::move(player);
 }
 
 void BasicField::deserialize(const json& data)  {
@@ -293,10 +303,10 @@ void BasicField::deserialize(const json& data)  {
     setCostsValues();
 }
 
-void BasicField::sendSignalToInfo()
+void BasicField::sendSignalToInfo(int idPlayer)
 {
-    emit signal(name, group, level, cost, costUpgrade,
-                costDowngrade, costSell, tax1, tax2, tax3, tax4, tax5);
+    emit signal(name, group, level, bought, cost, costUpgrade,
+                costDowngrade, costSell, tax1, tax2, tax3, tax4, tax5, idPlayer, id);
 }
 
 
@@ -313,6 +323,7 @@ void BasicField::setCostsValues()
     this->tax3 = 1.5*tax2;
     this->tax4 = 1.5*tax3;
     this->tax5 = 1.5*tax4;
+    this->currentTax = tax;
 
 }
 

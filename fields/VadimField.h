@@ -8,21 +8,22 @@
 #include "../game/Monopoly.h"
 
 class VadimField : public Field {
-  
+
 public:
 
-	VadimField(int id)
-		: Field(id) {};
+    VadimField(int id)
+        : Field(id) {};
 
-	VadimField() : Field() {};
+    VadimField() : Field() {};
 
     void info() override{
     std::cout << "it's VadimField\n";
   }
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void deserialize(const json& data) override;
-    void sendSignalToInfo();
-    void changeColor(int pl_id);
+    void sendSignalToInfo(int) override;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
 
 private:
 

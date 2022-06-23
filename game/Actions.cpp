@@ -21,7 +21,7 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
     std::vector<std::unique_ptr<Field>> vec;
 
 
-    std::ifstream fin("C:/Users/tysya/Documents/GitHub/qt-monopoly-/resources/dataFields.json");
+    std::ifstream fin("C:/Users/starodubbb/Documents/GitHub/qt-monopoly-/resources/dataFields.json");
     json data = json::parse(fin);
     fin.close();
 

@@ -13,71 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>60</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>100</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>type:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>130</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>level:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>160</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>owner:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>200</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>price:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
@@ -89,110 +24,6 @@
    </property>
    <property name="text">
     <string>upgrade cost:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>280</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>downgrade cost:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>320</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>sell:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>350</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>INCOME:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_10">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>390</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>1 level</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>430</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>2 level</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_12">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>470</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>3</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_13">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>510</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>4</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_14">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>550</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>5</string>
    </property>
   </widget>
   <widget class="QLabel" name="downgrade">
@@ -208,43 +39,43 @@
     <string>даунгрейд поля</string>
    </property>
   </widget>
-  <widget class="QLabel" name="firstLevel">
+  <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>170</x>
      <y>390</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>1 уровень</string>
+    <string>1 level</string>
    </property>
   </widget>
-  <widget class="QLabel" name="thirdLevel">
+  <widget class="QLabel" name="currentPlayer">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>470</y>
+     <x>500</x>
+     <y>10</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>3</string>
+    <string>PLAYER</string>
    </property>
   </widget>
-  <widget class="QLabel" name="sell">
+  <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>170</x>
      <y>320</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>продажа поля</string>
+    <string>sell:</string>
    </property>
   </widget>
   <widget class="QLabel" name="name">
@@ -260,30 +91,17 @@
     <string>название</string>
    </property>
   </widget>
-  <widget class="QLabel" name="currentLevel">
+  <widget class="QLabel" name="sell">
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>130</y>
+     <y>320</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>текущий уровень</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="type">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>100</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>тип</string>
+    <string>продажа поля</string>
    </property>
   </widget>
   <widget class="QLabel" name="buy">
@@ -299,17 +117,43 @@
     <string>стоимость</string>
    </property>
   </widget>
-  <widget class="QLabel" name="owner">
+  <widget class="QLabel" name="label_14">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>160</y>
+     <x>170</x>
+     <y>550</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>владелец</string>
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bSell">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>600</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>sell</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>423</x>
+     <y>35</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>id field</string>
    </property>
   </widget>
   <widget class="QLabel" name="secondLevel">
@@ -325,10 +169,101 @@
     <string>2 уровень</string>
    </property>
   </widget>
-  <widget class="QLabel" name="fourthLevel">
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>200</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>price:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="type">
    <property name="geometry">
     <rect>
      <x>320</x>
+     <y>100</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>тип</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>470</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>430</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2 level</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="currentField">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>35</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ID FIELD</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="thirdLevel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>470</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="firstLevel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>390</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1 уровень</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
      <y>510</y>
      <width>63</width>
      <height>20</height>
@@ -338,17 +273,95 @@
     <string>4</string>
    </property>
   </widget>
-  <widget class="QLabel" name="upgrade">
+  <widget class="QLabel" name="currentLevel">
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>240</y>
-     <width>61</width>
-     <height>21</height>
+     <y>130</y>
+     <width>63</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>апгрейд поля</string>
+    <string>текущий уровень</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>60</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>name:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bDowngrade">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>600</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>downgrade</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>owner:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>100</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>type:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>350</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>INCOME:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="owner">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>160</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>владелец</string>
    </property>
   </widget>
   <widget class="QLabel" name="fifthLevel">
@@ -364,36 +377,36 @@
     <string>5</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>600</y>
-     <width>83</width>
-     <height>29</height>
+     <x>170</x>
+     <y>280</y>
+     <width>111</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>buy</string>
+    <string>downgrade cost:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QLabel" name="upgrade">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>600</y>
-     <width>83</width>
-     <height>29</height>
+     <x>320</x>
+     <y>240</y>
+     <width>61</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>sell</string>
+    <string>апгрейд поля</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="bUpgrade">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>250</x>
      <y>600</y>
      <width>83</width>
      <height>29</height>
@@ -403,17 +416,17 @@
     <string>upgrade</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>600</y>
-     <width>83</width>
-     <height>29</height>
+     <x>170</x>
+     <y>130</y>
+     <width>63</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>downgrade</string>
+    <string>level:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_15">
@@ -433,6 +446,32 @@
    </property>
    <property name="text">
     <string>Buying stop</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>10</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>current player</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fourthLevel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>510</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>4</string>
    </property>
   </widget>
  </widget>

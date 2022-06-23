@@ -9,23 +9,23 @@
 
 class Field : public QWidget {
     Q_OBJECT
-public:	
-	Field();
-	Field(int id);
+public:
+    Field();
+    Field(int id);
 
-	void setID(int id);
-	void setBought(int b);
+    void setID(int id);
+    void setBought(int b);
 
-	int getID();
-	int getBought();
+    int getID();
+    int getBought();
 
     virtual void info() = 0;
     virtual std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) = 0;
     //virtual void setCostsValues() = 0;
     virtual void deserialize(const json& data) = 0;
-    virtual void sendSignalToInfo() = 0;
+    virtual void sendSignalToInfo(int) = 0;
     virtual void changeColor(int pl_id) = 0;
-   // virtual void changePos(int ) = 0;
+    virtual std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) = 0;
 
 
 //    virtual void setLevel(int level);
@@ -63,20 +63,20 @@ public:
 
 protected:
     int id;
-	int bought;
+    int bought;
 
 private:
 
 
 signals:
-    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
-    void signal_selective (int, int, std::string, int, int, int);
+    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int, int, int, int);
+    //void signal_selective (int, int, std::string, int, int, int);
+    void signal_selective (std::string, std::string, int, int, int, int, int, int, int, int, int);
     void signal_question(int);
     void signal_vadim(int);
     void signal_portal(int);
     void signal_gift(int);
     void signal_polyana(int);
     void signal_bought(int, int);
-    void signal_pos_change(int);
 };
 

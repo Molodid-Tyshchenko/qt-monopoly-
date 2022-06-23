@@ -17,7 +17,11 @@ public:
     SelectiveWindow(QWidget *parent, Monopoly *t_m);
     ~SelectiveWindow();
 public slots:
-    void get_win_info(int id_t, int bought_t, std::string group_t, int cost_t, int tax_t, int amount_t);
+    void get_win_info(std::string, std::string, int, int, int, int, int, int, int, int, int);
+
+
+private slots:
+    void on_bSell_clicked();
 
 private:
     Ui::SelectiveWindow *ui;

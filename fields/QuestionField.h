@@ -11,26 +11,27 @@
 class QuestionField : public Field {
 public:
 
-	QuestionField(int id)
-		: Field(id) {};
+    QuestionField(int id)
+        : Field(id) {};
 
-	QuestionField() : Field() {};
+    QuestionField() : Field() {};
 
     void info() override{
     std::cout << "it's QuestionField\n";
   }
     void incident1(std::unique_ptr<AbstractPlayer>& player);
-	void incident2(std::unique_ptr<AbstractPlayer>& player);
-	void incident3(std::unique_ptr<AbstractPlayer>& player);
-	void incident4(std::unique_ptr<AbstractPlayer>& player);
-	void incident5(std::unique_ptr<AbstractPlayer>& player);
+    void incident2(std::unique_ptr<AbstractPlayer>& player);
+    void incident3(std::unique_ptr<AbstractPlayer>& player);
+    void incident4(std::unique_ptr<AbstractPlayer>& player);
+    void incident5(std::unique_ptr<AbstractPlayer>& player);
 
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void deserialize(const json& data) override;
-    void sendSignalToInfo();
-    void changeColor(int pl_id);
+    void sendSignalToInfo(int ) override;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
 
-  
+
 private:
 
 

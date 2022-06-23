@@ -14,6 +14,8 @@ SelectiveWindow::SelectiveWindow(QWidget *parent, Monopoly *t_m):
 {
     ui->setupUi(this);
     m = t_m;
+
+
     connect(m->mapMonopoly.at(14).get(),&Field::signal_selective, this, &SelectiveWindow::get_win_info);
     connect(m->mapMonopoly.at(19).get(),&Field::signal_selective, this, &SelectiveWindow::get_win_info);
     connect(m->mapMonopoly.at(37).get(),&Field::signal_selective, this, &SelectiveWindow::get_win_info);
@@ -25,12 +27,39 @@ SelectiveWindow::~SelectiveWindow()
     delete ui;
 }
 
-void SelectiveWindow::get_win_info(int id_t, int bought_t, std::string group_t, int cost_t, int tax_t, int amount_t)
+void SelectiveWindow::get_win_info(std::string name, std::string type, int currentLevel, int owner,
+                                   int buy, int sell, int firstLevel, int secondLevel, int thirdLevel, int idPlayer, int idField)
 {
-    ui->id->setText(QString::number(id_t));
-    ui->amount->setText(QString::number(amount_t));
-    ui->bought->setText(QString::number(bought_t));
-    ui->cost->setText(QString::number(cost_t));
-    ui->group->setText(QString::fromUtf8(group_t.c_str()));
-    ui->tax->setText(QString::number(tax_t));
+    if(owner != idPlayer+1)
+        ui->bSell->setEnabled(false);
+
+    else
+        ui->bSell->setEnabled(true);
+
+    ui->currentPlayer->setText(QString::number(idPlayer+1));
+    ui->currentField->setText(QString::number(idField));
+
+    ui->name->setText(QString::fromStdString(name));
+    ui->type->setText(QString::fromStdString(type));
+    ui->currentLevel->setText(QString::number(currentLevel));
+    ui->owner->setText(QString::number(owner));
+
+    ui->buy->setText(QString::number(buy));
+
+    ui->sell->setText(QString::number(sell));
+    ui->firstLevel->setText(QString::number(firstLevel));
+    ui->secondLevel->setText(QString::number(secondLevel));
+    ui->thirdLevel->setText(QString::number(thirdLevel));
+
+
 }
+
+void SelectiveWindow::on_bSell_clicked()
+{
+    int idField = ui->currentField->text().toInt();
+    int idPlayer = ui->currentPlayer->text().toInt() - 1;
+
+    //std::cout << idPlayer << std::endl;
+    m->players[idPlayer] = m->mapMonopoly[idField]->pressToButton(std::move(m->players[idPlayer]), "qwe");
+}
+

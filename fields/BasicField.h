@@ -17,23 +17,23 @@
 
 class BasicField : public Field {
 public:
-	BasicField(int id)
-		: Field(id) {
+    BasicField(int id)
+        : Field(id) {
         bought = 0;
-		    level = 0;
+            level = 1;
 
-	};
+    };
 
-	BasicField() : Field() {
+    BasicField() : Field() {
     bought = 0;
-		level = 0;
-	};
+        level = 1;
+    };
 
 
 
 
 
-	void setLevel(int level);
+    void setLevel(int level);
     void setCostUpgrade(int costUpgrade);
     void setCostDowngrade(int costDowngrade);
     void setCostSell(int costSell);
@@ -50,11 +50,11 @@ public:
     std::string getName();
     std::string getGroup();
     int getLevel();
-	int getCost();
+    int getCost();
     int getCostUpgrade();
     int getCostDowngrade();
     int getCostSell();
-	int getTax();
+    int getTax();
     int getTax1();
     int getTax2();
     int getTax3();
@@ -66,24 +66,25 @@ public:
 
     void info() override;
 
-	std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
-	std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
-	//std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
+    std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
+    std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
+    //std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
     std::unique_ptr<AbstractPlayer> upgrade(std::unique_ptr<AbstractPlayer> player);
-	std::unique_ptr<AbstractPlayer> downgrade(std::unique_ptr<AbstractPlayer> player);
+    std::unique_ptr<AbstractPlayer> downgrade(std::unique_ptr<AbstractPlayer> player);
 
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void setCostsValues() ;
     void deserialize(const json& data) override;
-    void sendSignalToInfo() ;
-    void changeColor(int pl_id);
+    void sendSignalToInfo(int) override ;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
 
 
 protected:
     std::string name = "Name";
-	std::string group;
+    std::string group;
     int level;
-	int cost;
+    int cost;
     int costUpgrade;
     int costDowngrade;
     int costSell;
@@ -93,8 +94,9 @@ protected:
     int tax3;
     int tax4;
     int tax5;
+    int currentTax;
 
-	int amount;
+    int amount;
 
 signals:
 //    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);

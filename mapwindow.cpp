@@ -94,6 +94,10 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     connect(m->mapMonopoly.at(41).get(), &Field::signal_bought, this, &MapWindow::changeColor);
     connect(m->mapMonopoly.at(42).get(), &Field::signal_bought, this, &MapWindow::changeColor);
 
+    connect(m->mapMonopoly.at(14).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(19).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+    connect(m->mapMonopoly.at(37).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+
 }
 
 void MapWindow::create_field()
@@ -222,7 +226,10 @@ void MapWindow::changeColor(int id_t, int color_t){
         temp = "QPushButton { background-color: rgb(126,211,33); }";
         break;
     }
-    default: break;
+    default: {
+        temp = "QPushButton { background-color: rgb(255,255,255); }";
+        break;
+    }
     }
     map_storage.at(id_t)->setStyleSheet(temp);
 
@@ -259,177 +266,177 @@ void MapWindow::update_pos(int id_t, int pos_t)
 
 void MapWindow::on_bField1_clicked()
 {
-    m->mapMonopoly.at(1)->sendSignalToInfo();
+    m->mapMonopoly.at(1)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 
 void MapWindow::on_bField2_clicked()
 {
-    m->mapMonopoly.at(2)->sendSignalToInfo();
+    m->mapMonopoly.at(2)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField3_clicked()
 {
-    m->mapMonopoly.at(3)->sendSignalToInfo();
+    m->mapMonopoly.at(3)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 
 void MapWindow::on_bField5_clicked()
 {
-    m->mapMonopoly.at(5)->sendSignalToInfo();
+    m->mapMonopoly.at(5)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField6_clicked()
 {
-    m->mapMonopoly.at(6)->sendSignalToInfo();myInfoWindow->openInfo(6);
+    m->mapMonopoly.at(6)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField7_clicked()
 {
-    m->mapMonopoly.at(7)->sendSignalToInfo();
+    m->mapMonopoly.at(7)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField10_clicked()
 {
-    m->mapMonopoly.at(10)->sendSignalToInfo();
+    m->mapMonopoly.at(10)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField11_clicked()
 {
-    m->mapMonopoly.at(11)->sendSignalToInfo();
+    m->mapMonopoly.at(11)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField12_clicked()
 {
-    m->mapMonopoly.at(12)->sendSignalToInfo();
+    m->mapMonopoly.at(12)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField15_clicked()
 {
-    m->mapMonopoly.at(15)->sendSignalToInfo();
+    m->mapMonopoly.at(15)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField16_clicked()
 {
-    m->mapMonopoly.at(16)->sendSignalToInfo();
+    m->mapMonopoly.at(16)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField17_clicked()
 {
-    m->mapMonopoly.at(17)->sendSignalToInfo();
+    m->mapMonopoly.at(17)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField20_clicked()
 {
-    m->mapMonopoly.at(20)->sendSignalToInfo();
+    m->mapMonopoly.at(20)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField21_clicked()
 {
-    m->mapMonopoly.at(21)->sendSignalToInfo();
+    m->mapMonopoly.at(21)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField22_clicked()
 {
-    m->mapMonopoly.at(22)->sendSignalToInfo();
+    m->mapMonopoly.at(22)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField23_clicked()
 {
-    m->mapMonopoly.at(23)->sendSignalToInfo();
+    m->mapMonopoly.at(23)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField25_clicked()
 {
-    m->mapMonopoly.at(25)->sendSignalToInfo();
+    m->mapMonopoly.at(25)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField26_clicked()
 {
-    m->mapMonopoly.at(26)->sendSignalToInfo();
+    m->mapMonopoly.at(26)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField27_clicked()
 {
-    m->mapMonopoly.at(27)->sendSignalToInfo();
+    m->mapMonopoly.at(27)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField28_clicked()
 {
-    m->mapMonopoly.at(28)->sendSignalToInfo();
+    m->mapMonopoly.at(28)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField30_clicked()
 {
-    m->mapMonopoly.at(30)->sendSignalToInfo();
+    m->mapMonopoly.at(30)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField31_clicked()
 {
-    m->mapMonopoly.at(31)->sendSignalToInfo();
+    m->mapMonopoly.at(31)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField32_clicked()
 {
-    m->mapMonopoly.at(32)->sendSignalToInfo();
+    m->mapMonopoly.at(32)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField33_clicked()
 {
-    m->mapMonopoly.at(33)->sendSignalToInfo();
+    m->mapMonopoly.at(33)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField34_clicked()
 {
-    m->mapMonopoly.at(34)->sendSignalToInfo();
+    m->mapMonopoly.at(34)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField35_clicked()
 {
-    m->mapMonopoly.at(35)->sendSignalToInfo();
+    m->mapMonopoly.at(35)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField40_clicked()
 {
-    m->mapMonopoly.at(40)->sendSignalToInfo();
+    m->mapMonopoly.at(40)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField41_clicked()
 {
-    m->mapMonopoly.at(41)->sendSignalToInfo();
+    m->mapMonopoly.at(41)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
 void MapWindow::on_bField42_clicked()
 {
-    m->mapMonopoly.at(42)->sendSignalToInfo();
+    m->mapMonopoly.at(42)->sendSignalToInfo(m->getCurrentPlayer());
     myInfoWindow->show();
 }
 
@@ -439,98 +446,100 @@ void MapWindow::on_bField42_clicked()
 
 void MapWindow::on_bField14_clicked()
 {
-    m->mapMonopoly.at(14)->sendSignalToInfo();
+    m->mapMonopoly.at(14)->sendSignalToInfo(m->getCurrentPlayer());
     mySelecWin->show();
 }
 
 
 void MapWindow::on_bField19_clicked()
 {
-    m->mapMonopoly.at(19)->sendSignalToInfo();
+    m->mapMonopoly.at(19)->sendSignalToInfo(m->getCurrentPlayer());
     mySelecWin->show();
 }
 
 
 void MapWindow::on_bField37_clicked()
 {
-    m->mapMonopoly.at(37)->sendSignalToInfo();
+    m->mapMonopoly.at(37)->sendSignalToInfo(m->getCurrentPlayer());
     mySelecWin->show();
 }
 
 
 void MapWindow::on_bField4_clicked()
 {
-    m->mapMonopoly.at(4)->sendSignalToInfo();
+    m->mapMonopoly.at(4)->sendSignalToInfo(m->getCurrentPlayer());
     myQWin->show();
 }
 
 
 void MapWindow::on_bField13_clicked()
 {
-    m->mapMonopoly.at(13)->sendSignalToInfo();
+    m->mapMonopoly.at(13)->sendSignalToInfo(m->getCurrentPlayer());
     myQWin->show();
 }
 
 
 void MapWindow::on_bField29_clicked()
 {
-    m->mapMonopoly.at(29)->sendSignalToInfo();
+    m->mapMonopoly.at(29)->sendSignalToInfo(m->getCurrentPlayer());
     myQWin->show();
 }
 
 
 void MapWindow::on_bField39_clicked()
 {
-    m->mapMonopoly.at(39)->sendSignalToInfo();
+    m->mapMonopoly.at(39)->sendSignalToInfo(m->getCurrentPlayer());
     myQWin->show();
 }
 
 
 void MapWindow::on_bField18_clicked()
 {
-    m->mapMonopoly.at(18)->sendSignalToInfo();
+    m->mapMonopoly.at(18)->sendSignalToInfo(m->getCurrentPlayer());
     myVadimWin->show();
 }
 
 
 void MapWindow::on_bField8_clicked()
 {
-    m->mapMonopoly.at(8)->sendSignalToInfo();
+    m->mapMonopoly.at(8)->sendSignalToInfo(m->getCurrentPlayer());
     myPortalWin->show();
 }
 
 
 void MapWindow::on_bField24_clicked()
 {
-    m->mapMonopoly.at(24)->sendSignalToInfo();
+    m->mapMonopoly.at(24)->sendSignalToInfo(m->getCurrentPlayer());
     myPortalWin->show();
 }
 
 
 void MapWindow::on_bField36_clicked()
 {
-    m->mapMonopoly.at(36)->sendSignalToInfo();
+    m->mapMonopoly.at(36)->sendSignalToInfo(m->getCurrentPlayer());
     myPortalWin->show();
 }
 
 
 void MapWindow::on_bField43_clicked()
 {
-    m->mapMonopoly.at(43)->sendSignalToInfo();
+    m->mapMonopoly.at(43)->sendSignalToInfo(m->getCurrentPlayer());
     myPortalWin->show();
 }
 
 
 void MapWindow::on_bField38_clicked()
 {
-    m->mapMonopoly.at(38)->sendSignalToInfo();
+
+    m->mapMonopoly.at(38)->sendSignalToInfo(m->getCurrentPlayer());
     myGiftWin->show();
 }
 
 
 void MapWindow::on_bField9_clicked()
 {
-    m->mapMonopoly.at(9)->sendSignalToInfo();
+    m->mapMonopoly.at(9)->sendSignalToInfo(m->getCurrentPlayer());
     myPolyanaWin->show();
 }
+
 

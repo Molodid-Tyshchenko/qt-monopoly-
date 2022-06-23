@@ -8,12 +8,17 @@ void PolyanaField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
 
-void PolyanaField::sendSignalToInfo()
+void PolyanaField::sendSignalToInfo(int idPlayer)
 {
     emit signal_polyana(id);
 }
 
 void PolyanaField::changeColor(int pl_id)
+{
+
+}
+
+std::unique_ptr<AbstractPlayer> PolyanaField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

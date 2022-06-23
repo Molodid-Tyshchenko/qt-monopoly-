@@ -12,10 +12,10 @@
 class GiftField : public Field {
 public:
 
-	GiftField(int id)
-		: Field(id) {};
+    GiftField(int id)
+        : Field(id) {};
 
-	GiftField() : Field() {};
+    GiftField() : Field() {};
 
 
     void info() override{
@@ -23,11 +23,11 @@ public:
   }
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void deserialize(const json& data) override;
-    void sendSignalToInfo();
-    void changeColor(int pl_id);
-    void changePos(int pos_t);
+    void sendSignalToInfo(int ) override;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
 
-  
+
 private:
 
 //signals:

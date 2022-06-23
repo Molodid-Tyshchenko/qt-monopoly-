@@ -10,7 +10,6 @@ void Monopoly::menu(int players_t, int bots_t) {
     numberPlayers = players_t;
     numberBots = bots_t;
     numberAllPlayers = numberPlayers + numberBots;
-    std::cout << numberAllPlayers << std::endl;
 }
 
 void Monopoly::startGame() {
@@ -21,19 +20,19 @@ void Monopoly::startGame() {
     color.push_back("QPushButton { background-color: blue; }");
     color.push_back("QPushButton { background-color: green; }");
 
-	int id = 1;
-	for (int i = 0; i < numberPlayers; i++) {
-		Player a("Human", id);
+    int id = 1;
+    for (int i = 0; i < numberPlayers; i++) {
+        Player a("Human", id);
         a.setColor(color[i]);
-		players.push_back(std::make_unique<Player>(a));
-		id++;
-	}
-	for (int i = 0; i < numberBots; i++) {
-		Bot a("Bot", id);
+        players.push_back(std::make_unique<Player>(a));
+        id++;
+    }
+    for (int i = 0; i < numberBots; i++) {
+        Bot a("Bot", id);
         a.setColor(color[i + numberPlayers]);
-		players.push_back(std::make_unique<Bot>(a));
-		id++;
-	}
+        players.push_back(std::make_unique<Bot>(a));
+        id++;
+    }
 
     mapMonopoly = fieldCreation();
 
@@ -49,11 +48,16 @@ int Monopoly::getNumberAllPlayers()
     return numberAllPlayers;
 }
 
+int Monopoly::getCurrentPlayer()
+{
+    return currentPlayer;
+}
+
 //void Monopoly::updateGame() {
 //	std::cout << "-----------------\n";
 //	std::cout << "The game begins\n";
 //	std::cout << "There are " << players.size() << " participants in the game\n";
-	
+
 //  int number_players = players.size();
 //  int id_player = 0;
 
@@ -64,11 +68,11 @@ int Monopoly::getNumberAllPlayers()
 //       continue;
 //    }
 //	  int tmpField = players[id_player]->makeTurn();
-	  
+
 //    players[id_player] = mapMonopoly[tmpField]->action(std::move(players[id_player]));
-	  
+
 //	  stats.update_pt(id_player, players[id_player]->getPoints());
-	  
+
 //	  id_player++;
 
 //    id_player %= players.size();
@@ -84,11 +88,21 @@ void Monopoly::updateGame() {
     players[currentPlayer]->changePos(currentPlayer ,players[currentPlayer]->getPos());
     //проверить action
     players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
-    int attempt = 0;
 
+    int attempt = 0;
     while (attempt < numberAllPlayers) {
+
         currentPlayer++;
         currentPlayer %= numberAllPlayers;
+
+        if(players[currentPlayer]->getSkip() == true) {
+            players[currentPlayer]->setSkip(false);
+            QString str = "Player %1 skips a turn";
+            QMessageBox::information(nullptr, "Info", str.arg(currentPlayer+1));
+            continue;
+
+        }
+
         if(players[currentPlayer]->getBankrot() == false) {
             QString str = "The turn goes to the player %1!";
             QMessageBox::information(nullptr, "Info", str.arg(currentPlayer+1));
@@ -97,7 +111,7 @@ void Monopoly::updateGame() {
         else attempt++;
     }
 
-    if(attempt == numberAllPlayers)
+    if(attempt >= numberAllPlayers - 1)
         QMessageBox::information(nullptr, "Info", "The game is over!");
 
 

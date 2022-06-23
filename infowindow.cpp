@@ -15,6 +15,9 @@ InfoWindow::InfoWindow(QWidget *parent, Monopoly *t_m) :
     ui->setupUi(this);
     m = t_m;
 
+    connect(ui->bSell, SIGNAL(clicked()), this, SLOT(slotForButtons()));
+    connect(ui->bUpgrade, SIGNAL(clicked()), this, SLOT(slotForButtons()));
+    connect(ui->bDowngrade, SIGNAL(clicked()), this, SLOT(slotForButtons()));
 
 
     connect(m->mapMonopoly.at(1).get(), &Field::signal, this, &InfoWindow::fromBasicField);
@@ -54,32 +57,32 @@ InfoWindow::~InfoWindow()
     delete ui;
 }
 
-void InfoWindow::openInfo(int i)
-{
-//    ui->name->setText(QString::fromStdString(m->mapMonopoly.at(i)->getName()));
-//    ui->type->setText(QString::fromStdString(m->mapMonopoly.at(i)->getGroup()));
-//    ui->currentLevel->setText(QString::number(m->mapMonopoly.at(i)->getLevel()));
-//    //здесь должен быть владелец
-//    ui->buy->setText(QString::number(m->mapMonopoly.at(i)->getCost()));
-//    ui->upgrade->setText(QString::number(m->mapMonopoly.at(i)->getCostUpgrade()));
-//    ui->downgrade->setText(QString::number(m->mapMonopoly.at(i)->getCostDowngrade()));
-//    ui->sell->setText(QString::number(m->mapMonopoly.at(i)->getCostSell()));
-//    ui->firstLevel->setText(QString::number(m->mapMonopoly.at(i)->getTax1()));
-//    ui->secondLevel->setText(QString::number(m->mapMonopoly.at(i)->getTax2()));
-//    ui->thirdLevel->setText(QString::number(m->mapMonopoly.at(i)->getTax3()));
-//    ui->fourthLevel->setText(QString::number(m->mapMonopoly.at(i)->getTax4()));
-//    ui->fifthLevel->setText(QString::number(m->mapMonopoly.at(i)->getTax5()));
 
 
-}
-
-void InfoWindow::fromBasicField(std::string name, std::string type, int currentLevel, int buy, int upgrade,
-                                 int downgrade, int sell, int firstLevel, int secondLevel, int thirdLevel, int fourthLevel, int fifthLevel)
+void InfoWindow::fromBasicField(std::string name, std::string type, int currentLevel, int owner, int buy, int upgrade,
+                                 int downgrade, int sell, int firstLevel, int secondLevel, int thirdLevel, int fourthLevel,
+                                int fifthLevel, int idPlayer, int idField)
 
 {
+    if(owner != idPlayer+1) {
+        ui->bSell->setEnabled(false);
+        ui->bUpgrade->setEnabled(false);
+        ui->bDowngrade->setEnabled(false);
+    }
+
+    else {
+        ui->bSell->setEnabled(true);
+        ui->bUpgrade->setEnabled(true);
+        ui->bDowngrade->setEnabled(true);
+    }
+
+    ui->currentPlayer->setText(QString::number(idPlayer+1));
+    ui->currentField->setText(QString::number(idField));
+
     ui->name->setText(QString::fromStdString(name));
     ui->type->setText(QString::fromStdString(type));
     ui->currentLevel->setText(QString::number(currentLevel));
+    ui->owner->setText(QString::number(owner));
         //здесь должен быть владелец
     ui->buy->setText(QString::number(buy));
     ui->upgrade->setText(QString::number(upgrade));
@@ -90,5 +93,22 @@ void InfoWindow::fromBasicField(std::string name, std::string type, int currentL
     ui->thirdLevel->setText(QString::number(thirdLevel));
     ui->fourthLevel->setText(QString::number(fourthLevel));
     ui->fifthLevel->setText(QString::number(fifthLevel));
+
+}
+
+void InfoWindow::slotForButtons()
+{
+
+    int idField = ui->currentField->text().toInt();
+    int idPlayer = ui->currentPlayer->text().toInt() - 1;
+
+    QPushButton* button = (QPushButton*) QObject::sender();
+    QString buttonText = button->text();
+
+    std::string str = buttonText.toStdString();
+
+    m->players[idPlayer] = m->mapMonopoly[idField]->pressToButton(std::move(m->players[idPlayer]), str);
+
+
 
 }
