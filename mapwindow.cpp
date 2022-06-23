@@ -8,7 +8,8 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <QFile>
-
+#include <QPropertyAnimation>
+#include <QResource>
 
 MapWindow::MapWindow(QWidget *parent) :
     QWidget(parent),
@@ -16,9 +17,6 @@ MapWindow::MapWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-
-
-
 }
 
 MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
@@ -36,19 +34,35 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     myPolyanaWin = new PolyanaWindow(nullptr, m);
     myPortalWin = new PortalWindow(nullptr, m);
     mPlayers = m->getNumberAllPlayers();
-
-
-
-
+    create_field();
 
     //вывод на кубики
     connect(m->players[0].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
+    connect(m->players[0].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
     connect(m->players[1].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
-    if(mPlayers == 3)
+    connect(m->players[1].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
+
+    ui->pl3->setHidden(true);
+    ui->pl4->setHidden(true);
+    ui->icon_pl3->setHidden(true);
+    ui->icon_pl4->setHidden(true);
+
+    if(mPlayers == 3){
         connect(m->players[2].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
+        connect(m->players[2].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
+        ui->pl3->setHidden(false);
+        ui->icon_pl3->setHidden(false);
+    }
+
     else if(mPlayers == 4) {
         connect(m->players[2].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
+        connect(m->players[2].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
         connect(m->players[3].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
+        connect(m->players[3].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
+        ui->pl3->setHidden(false);
+        ui->pl4->setHidden(false);
+        ui->icon_pl3->setHidden(false);
+        ui->icon_pl4->setHidden(false);
     }
     connect(m->mapMonopoly.at(1).get(), &Field::signal_bought, this, &MapWindow::changeColor);
     connect(m->mapMonopoly.at(2).get(), &Field::signal_bought, this, &MapWindow::changeColor);
@@ -82,11 +96,61 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
 
 }
 
+void MapWindow::create_field()
+{
+    //поле кнопок у векторі
+    map_storage.push_back(ui->bField0);
+    map_storage.push_back(ui->bField1);
+    map_storage.push_back(ui->bField2);
+    map_storage.push_back(ui->bField3);
+    map_storage.push_back(ui->bField4);
+    map_storage.push_back(ui->bField5);
+    map_storage.push_back(ui->bField6);
+    map_storage.push_back(ui->bField7);
+    map_storage.push_back(ui->bField8);
+    map_storage.push_back(ui->bField9);
+    map_storage.push_back(ui->bField10);
+    map_storage.push_back(ui->bField11);
+    map_storage.push_back(ui->bField12);
+    map_storage.push_back(ui->bField13);
+    map_storage.push_back(ui->bField14);
+    map_storage.push_back(ui->bField15);
+    map_storage.push_back(ui->bField16);
+    map_storage.push_back(ui->bField17);
+    map_storage.push_back(ui->bField18);
+    map_storage.push_back(ui->bField19);
+    map_storage.push_back(ui->bField20);
+    map_storage.push_back(ui->bField21);
+    map_storage.push_back(ui->bField22);
+    map_storage.push_back(ui->bField23);
+    map_storage.push_back(ui->bField24);
+    map_storage.push_back(ui->bField25);
+    map_storage.push_back(ui->bField26);
+    map_storage.push_back(ui->bField27);
+    map_storage.push_back(ui->bField28);
+    map_storage.push_back(ui->bField29);
+    map_storage.push_back(ui->bField30);
+    map_storage.push_back(ui->bField31);
+    map_storage.push_back(ui->bField32);
+    map_storage.push_back(ui->bField33);
+    map_storage.push_back(ui->bField34);
+    map_storage.push_back(ui->bField35);
+    map_storage.push_back(ui->bField36);
+    map_storage.push_back(ui->bField37);
+    map_storage.push_back(ui->bField38);
+    map_storage.push_back(ui->bField39);
+    map_storage.push_back(ui->bField40);
+    map_storage.push_back(ui->bField41);
+    map_storage.push_back(ui->bField42);
+    map_storage.push_back(ui->bField43);
+}
+
 MapWindow::~MapWindow()
 {
     delete ui;
     delete myInfoWindow;
 }
+
 
 
 void MapWindow::set_play_num(int p_t){
@@ -95,32 +159,32 @@ void MapWindow::set_play_num(int p_t){
    QString pos = QString::number(m->players.at(0)->getPos());
    ui->play1->setText("Player 1");
    ui->money1->setText(money+ "$");
-   ui->pos1->setText(pos);
+   //ui->pos1->setText(pos);
 
    money = QString::number(m->players.at(1)->getCash());
    pos = QString::number(m->players.at(1)->getPos());
    ui->play2->setText("Player 2");
    ui->money2->setText(money+ "$");
-   ui->pos2->setText(pos);
+   //ui->pos2->setText(pos);
 
    if (p_t == 3){
        money = QString::number(m->players.at(2)->getCash());
        pos = QString::number(m->players.at(2)->getPos());
        ui->play3->setText("Player 3");
        ui->money3->setText(money + "$");
-       ui->pos3->setText(pos);
+       //ui->pos3->setText(pos);
    }
    else if (p_t == 4) {
        money = QString::number(m->players.at(2)->getCash());
        pos = QString::number(m->players.at(2)->getPos());
        ui->play3->setText("Player 3");
        ui->money3->setText(money + "$");
-       ui->pos3->setText(pos);
+       //ui->pos3->setText(pos);
 
        money = QString::number(m->players.at(3)->getCash());
        pos = QString::number(m->players.at(3)->getPos());
        ui->play4->setText("Player 4");
-       ui->pos4->setText(pos);
+       //ui->pos4->setText(pos);
        ui->money4->setText(money+ "$");
    }
     playebles = p_t;
@@ -130,19 +194,6 @@ void MapWindow::set_play_num(int p_t){
 void MapWindow::on_bRollDice_clicked()
 {
     m->updateGame();
-    QString pos;
-    ui->pos1->setText(QString::number(m->getPlayer(0)->getPos()));
-    ui->pos2->setText(QString::number(m->getPlayer(1)->getPos()));
-    if (playebles == 3){
-        pos = QString::number(m->players.at(2)->getPos());
-        ui->pos3->setText(pos);
-    }
-    else if (playebles == 4) {
-        pos = QString::number(m->players.at(2)->getPos());
-        ui->pos3->setText(pos);
-        pos = QString::number(m->players.at(3)->getPos());
-        ui->pos4->setText(pos);
-    }
 }
 
 void MapWindow::diceValue(QString value1, QString value2)
@@ -156,143 +207,53 @@ void MapWindow::changeColor(int id_t, int color_t){
     QString temp;
     switch(color_t) {
     case 0:{
-        temp = "QPushButton { background-color: red; }";
+        temp = "QPushButton { background-color: rgb(186,112,252); }";
         break;
     }
     case 1:{
-        temp = "QPushButton { background-color: blue; }";
+        temp = "QPushButton { background-color: rgb(245,110,212); }";
         break;
     }
     case 2:{
-        temp = "QPushButton { background-color: yellow; }";
+        temp = "QPushButton { background-color: rgb(181,114,4); }";
         break;
     }
     case 3:{
-        temp = "QPushButton { background-color: green; }";
+        temp = "QPushButton { background-color: rgb(126,211,33); }";
         break;
     }
     default: break;
     }
-    switch(id_t) {
-        case 1: {
-            ui->bField1->setStyleSheet(temp);
-            break;
-        }
-        case 2: {
-            ui->bField2->setStyleSheet(temp);
-            break;
-        }
-        case 3: {
-            ui->bField3->setStyleSheet(temp);
-            break;
-        }
-        case 5: {
-            ui->bField5->setStyleSheet(temp);
-            break;
-       }
-       case 6: {
-           ui->bField6->setStyleSheet(temp);
-           break;
-       }
-       case 7: {
-           ui->bField7->setStyleSheet(temp);
-           break;
-       }
-    case 10: {
-        ui->bField10->setStyleSheet(temp);
-        break;
-    }
-        case 11: {
-            ui->bField11->setStyleSheet(temp);
-            break;
-        }
-        case 12: {
-            ui->bField12->setStyleSheet(temp);
-            break;
-        }
-        case 15: {
-            ui->bField15->setStyleSheet(temp);
-            break;
-        }
-    case 16: {
-        ui->bField16->setStyleSheet(temp);
-        break;
-    }
-    case 17: {
-        ui->bField17->setStyleSheet(temp);
-        break;
-    }
-    case 20: {
-        ui->bField20->setStyleSheet(temp);
-        break;
-    }
-    case 21: {
-        ui->bField21->setStyleSheet(temp);
-        break;
-    }
-    case 22: {
-        ui->bField22->setStyleSheet(temp);
-        break;
-    }
-    case 23: {
-        ui->bField23->setStyleSheet(temp);
-        break;
-    }
-    case 25: {
-        ui->bField25->setStyleSheet(temp);
-        break;
-    }
-    case 26: {
-        ui->bField26->setStyleSheet(temp);
-        break;
-    }
-    case 27: {
-        ui->bField27->setStyleSheet(temp);
-        break;
-    }
-    case 28: {
-        ui->bField28->setStyleSheet(temp);
-        break;
-    }
-    case 30: {
-        ui->bField30->setStyleSheet(temp);
-        break;
-    }
-    case 31: {
-        ui->bField31->setStyleSheet(temp);
-        break;
-    }
-    case 32: {
-        ui->bField32->setStyleSheet(temp);
-        break;
-    }
-    case 33: {
-        ui->bField33->setStyleSheet(temp);
-        break;
-    }
-    case 34: {
-        ui->bField34->setStyleSheet(temp);
-        break;
-    }
-    case 35: {
-        ui->bField35->setStyleSheet(temp);
-        break;
-    }
-    case 40: {
-        ui->bField40->setStyleSheet(temp);
-        break;
-    }
-    case 41: {
-        ui->bField41->setStyleSheet(temp);
-        break;
-    }
-    case 42: {
-        ui->bField42->setStyleSheet(temp);
-        break;
-    }
-    default: break;
+    map_storage.at(id_t)->setStyleSheet(temp);
+
 }
 
+void MapWindow::update_pos(int id_t, int pos_t)
+{
+    int x_t = map_storage.at(pos_t)->x();
+    int y_t = map_storage.at(pos_t)->y();
+    switch(id_t){
+    case 0:{
+        //ui->pos1->setText(QString::number(pos_t));
+        ui->pl1->move(x_t+5,y_t+5);
+        break;
+    }
+    case 1:{
+        //ui->pos2->setText(QString::number(pos_t));
+        ui->pl2->move(x_t+5,y_t+40);
+        break;
+    }
+    case 2:{
+        //ui->pos3->setText(QString::number(pos_t));
+        ui->pl3->move(x_t+40,y_t+5);
+        break;
+    }
+    case 3:{
+        //ui->pos4->setText(QString::number(pos_t));
+        ui->pl4->move(x_t+40,y_t+40);
+        break;
+    }
+    }
 }
 
 

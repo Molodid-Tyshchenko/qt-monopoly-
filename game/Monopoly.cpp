@@ -10,6 +10,7 @@ void Monopoly::menu(int players_t, int bots_t) {
     numberPlayers = players_t;
     numberBots = bots_t;
     numberAllPlayers = numberPlayers + numberBots;
+    std::cout << numberAllPlayers << std::endl;
 }
 
 void Monopoly::startGame() {
@@ -80,10 +81,11 @@ int Monopoly::getNumberAllPlayers()
 void Monopoly::updateGame() {
     //проверить makeTurn
     int tmpField = players[currentPlayer]->makeTurn();
+    players[currentPlayer]->changePos(currentPlayer ,players[currentPlayer]->getPos());
     //проверить action
     players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
-    //mapMonopoly[tmpField]->changeColor(players[currentPlayer]->getColor());
     int attempt = 0;
+
     while (attempt < numberAllPlayers) {
         currentPlayer++;
         currentPlayer %= numberAllPlayers;

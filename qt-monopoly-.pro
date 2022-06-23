@@ -88,3 +88,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     resources/dataFields.json \
     style.qss
+
+RESOURCES += \
+    pl1.qrc

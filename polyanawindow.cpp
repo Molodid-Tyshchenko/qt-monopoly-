@@ -14,7 +14,7 @@ PolyanaWindow::PolyanaWindow(QWidget *parent, Monopoly *t_m):
 {
     ui->setupUi(this);
     m = t_m;
-    connect(m->mapMonopoly.at(9).get(), &Field::signal_gift, this, &PolyanaWindow::get_info_polyana);
+    connect(m->mapMonopoly.at(9).get(), &Field::signal_polyana, this, &PolyanaWindow::get_info_polyana);
 }
 
 PolyanaWindow::~PolyanaWindow()

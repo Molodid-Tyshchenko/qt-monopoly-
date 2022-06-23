@@ -24,3 +24,8 @@
 /*add_or_remove(std::unique_ptr<AbstractPlayer>& player){
   std::cout << player->name() << "\n\n";
 }*/
+
+void Player::changePos(int id_t,int t_pos)
+{
+    emit signal_changePos(id_t,t_pos);
+}

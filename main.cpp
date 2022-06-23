@@ -6,18 +6,18 @@
 
 #include <QApplication>
 #include <QFile>
+#include <QResource>
 
 int main(int argc, char *argv[]){
     
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+
+    //:/new/prefix1/pl1.png
 //    MapWindow map(&w);
 //    map.show();
-    QFile file("C:/Users/tysya/Documents/GitHub/qt-monopoly-/style.qss");
-    file.open(QIODevice::ReadOnly);
-    QString styleSheet { QLatin1String(file.readAll()) };
-    a.setStyleSheet(styleSheet);
+
     return a.exec();
 
   //  Test t;     // testing the program

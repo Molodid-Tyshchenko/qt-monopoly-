@@ -37,6 +37,7 @@ public:
 	int getBusiness(std::string key);
 	void removeBusiness(std::string key);
     int makeTurn();
+    virtual void changePos(int id_t,int t_pos) = 0;
   
 protected:
     std::string name;
@@ -53,5 +54,6 @@ protected:
 
 signals:
     void signal(QString, QString);
+    void signal_changePos(int,int);
 
 };

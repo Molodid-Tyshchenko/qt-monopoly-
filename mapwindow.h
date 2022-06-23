@@ -36,12 +36,16 @@ private:
     PolyanaWindow *myPolyanaWin;
     QuestWindow *myQWin;
     PortalWindow *myPortalWin;
+
+    std::vector<QPushButton*> map_storage;
+
     Monopoly* m;
     int mPlayers;
 
 public:
     explicit MapWindow(QWidget *parent = nullptr);
     MapWindow(QWidget *parent, Monopoly* t_m);
+    void create_field();
     void set_play_num(int p_t);
     int get_play_num(){
         return playebles;
@@ -118,7 +122,7 @@ private slots:
 public slots:
     void diceValue(QString, QString);
     void changeColor(int, int);
-//    void update_pos(int new_pos);
+    void update_pos(int,int);
 //    void infoBasicField();
 };
 

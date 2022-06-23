@@ -25,6 +25,7 @@ public:
     void deserialize(const json& data) override;
     void sendSignalToInfo();
     void changeColor(int pl_id);
+    void changePos(int pos_t);
 
   
 private:

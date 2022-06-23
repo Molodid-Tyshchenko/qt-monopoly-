@@ -19,6 +19,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(68, 68, 68);
+QPushButton {
+    background-color: rgb(255, 255, 255);
+}
+</string>
+  </property>
   <widget class="QPushButton" name="bRollDice">
    <property name="geometry">
     <rect>
@@ -36,6 +43,9 @@
      <bold>true</bold>
      <underline>false</underline>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>ROLL THE DICE</string>
@@ -55,6 +65,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 255, 127);</string>
    </property>
    <property name="text">
     <string>START</string>
@@ -90,6 +103,9 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -110,6 +126,9 @@
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -132,6 +151,9 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -152,6 +174,9 @@
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -175,6 +200,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>hum1</string>
    </property>
@@ -196,6 +224,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>hum2</string>
@@ -219,6 +250,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>hum3</string>
    </property>
@@ -241,8 +275,22 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Q</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/new/prefix2/question.png</normaloff>
+     <disabledoff>:/new/prefix2/images/question.png</disabledoff>:/new/prefix2/question.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -262,6 +310,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>PE1</string>
@@ -285,6 +336,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>PE2</string>
    </property>
@@ -306,6 +360,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>PE3</string>
@@ -329,6 +386,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>P</string>
    </property>
@@ -350,6 +410,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Polyana</string>
@@ -373,6 +436,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>DM1</string>
    </property>
@@ -394,6 +460,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>DM2</string>
@@ -417,6 +486,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>DM3</string>
    </property>
@@ -438,6 +510,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>CM2</string>
@@ -461,6 +536,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>CM1</string>
    </property>
@@ -483,8 +561,22 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Q</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/new/prefix2/question.png</normaloff>
+     <disabledoff>:/new/prefix2/images/question.png</disabledoff>:/new/prefix2/question.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -504,6 +596,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>S</string>
@@ -527,6 +622,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Vadim</string>
    </property>
@@ -548,6 +646,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>phy1</string>
@@ -571,6 +672,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>S</string>
    </property>
@@ -592,6 +696,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>phy4</string>
@@ -615,6 +722,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>P</string>
    </property>
@@ -636,6 +746,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>phy3</string>
@@ -664,6 +777,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>prog1</string>
    </property>
@@ -685,6 +801,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>prog3</string>
@@ -708,6 +827,12 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>prog2</string>
    </property>
@@ -729,6 +854,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>CM3</string>
@@ -752,6 +880,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>phy2</string>
    </property>
@@ -774,8 +905,22 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Q</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/new/prefix2/question.png</normaloff>
+     <disabledoff>:/new/prefix2/images/question.png</disabledoff>:/new/prefix2/question.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -795,6 +940,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>prog4</string>
@@ -818,6 +966,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>ASD1</string>
    </property>
@@ -839,6 +990,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>ASD3</string>
@@ -862,6 +1016,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>math1</string>
    </property>
@@ -883,6 +1040,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>math2</string>
@@ -906,6 +1066,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>ASD2</string>
    </property>
@@ -927,6 +1090,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>P</string>
@@ -950,6 +1116,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>math3</string>
    </property>
@@ -971,6 +1140,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Gift</string>
@@ -994,6 +1166,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>S</string>
    </property>
@@ -1015,6 +1190,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>schemo1</string>
@@ -1038,8 +1216,22 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Q</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/new/prefix2/question.png</normaloff>
+     <disabledoff>:/new/prefix2/images/question.png</disabledoff>:/new/prefix2/question.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1059,6 +1251,9 @@
    </property>
    <property name="mouseTracking">
     <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>schemo3</string>
@@ -1082,6 +1277,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>schemo2</string>
    </property>
@@ -1104,6 +1302,9 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>P</string>
    </property>
@@ -1120,6 +1321,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -1133,6 +1337,9 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -1145,6 +1352,9 @@
      <width>63</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -1162,57 +1372,8 @@
      <height>20</height>
     </rect>
    </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="pos1">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>110</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="pos2">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>210</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="pos3">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>270</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="pos4">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>350</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -1233,6 +1394,9 @@
      <pointsize>13</pointsize>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>DICE 1</string>
@@ -1256,6 +1420,9 @@
      <pointsize>13</pointsize>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>DICE 2</string>
@@ -1289,6 +1456,9 @@
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>0</string>
    </property>
@@ -1312,6 +1482,9 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>0</string>
    </property>
@@ -1319,33 +1492,217 @@
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>610</y>
-     <width>93</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>info</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>610</y>
-     <width>93</width>
+     <x>32</x>
+     <y>620</y>
+     <width>201</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>statistik</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pl1">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>50</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(144, 19, 254);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 15px;
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pl2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>100</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(201, 37, 161);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pl3">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>50</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Segoe UI&quot;;
+background-color: rgb(139, 87, 42);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pl4">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>100</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(65, 117, 5);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="icon_pl1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>70</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/pl1.png</normaloff>
+     <disabledoff>:/new/prefix1/images/pl1.png</disabledoff>
+     <disabledon>:/new/prefix1/images/pl1.png</disabledon>:/new/prefix1/images/pl1.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="icon_pl2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>70</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <disabledoff>:/new/prefix1/images/pl2.png</disabledoff>
+    </iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="icon_pl3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>70</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <disabledoff>:/new/prefix1/images/pl3.png</disabledoff>
+    </iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="icon_pl4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>350</y>
+     <width>70</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/new/prefix1/pl4.png</normaloff>
+     <disabledoff>:/new/prefix1/images/pl4.png</disabledoff>
+     <activeoff>:/new/prefix1/pl4.png</activeoff>
+     <selectedoff>:/new/prefix1/pl4.png</selectedoff>:/new/prefix1/pl4.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="pl1.qrc"/>
+ </resources>
  <connections/>
 </ui>

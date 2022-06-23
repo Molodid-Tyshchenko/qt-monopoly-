@@ -125,8 +125,12 @@ std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> 
 	}
 	else {
         QMessageBox::StandardButton reply;
-        reply = QMessageBox::question(this, "Buying a field", "Do you want to buy this field?",
+        QString field_name = QString::fromStdString(this->name);
+        QString field_id = QString::number(this->id);
+        QString temp ="Do you want to buy field "+ field_name +" id:"+ field_id +"?";
+        reply = QMessageBox::question(this,"Buying a field", temp,
                                       QMessageBox::Yes|QMessageBox::No);
+        //auto str = QString("<page pageIndex = \"%1\">").arg(myVar);
         if (reply == QMessageBox::Yes) {
             moneyPlayer -=  getCost();
             player->setCash(moneyPlayer);
@@ -280,6 +284,7 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
 }
 
 void BasicField::deserialize(const json& data)  {
+    data.at("name").get_to(name);
     data.at("id").get_to(id);
     data.at("group").get_to(group);
     data.at("cost").get_to(cost);

@@ -25,6 +25,7 @@ public:
     virtual void deserialize(const json& data) = 0;
     virtual void sendSignalToInfo() = 0;
     virtual void changeColor(int pl_id) = 0;
+   // virtual void changePos(int ) = 0;
 
 
 //    virtual void setLevel(int level);
@@ -76,5 +77,6 @@ signals:
     void signal_gift(int);
     void signal_polyana(int);
     void signal_bought(int, int);
+    void signal_pos_change(int);
 };
 

@@ -27,3 +27,4 @@ void GiftWindow::get_info_gift(int id_t)
 {
     ui->id->setText(QString::number(id_t));
 }
+

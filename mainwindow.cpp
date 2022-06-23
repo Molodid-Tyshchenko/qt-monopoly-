@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->pushButton->setStyleSheet("background-color: yellow");
 
+
+
     //было не здесь, стало здесь
     //myMapWindow = new MapWindow(nullptr, &m);
 
@@ -53,6 +55,10 @@ void MainWindow::on_pushButton_2_clicked()
     m.startGame();
     myMapWindow = new MapWindow(nullptr, &m);
     myMapWindow->set_play_num(sum_num);
+    //QFile file("C:/Users/tysya/Documents/GitHub/qt-monopoly-/style.qss");
+    //file.open(QIODevice::ReadOnly);
+   // QString styleSheet { QLatin1String(file.readAll()) };
+   // myMapWindow->setStyleSheet(styleSheet);
     myMapWindow->show();
 
     QMessageBox::information(nullptr, "Info", "Player 1 can start the game!");
