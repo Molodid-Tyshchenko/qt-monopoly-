@@ -204,7 +204,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>hum1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/philosopher-bust.png</normaloff>:/new/prefix1/images/field/philosopher-bust.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -229,7 +239,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>hum2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/woman-elf-face.png</normaloff>:/new/prefix1/images/field/woman-elf-face.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -254,7 +274,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>hum3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/anubis.png</normaloff>:/new/prefix1/images/field/anubis.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -315,7 +345,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>PE1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/canoe.png</normaloff>:/new/prefix1/images/field/canoe.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -340,7 +380,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>PE2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/tennis-court.png</normaloff>:/new/prefix1/images/field/tennis-court.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -365,7 +415,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>PE3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/pool-dive.png</normaloff>:/new/prefix1/images/field/pool-dive.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -390,7 +450,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>P</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/portal.png</normaloff>:/new/prefix1/images/field/portal.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -415,7 +485,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Polyana</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/wireframe-globe.png</normaloff>:/new/prefix1/images/field/wireframe-globe.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>80</width>
+     <height>80</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -440,7 +520,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>DM1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/ace.png</normaloff>:/new/prefix1/images/field/ace.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -465,7 +555,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>DM2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/eight-ball.png</normaloff>:/new/prefix1/images/field/eight-ball.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -490,7 +590,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>DM3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/rolling-dices.png</normaloff>:/new/prefix1/images/field/rolling-dices.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -515,7 +625,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>CM2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/calculator.png</normaloff>:/new/prefix1/images/field/calculator.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -540,7 +660,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>CM1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/abacus.png</normaloff>:/new/prefix1/images/field/abacus.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -601,7 +731,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>S</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/flowers.png</normaloff>:/new/prefix1/images/field/flowers.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -626,7 +766,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Vadim</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/suspicious.png</normaloff>:/new/prefix1/images/field/suspicious.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>90</width>
+     <height>90</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -651,7 +801,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>phy1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/orrery.png</normaloff>:/new/prefix1/images/field/orrery.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -676,7 +836,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>S</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/plague-doctor-profile.png</normaloff>:/new/prefix1/images/field/plague-doctor-profile.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -701,7 +871,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>phy4</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/omega.png</normaloff>:/new/prefix1/images/field/omega.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -726,7 +906,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>P</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/portal.png</normaloff>:/new/prefix1/images/field/portal.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -751,7 +941,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>phy3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/tesla-coil.png</normaloff>:/new/prefix1/images/field/tesla-coil.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -781,7 +981,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>prog1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/game-console.png</normaloff>:/new/prefix1/images/field/game-console.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -806,7 +1016,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>prog3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/computer-fan.png</normaloff>:/new/prefix1/images/field/computer-fan.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -834,7 +1054,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>prog2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/server-rack.png</normaloff>:/new/prefix1/images/field/server-rack.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -859,7 +1089,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>CM3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/computing.png</normaloff>:/new/prefix1/images/field/computing.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -884,7 +1124,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>phy2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/radar-dish.png</normaloff>:/new/prefix1/images/field/radar-dish.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -945,7 +1195,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>prog4</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/artificial-intelligence.png</normaloff>:/new/prefix1/images/field/artificial-intelligence.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -970,7 +1230,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>ASD1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/family-tree.png</normaloff>:/new/prefix1/images/field/family-tree.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -995,7 +1265,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>ASD3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/organigram.png</normaloff>:/new/prefix1/images/field/organigram.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1020,7 +1300,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>math1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/cpu.png</normaloff>:/new/prefix1/images/field/cpu.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1045,7 +1335,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>math2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/diagram.png</normaloff>:/new/prefix1/images/field/diagram.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1070,7 +1370,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>ASD2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/mesh-network.png</normaloff>:/new/prefix1/images/field/mesh-network.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1095,7 +1405,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>P</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/portal.png</normaloff>:/new/prefix1/images/field/portal.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1120,7 +1440,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>math3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/network-bars.png</normaloff>:/new/prefix1/images/field/network-bars.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1145,7 +1475,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Gift</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/present.png</normaloff>:/new/prefix1/images/field/present.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1170,7 +1510,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>S</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/coins.png</normaloff>:/new/prefix1/images/field/coins.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1195,7 +1545,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>schemo1</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/logic-gate-or.png</normaloff>:/new/prefix1/images/field/logic-gate-or.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1256,7 +1616,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>schemo3</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/logic-gate-nand.png</normaloff>:/new/prefix1/images/field/logic-gate-nand.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1281,7 +1651,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>schemo2</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/logic-gate-not.png</normaloff>:/new/prefix1/images/field/logic-gate-not.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1306,7 +1686,17 @@ QPushButton {
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>P</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="pl1.qrc">
+     <normaloff>:/new/prefix1/images/field/portal.png</normaloff>:/new/prefix1/images/field/portal.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -1523,6 +1913,7 @@ color: rgb(255, 255, 255);
 font: 10pt &quot;Segoe UI&quot;;
 border-radius: 15px;
 
+
 </string>
    </property>
    <property name="text">
@@ -1700,6 +2091,1052 @@ border-radius: 15px;</string>
     <bool>false</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>110</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Platonism</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>110</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>110</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>History</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>110</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Travel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>110</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>110</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Swim</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>120</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Polyana</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>200</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Cards</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Luck</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Cubes</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>abacus</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>calculator</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>design</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>280</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>011001</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>360</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>phyco</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>astro</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>signals</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>electricity</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_22">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>omega</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>games</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_25">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>servers</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_26">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>computing</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_27">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>520</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>AI</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_28">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>tree</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_29">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>set</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_30">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>team</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_31">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_32">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>function</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_33">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>histo.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_35">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>600</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>economy</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_36">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>440</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>NOR</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_37">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>360</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>NO</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>NAND</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>280</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+   </property>
+   <property name="text">
+    <string>Vadim</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>50</y>
+     <width>234</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>1</width>
+     <height>1</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(161, 255, 249);
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>50</y>
+     <width>234</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(203, 130, 255);
+
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>310</y>
+     <width>161</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(18, 255, 14);
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_6">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>150</y>
+     <width>5</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(18, 255, 14);
+
+
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_13">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>220</y>
+     <width>234</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 110, 124);
+
+
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_14">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>470</y>
+     <width>314</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 85, 127);
+
+
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_7">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>380</y>
+     <width>245</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 170, 127);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_8">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>380</y>
+     <width>5</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 170, 127);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_15">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>630</y>
+     <width>234</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_16">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>630</y>
+     <width>234</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 85, 0);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_9">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>230</y>
+     <width>5</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_17">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>220</y>
+     <width>75</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_18">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>630</y>
+     <width>75</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>470</y>
+     <width>5</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <zorder>bRollDice</zorder>
+  <zorder>bField0</zorder>
+  <zorder>line</zorder>
+  <zorder>play3</zorder>
+  <zorder>play2</zorder>
+  <zorder>play1</zorder>
+  <zorder>play4</zorder>
+  <zorder>bField1</zorder>
+  <zorder>bField2</zorder>
+  <zorder>bField3</zorder>
+  <zorder>bField4</zorder>
+  <zorder>bField5</zorder>
+  <zorder>bField6</zorder>
+  <zorder>bField7</zorder>
+  <zorder>bField8</zorder>
+  <zorder>bField9</zorder>
+  <zorder>bField10</zorder>
+  <zorder>bField11</zorder>
+  <zorder>bField12</zorder>
+  <zorder>bField16</zorder>
+  <zorder>bField15</zorder>
+  <zorder>bField13</zorder>
+  <zorder>bField14</zorder>
+  <zorder>bField18</zorder>
+  <zorder>bField20</zorder>
+  <zorder>bField19</zorder>
+  <zorder>bField23</zorder>
+  <zorder>bField24</zorder>
+  <zorder>bField22</zorder>
+  <zorder>bField25</zorder>
+  <zorder>bField27</zorder>
+  <zorder>bField26</zorder>
+  <zorder>bField17</zorder>
+  <zorder>bField21</zorder>
+  <zorder>bField29</zorder>
+  <zorder>bField28</zorder>
+  <zorder>bField30</zorder>
+  <zorder>bField32</zorder>
+  <zorder>bField33</zorder>
+  <zorder>bField34</zorder>
+  <zorder>bField31</zorder>
+  <zorder>bField36</zorder>
+  <zorder>bField35</zorder>
+  <zorder>bField38</zorder>
+  <zorder>bField37</zorder>
+  <zorder>bField40</zorder>
+  <zorder>bField39</zorder>
+  <zorder>bField42</zorder>
+  <zorder>bField41</zorder>
+  <zorder>bField43</zorder>
+  <zorder>money1</zorder>
+  <zorder>money2</zorder>
+  <zorder>money3</zorder>
+  <zorder>money4</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>dice1</zorder>
+  <zorder>dice2</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pl1</zorder>
+  <zorder>pl2</zorder>
+  <zorder>pl3</zorder>
+  <zorder>pl4</zorder>
+  <zorder>icon_pl1</zorder>
+  <zorder>icon_pl2</zorder>
+  <zorder>icon_pl3</zorder>
+  <zorder>icon_pl4</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label_14</zorder>
+  <zorder>label_15</zorder>
+  <zorder>label_16</zorder>
+  <zorder>label_17</zorder>
+  <zorder>label_18</zorder>
+  <zorder>label_19</zorder>
+  <zorder>label_20</zorder>
+  <zorder>label_21</zorder>
+  <zorder>label_22</zorder>
+  <zorder>label_24</zorder>
+  <zorder>label_25</zorder>
+  <zorder>label_26</zorder>
+  <zorder>label_27</zorder>
+  <zorder>label_28</zorder>
+  <zorder>label_29</zorder>
+  <zorder>label_30</zorder>
+  <zorder>label_31</zorder>
+  <zorder>label_32</zorder>
+  <zorder>label_33</zorder>
+  <zorder>label_35</zorder>
+  <zorder>label_36</zorder>
+  <zorder>label_37</zorder>
+  <zorder>label_38</zorder>
+  <zorder>label_23</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>line_6</zorder>
+  <zorder>line_5</zorder>
+  <zorder>line_13</zorder>
+  <zorder>line_14</zorder>
+  <zorder>line_7</zorder>
+  <zorder>line_8</zorder>
+  <zorder>line_15</zorder>
+  <zorder>line_16</zorder>
+  <zorder>line_9</zorder>
+  <zorder>line_17</zorder>
+  <zorder>line_18</zorder>
+  <zorder>line_4</zorder>
  </widget>
  <resources>
   <include location="pl1.qrc"/>

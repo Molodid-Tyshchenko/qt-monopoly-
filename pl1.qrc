@@ -4,6 +4,58 @@
         <file>images/pl2.png</file>
         <file>images/pl3.png</file>
         <file>images/pl4.png</file>
+        <file>images/field/ace.png</file>
+        <file>images/field/anubis.png</file>
+        <file>images/field/caesar.png</file>
+        <file>images/field/canoe.png</file>
+        <file>images/field/coins.png</file>
+        <file>images/field/crystal-shine.png</file>
+        <file>images/field/eight-ball.png</file>
+        <file>images/field/game-console.png</file>
+        <file>images/field/glass-heart.png</file>
+        <file>images/field/magic-portal.png</file>
+        <file>images/field/orrery.png</file>
+        <file>images/field/perspective-dice-six-faces-three.png</file>
+        <file>images/field/philosopher-bust.png</file>
+        <file>images/field/pool-dive.png</file>
+        <file>images/field/potion-ball.png</file>
+        <file>images/field/present.png</file>
+        <file>images/field/radar-dish.png</file>
+        <file>images/field/rolling-dices.png</file>
+        <file>images/field/supersonic-bullet.png</file>
+        <file>images/field/swimfins.png</file>
+        <file>images/field/swipe-card.png</file>
+        <file>images/field/tennis-court.png</file>
+        <file>images/field/tesla-coil.png</file>
+        <file>images/field/test-tube-held.png</file>
+        <file>images/field/woman-elf-face.png</file>
+        <file>images/field/portal.png</file>
+        <file>images/field/wireframe-globe.png</file>
+        <file>images/field/server-rack.png</file>
+        <file>images/field/computer-fan.png</file>
+        <file>images/field/abacus.png</file>
+        <file>images/field/artificial-intelligence.png</file>
+        <file>images/field/calculator.png</file>
+        <file>images/field/omega.png</file>
+        <file>images/field/cpu.png</file>
+        <file>images/field/logic-gate-nand.png</file>
+        <file>images/field/logic-gate-nor.png</file>
+        <file>images/field/logic-gate-not.png</file>
+        <file>images/field/logic-gate-xor.png</file>
+        <file>images/field/logic-gate-or.png</file>
+        <file>images/field/computing.png</file>
+        <file>images/field/organigram.png</file>
+        <file>images/field/network-bars.png</file>
+        <file>images/field/move.png</file>
+        <file>images/field/share.png</file>
+        <file>images/field/enlightenment.png</file>
+        <file>images/field/cogsplosion.png</file>
+        <file>images/field/diagram.png</file>
+        <file>images/field/family-tree.png</file>
+        <file>images/field/mesh-network.png</file>
+        <file>images/field/plague-doctor-profile.png</file>
+        <file>images/field/flowers.png</file>
+        <file>images/field/suspicious.png</file>
     </qresource>
     <qresource prefix="/new/prefix2">
         <file>images/question.png</file>
