@@ -1,0 +1,6 @@
+#ifndef MAPINTERFACE_H
+#define MAPINTERFACE_H
+
+
+
+#endif // MAPINTERFACE_H

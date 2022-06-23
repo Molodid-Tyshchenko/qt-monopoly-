@@ -13,17 +13,24 @@
 class PortalField : public Field {
 public:
 
-	PortalField(int id)
-		: Field(id) {};
+    PortalField(int id)
+        : Field(id) {};
 
-	PortalField() : Field() {};
+    PortalField() : Field() {};
 
-  void info(){
+    void info() override{
     std::cout << "it's PortalField\n";
   }
-	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
-  void deserialize(const json& data);
-  
+    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void deserialize(const json& data) override;
+    void sendSignalToInfo(int ) override;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
+
+
 private:
 
+
+//signals:
+//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

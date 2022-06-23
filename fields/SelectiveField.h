@@ -11,35 +11,49 @@
 class SelectiveField : public Field {
 public:
 
-	SelectiveField(int id)
-		: Field(id) {};
+    SelectiveField(int id)
+        : Field(id) {};
 
-	SelectiveField() : Field() {};
+    SelectiveField() : Field() {};
 
-	void setGroup(std::string g);
-	void setCost(int cost);
-	void setTax(int tax);
-	void setAmount(int amount);
+    void setGroup(std::string g);
+    void setCost(int cost);
+    void setTax(int tax);
+    void setAmount(int amount);
 
-	std::string getGroup();
-	int getCost();
-	int getTax();
-	int getAmount();
+    std::string getGroup();
+    int getCost();
+    int getTax();
+    int getAmount();
 
-	void info(){
-	  std::cout << "it's SelectiveField\n";
-	}
+    void info() override{
+      std::cout << "it's SelectiveField\n";
+    }
 
-	std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
-	std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
-	void pay(std::unique_ptr<AbstractPlayer>& player);
+    std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
+    std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
+    void pay(std::unique_ptr<AbstractPlayer> player);
 
-	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
-	void deserialize(const json& data);
-  
+    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void deserialize(const json& data) override;
+    void sendSignalToInfo(int ) override;
+    void changeColor(int pl_id) override;
+    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
+    void setCostsValues();
+
+
 protected:
-	std::string group;
-	int cost;
-	int tax;
-	int amount;
+    std::string name = "Name";
+    std::string group;
+    int level = 0;
+    int cost;
+    int costSell;
+    int tax;
+    int tax2;
+    int tax3;
+    int currentTax;
+    int amount;
+
+//signals:
+//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

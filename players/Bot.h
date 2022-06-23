@@ -18,6 +18,7 @@ public:
 
   int makeTurn(); 
   int move();
+  void changePos(int id_t,int t_pos) override;
   
 private:
 	

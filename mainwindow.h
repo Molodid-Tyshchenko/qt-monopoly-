@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFile>
 #include "game/Monopoly.h"
 #include "mapwindow.h"
 
@@ -23,6 +24,8 @@ private slots:
     void push_button0();
 
     void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;
