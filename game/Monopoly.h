@@ -31,6 +31,7 @@ public:
     std::vector<std::shared_ptr<Field>> mapMonopoly;
     QWidget *myMapWindow;
     AbstractPlayer* getPlayer(int);
+    Statistik* stats;
     int getNumberAllPlayers();
     int getCurrentPlayer();
 
@@ -43,6 +44,7 @@ private:
     int numberAllPlayers = 0;
     Dice Dice1;
     Dice Dice2;
+
 
     bool lock = 0;
     int tmpField;

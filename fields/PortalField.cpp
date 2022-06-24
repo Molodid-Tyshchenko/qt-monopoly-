@@ -9,7 +9,7 @@ void PortalField::action(std::shared_ptr<AbstractPlayer> player) {
 
     QString str = "Player %1 will be teleported to field %2!";
     QMessageBox::information(nullptr, "Portal", str.arg(idPlayer+1).arg(newPos));
-
+    player->setPoints(player->getPoints() +1);
     player->setPos(newPos);
     player->changePos(idPlayer, newPos);
     player->actionForNewPos(idPlayer, newPos);

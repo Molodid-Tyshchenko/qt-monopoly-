@@ -149,6 +149,7 @@ void BasicField::buy(std::shared_ptr<AbstractPlayer> player) {
             setBought(idPlayer);
             player->setPoints(player->getPoints() + 10);
             player->setBusiness(getGroup(), id);
+            player->setPoints(player->getPoints() + 10);
             changeColor(player->getID()-1);
 
 
@@ -239,7 +240,7 @@ void BasicField::upgrade(std::shared_ptr<AbstractPlayer> player) {
                 currentTax = tax5;
             }
 
-            player->setPoints(player->getPoints() + 3);
+            player->setPoints(player->getPoints() + 5);
         }
         return;
     }
@@ -277,7 +278,7 @@ void BasicField::downgrade(std::shared_ptr<AbstractPlayer> player) {
             case 4:
                 currentTax = tax4;
             }
-            player->setPoints(player->getPoints() - 2);
+            player->setPoints(player->getPoints() - 4);
         }
     }
 
@@ -305,6 +306,7 @@ void BasicField::pay(std::shared_ptr<AbstractPlayer> player)
         else { //playerBankrot == 0 && moneyPlayer < currentTax
             QString str = "Player %1 goes bankrupt! Game over for him :(";
             QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setPoints(0);
             player->setBankrot(1);
             return ;
         }
@@ -318,7 +320,7 @@ void BasicField::pay(std::shared_ptr<AbstractPlayer> player)
         if (reply == QMessageBox::Yes) {
 
             player->transferMoney(bought - 1, currentTax);
-
+            player->setPoints(player->getPoints() + 2);
             QMessageBox::information(nullptr, "Payment", "The operation was successful!");
 
             return ;
@@ -327,6 +329,7 @@ void BasicField::pay(std::shared_ptr<AbstractPlayer> player)
 
             QString str = "Player %1 is too greedy to continuing playing the game, so he goes bankrupt!...";
             QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setPoints(-100);
             player->setBankrot(1);
             return ;
         }

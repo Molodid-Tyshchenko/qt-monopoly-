@@ -18,6 +18,8 @@
 #include "ui_portalwindow.h"
 #include "polyanawindow.h"
 #include "ui_polyanawindow.h"
+#include "statistikwindow.h"
+#include "ui_statistikwindow.h"
 
 namespace Ui {
 class MapWindow;
@@ -36,6 +38,7 @@ private:
     PolyanaWindow *myPolyanaWin;
     QuestWindow *myQWin;
     PortalWindow *myPortalWin;
+    StatistikWindow *myStatWin;
 
     std::vector<QPushButton*> map_storage;
 
@@ -118,6 +121,8 @@ private slots:
     void on_bField9_clicked();
 
 
+
+    void on_pushButton_2_clicked();
 
 public slots:
     void diceValue(QString, QString);

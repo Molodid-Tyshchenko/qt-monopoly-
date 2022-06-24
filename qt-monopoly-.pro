@@ -36,6 +36,7 @@ SOURCES += \
     portalwindow.cpp \
     questwindow.cpp \
     selectivewindow.cpp \
+    statistikwindow.cpp \
     vadimwindow.cpp
 
 HEADERS += \
@@ -67,6 +68,7 @@ HEADERS += \
     portalwindow.h \
     questwindow.h \
     selectivewindow.h \
+    statistikwindow.h \
     vadimwindow.h
 
 FORMS += \
@@ -78,6 +80,7 @@ FORMS += \
     portalwindow.ui \
     questwindow.ui \
     selectivewindow.ui \
+    statistikwindow.ui \
     vadimwindow.ui
 
 # Default rules for deployment.

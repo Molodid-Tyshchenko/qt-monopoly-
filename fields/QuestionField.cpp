@@ -7,16 +7,19 @@ void QuestionField::incident1(std::shared_ptr<AbstractPlayer>& player) {
     else cashPlayer = 0;
     player->setCash(cashPlayer);
     player->setSkip(1);
+    player->setPoints(player->getPoints() - 1);
 }
 
 void QuestionField::incident2(std::shared_ptr<AbstractPlayer>& player) {
     player->setSkip(1);
+    player->setPoints(player->getPoints() - 1);
 }
 
 void QuestionField::incident3(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     cashPlayer += 2000;
     player->setCash(cashPlayer);
+    player->setPoints(player->getPoints() + 1);
 }
 
 void QuestionField::incident4(std::shared_ptr<AbstractPlayer>& player) {
@@ -25,12 +28,14 @@ void QuestionField::incident4(std::shared_ptr<AbstractPlayer>& player) {
         cashPlayer -= 500;
     else cashPlayer = 0;
     player->setCash(cashPlayer);
+    player->setPoints(player->getPoints() - 1);
 }
 
 void QuestionField::incident5(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     cashPlayer += 1000;
     player->setCash(cashPlayer);
+    player->setPoints(player->getPoints() + 1);
 }
 
 void QuestionField::action(std::shared_ptr<AbstractPlayer> player) {

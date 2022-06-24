@@ -13,7 +13,7 @@ void GiftField::action(std::shared_ptr<AbstractPlayer> player) {
 
     QString str = "Today is your birthday! Your friends have collected for a gift %1$";
     QMessageBox::information(nullptr, "GIFT", str.arg(value));
-
+    player->setPoints(player->getPoints() + 1);
     player->setCash(cash);
 
 

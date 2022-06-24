@@ -8,6 +8,7 @@ void VadimField::action(std::shared_ptr<AbstractPlayer> player) {
 
     player->setPos(9);
     player->changePos(idPlayer, 9);
+    player->setPoints(player->getPoints() + 2);
     return;
 }
 
