@@ -1,8 +1,13 @@
 #include "StartField.h"
 std::unique_ptr<AbstractPlayer> StartField::action(std::unique_ptr<AbstractPlayer> player) {
-  int cash = player->getCash();
-  cash += 2000;
+    int cash = player->getCash();
+    cash += 2000;
+
+    QString str = "Player %1 on the start field! He gets 2000$";
+
     player->setCash(cash);
+
+
   return std::move(player);
 }
 

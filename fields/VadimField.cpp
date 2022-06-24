@@ -1,7 +1,14 @@
 #include "VadimField.h"
 std::unique_ptr<AbstractPlayer> VadimField::action(std::unique_ptr<AbstractPlayer> player) {
-  player->setPos(9);
-  return std::move(player);
+
+    int idPlayer = player->getID() - 1;
+
+    QString str = "Player %1 was going about his business and met Vadim. Then there is only one road - to Polyana :)";
+    QMessageBox::information(nullptr, "Portal", str.arg(idPlayer+1));
+
+    player->setPos(9);
+    player->changePos(idPlayer, 9);
+    return std::move(player);
 }
 
 

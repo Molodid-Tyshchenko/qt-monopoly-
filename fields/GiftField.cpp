@@ -1,13 +1,22 @@
 #include "GiftField.h"
 
 std::unique_ptr<AbstractPlayer> GiftField::action(std::unique_ptr<AbstractPlayer> player) {
-  View display;
-  display.gift();
+//  View display;
+//  display.gift();
+
+
+
     std::random_device generation;
     int value = (generation() % 50 + 1) * 100;
     int cash = player->getCash();
     cash += value;
+
+    QString str = "Today is your birthday! Your friends have collected for a gift %1$";
+    QMessageBox::information(nullptr, "GIFT", str.arg(value));
+
     player->setCash(cash);
+
+
   return std::move(player);
 }
 

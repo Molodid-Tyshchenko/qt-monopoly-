@@ -58,6 +58,7 @@ protected:
 
 signals:
     void signal(QString, QString);
-    void signal_changePos(int,int);
+    void signal_changePos(int, int);
+    void signal_changeMoney(int, int);
 
 };

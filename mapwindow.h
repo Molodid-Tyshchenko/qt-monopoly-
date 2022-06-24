@@ -122,8 +122,9 @@ private slots:
 public slots:
     void diceValue(QString, QString);
     void changeColor(int, int);
-    void update_pos(int,int);
-//    void infoBasicField();
+    void update_pos(int, int);
+    void update_money(int, int);
+
 };
 
 #endif // MAPWINDOW_H

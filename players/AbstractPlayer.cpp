@@ -67,6 +67,7 @@ void AbstractPlayer::setID(int id) {
 
 void AbstractPlayer::setCash(int cash) {
 	this->cash = cash;
+    signal_changeMoney(id - 1, cash);
 }
 
 void AbstractPlayer::setBankrot(bool bankrot) {
