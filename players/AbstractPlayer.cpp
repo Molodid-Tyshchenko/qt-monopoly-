@@ -4,7 +4,7 @@ AbstractPlayer::AbstractPlayer() {
 	name = "";
 	id = 0;
 	cash = 15000;
-	bankrot = 0;
+    bankrot = -1;
 	pos = 0;
 	skip = 0;
   bot = true;
@@ -27,6 +27,7 @@ AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 	this->name = name;
 	this->id = Playerid;
 	cash = 15000;
+    bankrot = -1;
 	pos = 0;
 	skip = 0;
 	points = 0;
@@ -67,10 +68,10 @@ void AbstractPlayer::setID(int id) {
 
 void AbstractPlayer::setCash(int cash) {
 	this->cash = cash;
-    signal_changeMoney(id - 1, cash);
+    emit signal_changeMoney(id - 1, cash);
 }
 
-void AbstractPlayer::setBankrot(bool bankrot) {
+void AbstractPlayer::setBankrot(int bankrot) {
 	this->bankrot = bankrot;
 }
 
@@ -138,7 +139,7 @@ std::string AbstractPlayer::getColor(){
     return color;
 }
 
-bool AbstractPlayer::getBankrot() {
+int AbstractPlayer::getBankrot() {
 	return bankrot;
 }
 
@@ -204,7 +205,7 @@ int AbstractPlayer::makeTurn(){
     return pos;
 }
 
-void AbstractPlayer::transferMoney(int, int)
+void AbstractPlayer::transferMoney(int idPlayer2, int money)
 {
-
+    emit signal_transferMoney(id - 1, idPlayer2, money);
 }

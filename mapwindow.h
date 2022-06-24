@@ -124,6 +124,7 @@ public slots:
     void changeColor(int, int);
     void update_pos(int, int);
     void update_money(int, int);
+    void transfer_money(int, int, int);
 
 };
 

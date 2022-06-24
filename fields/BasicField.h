@@ -71,6 +71,7 @@ public:
     //std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
     std::unique_ptr<AbstractPlayer> upgrade(std::unique_ptr<AbstractPlayer> player);
     std::unique_ptr<AbstractPlayer> downgrade(std::unique_ptr<AbstractPlayer> player);
+    std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
 
     std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
     void setCostsValues() ;

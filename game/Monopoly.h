@@ -34,6 +34,7 @@ public:
     int getNumberAllPlayers();
     int getCurrentPlayer();
 
+
 signals:
     // through dice ? може бути може ні, подивимось
 private:
@@ -43,6 +44,10 @@ private:
     int numberAllPlayers = 0;
     Dice Dice1;
     Dice Dice2;
+
+    bool lock = 0;
+    int tmpField;
+    bool gameOver = 0;
 
 
 };

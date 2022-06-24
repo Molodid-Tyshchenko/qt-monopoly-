@@ -83,11 +83,25 @@ int Monopoly::getCurrentPlayer()
 
 
 void Monopoly::updateGame() {
-    //проверить makeTurn
-    int tmpField = players[currentPlayer]->makeTurn();
-    players[currentPlayer]->changePos(currentPlayer ,players[currentPlayer]->getPos());
-    //проверить action
-    players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
+
+    if(gameOver) {
+        QMessageBox::information(nullptr, "Info", "The game is over!");
+        return;
+    }
+
+
+    if(players[currentPlayer]->getBankrot() == -1) {          //проверять на банкрота не обязательно, ибо на него проверка идет в конце функции
+        tmpField = players[currentPlayer]->makeTurn();
+        players[currentPlayer]->changePos(currentPlayer ,players[currentPlayer]->getPos());
+        players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
+        if(players[currentPlayer]->getBankrot() == 0)
+            return;
+    }
+    else if(players[currentPlayer]->getBankrot() == 0) {
+        players[currentPlayer] = mapMonopoly[tmpField]->action(std::move(players[currentPlayer]));
+    }
+
+
 
     int attempt = 0;
     while (attempt < numberAllPlayers) {
@@ -103,7 +117,7 @@ void Monopoly::updateGame() {
 
         }
 
-        if(players[currentPlayer]->getBankrot() == false) {
+        if(players[currentPlayer]->getBankrot() == -1) {
             QString str = "The turn goes to the player %1!";
             QMessageBox::information(nullptr, "Info", str.arg(currentPlayer+1));
             break;
@@ -111,8 +125,10 @@ void Monopoly::updateGame() {
         else attempt++;
     }
 
-    if(attempt >= numberAllPlayers - 1)
+    if(attempt >= numberAllPlayers - 1) {
+        gameOver = true;
         QMessageBox::information(nullptr, "Info", "The game is over!");
+    }
 
 
 }

@@ -17,7 +17,7 @@ public:
     void setName(const std::string name);
     void setID(int id);
     void setCash(int cash);
-    void setBankrot(bool bankrot);
+    void setBankrot(int bankrot);
     void setPos(int pos);
     void setSkip(bool skip);
     void setBot(bool bot);
@@ -29,7 +29,7 @@ public:
     std::string getName();
     int getID();
     int getCash();
-    bool getBankrot();
+    int getBankrot();
     int getPos();
     bool getSkip();
     bool getBot();
@@ -42,12 +42,14 @@ public:
     void removeBusiness(std::string key, int idField);
     int makeTurn();
     virtual void changePos(int id_t,int t_pos) = 0;
+
+    void transferMoney(int, int);
   
 protected:
     std::string name;
 	int id;
 	int cash;
-	bool bankrot;
+    int bankrot;
 	int pos;
 	bool skip;
 	int points;
@@ -60,5 +62,5 @@ signals:
     void signal(QString, QString);
     void signal_changePos(int, int);
     void signal_changeMoney(int, int);
-
+    void signal_transferMoney(int, int, int);
 };

@@ -10,7 +10,7 @@ class Bot : public AbstractPlayer {
 public:
 	Bot(const std::string& Name, int Playerid)
 		: AbstractPlayer(Name, Playerid) {
-      bankrot = false;
+      bankrot = -1;
       bot = true;
     };
 

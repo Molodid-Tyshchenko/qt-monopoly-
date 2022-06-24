@@ -40,10 +40,12 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     connect(m->players[0].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
     connect(m->players[0].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
     connect(m->players[0].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
+    connect(m->players[0].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
 
     connect(m->players[1].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
     connect(m->players[1].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
     connect(m->players[1].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
+    connect(m->players[1].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
 
     ui->pl3->setHidden(true);
     ui->pl4->setHidden(true);
@@ -54,6 +56,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[2].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
         connect(m->players[2].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
         connect(m->players[2].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
+        connect(m->players[2].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
 
         ui->pl3->setHidden(false);
         ui->icon_pl3->setHidden(false);
@@ -63,10 +66,12 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[2].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
         connect(m->players[2].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
         connect(m->players[2].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
+        connect(m->players[2].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
 
         connect(m->players[3].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
         connect(m->players[3].get(), &AbstractPlayer::signal_changePos, this, &MapWindow::update_pos);
         connect(m->players[3].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
+        connect(m->players[3].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
 
         ui->pl3->setHidden(false);
         ui->pl4->setHidden(false);
@@ -106,6 +111,8 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     connect(m->mapMonopoly.at(14).get(), &Field::signal_bought, this, &MapWindow::changeColor);
     connect(m->mapMonopoly.at(19).get(), &Field::signal_bought, this, &MapWindow::changeColor);
     connect(m->mapMonopoly.at(37).get(), &Field::signal_bought, this, &MapWindow::changeColor);
+
+
 
 }
 
@@ -294,8 +301,20 @@ void MapWindow::update_money(int id_t, int money_t)
     }
 }
 
-void MapWindow::transfer_money(int, int, int)
+void MapWindow::transfer_money(int idPlayer1, int idPlayer2, int money)
 {
+    std::cout << idPlayer1 << std::endl;
+    std::cout << idPlayer2 << std::endl;
+
+
+    int moneyPlayer1 = m->players.at(idPlayer1)->getCash();
+    int moneyPlayer2 = m->players.at(idPlayer2)->getCash();
+
+    moneyPlayer1 -= money;
+    moneyPlayer2 += money;
+
+    m->players.at(idPlayer1)->setCash(moneyPlayer1);
+    m->players.at(idPlayer2)->setCash(moneyPlayer2);
 
 }
 
