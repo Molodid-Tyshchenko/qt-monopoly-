@@ -209,3 +209,13 @@ void AbstractPlayer::transferMoney(int idPlayer2, int money)
 {
     emit signal_transferMoney(id - 1, idPlayer2, money);
 }
+
+void AbstractPlayer::actionForNewPos(int idPlayer, int idField)
+{
+    emit signal_actionForNewPos(idPlayer, idField);
+}
+
+void AbstractPlayer::changeTmpField(int tmpField)
+{
+    emit signal_changeTmpField(tmpField);
+}

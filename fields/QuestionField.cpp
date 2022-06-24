@@ -1,6 +1,6 @@
 #include "QuestionField.h"
 
-void QuestionField::incident1(std::unique_ptr<AbstractPlayer>& player) {
+void QuestionField::incident1(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     if (cashPlayer >= 1000)
         cashPlayer -= 1000;
@@ -9,17 +9,17 @@ void QuestionField::incident1(std::unique_ptr<AbstractPlayer>& player) {
     player->setSkip(1);
 }
 
-void QuestionField::incident2(std::unique_ptr<AbstractPlayer>& player) {
+void QuestionField::incident2(std::shared_ptr<AbstractPlayer>& player) {
     player->setSkip(1);
 }
 
-void QuestionField::incident3(std::unique_ptr<AbstractPlayer>& player) {
+void QuestionField::incident3(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     cashPlayer += 2000;
     player->setCash(cashPlayer);
 }
 
-void QuestionField::incident4(std::unique_ptr<AbstractPlayer>& player) {
+void QuestionField::incident4(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     if (cashPlayer >= 500)
         cashPlayer -= 500;
@@ -27,13 +27,13 @@ void QuestionField::incident4(std::unique_ptr<AbstractPlayer>& player) {
     player->setCash(cashPlayer);
 }
 
-void QuestionField::incident5(std::unique_ptr<AbstractPlayer>& player) {
+void QuestionField::incident5(std::shared_ptr<AbstractPlayer>& player) {
     int cashPlayer = player->getCash();
     cashPlayer += 1000;
     player->setCash(cashPlayer);
 }
 
-std::unique_ptr<AbstractPlayer> QuestionField::action(std::unique_ptr<AbstractPlayer> player) {
+void QuestionField::action(std::shared_ptr<AbstractPlayer> player) {
     std::random_device generation;
     int opt = generation() % 5 + 1;
   View display;
@@ -41,25 +41,25 @@ std::unique_ptr<AbstractPlayer> QuestionField::action(std::unique_ptr<AbstractPl
     case 1:
     display.showIncident1();
         incident1(player);
-        return std::move(player);
+        return;
     case 2:
     display.showIncident2();
         incident2(player);
-        return std::move(player);
+        return;
     case 3:
     display.showIncident3();
         incident3(player);
-        return std::move(player);
+        return;
     case 4:
     display.showIncident4();
       incident4(player);
-        return std::move(player);
+        return;
     case 5:
     display.showIncident5();
         incident5(player);
-        return std::move(player);
+        return;
     default:
-        return std::move(player);
+        return;
     }
 
 
@@ -79,7 +79,7 @@ void QuestionField::changeColor(int pl_id)
 
 }
 
-std::unique_ptr<AbstractPlayer> QuestionField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void QuestionField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

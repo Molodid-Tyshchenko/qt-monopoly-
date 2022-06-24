@@ -1,6 +1,6 @@
 #include "GiftField.h"
 
-std::unique_ptr<AbstractPlayer> GiftField::action(std::unique_ptr<AbstractPlayer> player) {
+void GiftField::action(std::shared_ptr<AbstractPlayer> player) {
 //  View display;
 //  display.gift();
 
@@ -17,7 +17,7 @@ std::unique_ptr<AbstractPlayer> GiftField::action(std::unique_ptr<AbstractPlayer
     player->setCash(cash);
 
 
-  return std::move(player);
+  return;
 }
 
 void GiftField::deserialize(const json& data) {
@@ -34,7 +34,7 @@ void GiftField::changeColor(int pl_id)
 
 }
 
-std::unique_ptr<AbstractPlayer> GiftField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void GiftField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

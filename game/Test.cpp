@@ -20,7 +20,7 @@ void Test::test1() {
 void Test::test2() {
 	std::cout << "Test 2:\n";
 	std::cout << "checking the loading of the playing field\n\n";
-	std::vector<std::unique_ptr<Field>> test_map;
+    std::vector<std::shared_ptr<Field>> test_map;
   test_map = fieldCreation();
   for(int i = 0;i < test_map.size();i++){
     test_map[i]->info();

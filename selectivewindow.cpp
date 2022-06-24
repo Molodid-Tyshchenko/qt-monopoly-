@@ -60,6 +60,6 @@ void SelectiveWindow::on_bSell_clicked()
     int idPlayer = ui->currentPlayer->text().toInt() - 1;
 
     //std::cout << idPlayer << std::endl;
-    m->players[idPlayer] = m->mapMonopoly[idField]->pressToButton(std::move(m->players[idPlayer]), "qwe");
+    m->mapMonopoly[idField]->pressToButton(m->players[idPlayer], "qwe");
 }
 

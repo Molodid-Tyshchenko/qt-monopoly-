@@ -17,4 +17,4 @@
 
 #include "../lib/json.hpp"
 
-std::vector<std::unique_ptr<Field>> fieldCreation();
+std::vector<std::shared_ptr<Field>> fieldCreation();

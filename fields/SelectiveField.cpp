@@ -55,13 +55,13 @@ int SelectiveField::getAmount() {
 
 
 
-std::unique_ptr<AbstractPlayer> SelectiveField::buy(std::unique_ptr<AbstractPlayer> player) {
+void SelectiveField::buy(std::shared_ptr<AbstractPlayer> player) {
 
     int moneyPlayer = player->getCash();
     if (moneyPlayer < cost) {
         QString str = "Not enough money to buy a field %1 (cost %2)";
         QMessageBox::information(nullptr, "Buying a field", str.arg(id).arg(cost));
-        return std::move(player);
+        return;
     }
     else {
         QMessageBox::StandardButton reply;
@@ -80,11 +80,11 @@ std::unique_ptr<AbstractPlayer> SelectiveField::buy(std::unique_ptr<AbstractPlay
 
 
         }
-        return std::move(player);
+        return;
     }
 }
 
-std::unique_ptr<AbstractPlayer> SelectiveField::sell(std::unique_ptr<AbstractPlayer> player) {
+void SelectiveField::sell(std::shared_ptr<AbstractPlayer> player) {
 
     QMessageBox::StandardButton reply;
     QString str = "Are you sure you want to sell field %1?";
@@ -104,26 +104,77 @@ std::unique_ptr<AbstractPlayer> SelectiveField::sell(std::unique_ptr<AbstractPla
         level = player->getBusiness(group);
     }
 
-    return std::move(player);
+    return;
 
 }
 
-void SelectiveField::pay(std::unique_ptr<AbstractPlayer> player) {
+void SelectiveField::pay(std::shared_ptr<AbstractPlayer> player) {
 
-}
+    int moneyPlayer = player->getCash();
+    int idPlayer = player->getID() - 1;
+    int playerBankrot = player->getBankrot();
 
-std::unique_ptr<AbstractPlayer> SelectiveField::action(std::unique_ptr<AbstractPlayer> player) {
 
-//  if(player->getBot() == true){
-//    return std::move(player);
-//  }
 
-    if (getBought() == 0) {
-        player = buy(std::move(player));
+    if (moneyPlayer < currentTax) {
+        if(playerBankrot == -1) {
+            QString str = "Player %1 enough money to pay player %2 to visit field %3 (price %4$)!\n"
+                          "You need to find money and pay off the debt!";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax));
+            player->setBankrot(0);
+            return ;
+        }
+        else { //playerBankrot == 0 && moneyPlayer < currentTax
+            QString str = "Player %1 goes bankrupt! Game over for him :(";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setBankrot(1);
+            return ;
+        }
     }
-    return std::move(player);
+    else { //moneyPlayer >= currentTax
+
+        QMessageBox::StandardButton reply;
+        QString str = "Player %1 must pay player %2 to visit field %3 (price %4$)!";
+        reply = QMessageBox::question(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax),
+                                      QMessageBox::Yes|QMessageBox::No );
+        if (reply == QMessageBox::Yes) {
+
+            player->transferMoney(bought - 1, currentTax);
+
+            QMessageBox::information(nullptr, "Payment", "The operation was successful!");
+
+            return ;
+        }
+        else { //reply == QMessageBox::No
+
+            QString str = "Player %1 goes bankrupt! Game over for him :(";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setBankrot(1);
+            return ;
+        }
+    }
 
 
+        return;
+
+
+
+}
+
+void SelectiveField::action(std::shared_ptr<AbstractPlayer> player) {
+
+    int numPlayer = player->getID();
+
+    if (bought == 0)
+        buy(player);
+    else if (bought != numPlayer)
+        pay(player);
+    else {
+        QString str = "Player %1 visited own field %2";
+        QMessageBox::information(nullptr, "Own field", str.arg(numPlayer).arg(id));
+    }
+
+    return ;
 
 }
 
@@ -147,15 +198,15 @@ void SelectiveField::changeColor(int pl_id) {
     emit signal_bought(this->id, pl_id);
 }
 
-std::unique_ptr<AbstractPlayer> SelectiveField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void SelectiveField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
-    player = sell(std::move(player));
+    sell(player);
 
 //    level = player->getBusiness(group);
     sendSignalToInfo(player->getID() - 1);
 
-    return std::move(player);
+    return;
 }
 
 void SelectiveField::setCostsValues()

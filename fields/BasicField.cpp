@@ -114,28 +114,28 @@ void BasicField::changeColor(int pl_id)
     emit signal_bought(this->id, pl_id);
 }
 
-std::unique_ptr<AbstractPlayer> BasicField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void BasicField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
     if(action == "sell")
-        player = sell(std::move(player));
+        sell(player);
     else if (action == "upgrade")
-        player = upgrade(std::move(player));
+        upgrade(player);
     else if (action == "downgrade")
-        player = downgrade(std::move(player));
+        downgrade(player);
 
     sendSignalToInfo(player->getID() - 1);
-    return std::move(player);
+    return;
 }
 
 
-std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> player) {
+void BasicField::buy(std::shared_ptr<AbstractPlayer> player) {
 
     int moneyPlayer = player->getCash();
     if (moneyPlayer < cost) {
         QString str = "Not enough money to buy a field %1 (cost %2)";
         QMessageBox::information(nullptr, "Buying a field", str.arg(id).arg(cost));
-        return std::move(player);
+        return;
     }
     else {
         QMessageBox::StandardButton reply;
@@ -153,28 +153,28 @@ std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> 
 
 
         }
-        return std::move(player);
+        return;
     }
 }
 
-std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer> player) {
+void BasicField::sell(std::shared_ptr<AbstractPlayer> player) {
 
     if (player->getBusiness(getGroup()) == amount) {
         if(!(player->checkLevelBusinessField(group, 1))) {
             QMessageBox::information(nullptr, "Sell field", "You have improved fields in this group. "
                                                          "To sell this field, you need all fields in this group to be level 1!");
-            return std::move(player);
+            return;
         }
     }
 
     if (level < 1) {
         QMessageBox::critical(nullptr, "Error", "ERROR!");
-        return std::move(player);
+        return;
     }
     if (level > 1) {
         QString str = "This field is level %1. To sell a field, you must lower its level!";
         QMessageBox::information(nullptr, "Sell field", str.arg(level));
-        return std::move(player);
+        return;
     }
 //    else {  // level == 1
 
@@ -195,26 +195,26 @@ std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer>
             changeColor(-1);
         }
 
-        return std::move(player);
+        return;
 //	}
 }
-std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlayer> player) {
+void BasicField::upgrade(std::shared_ptr<AbstractPlayer> player) {
 
     if (player->getBusiness(getGroup()) != amount) {
         QMessageBox::information(this, "Upgrade a field", "You do not have enough fields for this group. You cannot improve the field!");
-        return std::move(player);
+        return;
     }
 
     if (level == 5) {
         QMessageBox::information(this, "Upgrade a field", "You have the maximum level of this field!");
-        return std::move(player);
+        return;
     }
 
     int moneyPlayer = player->getCash();
     if (moneyPlayer < costUpgrade) {
         QString str = "Not enough money to upgrade a field %1 (cost %2)";
         QMessageBox::information(this, "Upgrade a field", str.arg(id).arg(costUpgrade));
-        return std::move(player);
+        return;
     }
     else {
 
@@ -241,17 +241,17 @@ std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlay
 
             player->setPoints(player->getPoints() + 3);
         }
-        return std::move(player);
+        return;
     }
 
 }
 
 
-std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPlayer> player) {
+void BasicField::downgrade(std::shared_ptr<AbstractPlayer> player) {
 
     if (level == 1) {
         QMessageBox::information(this, "Upgrade a field", "You have the minimum level of this field!");
-        return std::move(player);
+        return;
     }
 
     else { //level>1
@@ -281,59 +281,60 @@ std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPl
         }
     }
 
-    return std::move(player);
+    return;
 
 }
 
-std::unique_ptr<AbstractPlayer> BasicField::pay(std::unique_ptr<AbstractPlayer> player)
+void BasicField::pay(std::shared_ptr<AbstractPlayer> player)
 {
 
-//    int moneyPlayer = player->getCash();
-//    int idPlayer = player->getID() - 1;
-//    int playerBankrot = player->getBankrot();
+    int moneyPlayer = player->getCash();
+    int idPlayer = player->getID() - 1;
+    int playerBankrot = player->getBankrot();
 
 
 
-//    if (moneyPlayer < currentTax) {
-//        if(playerBankrot == -1) {
-//            QString str = "Player %1 enough money to pay player %2 to visit field %3 (price %4$)!\n"
-//                          "You need to find money and pay off the debt!";
-//            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax));
-//            player->setBankrot(0);
-//            return std::move(player);
-//        }
-//        else { //playerBankrot == 0 && moneyPlayer < currentTax
-//            QString str = "Player %1 goes bankrupt! Game over for him :(";
-//            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
-//            player->setBankrot(1);
-//            return std::move(player);
-//        }
-//    }
-//    else { //moneyPlayer >= currentTax
+    if (moneyPlayer < currentTax) {
+        if(playerBankrot == -1) {
+            QString str = "Player %1 has not enough money to pay player %2 to visit field %3 (price %4$)!\n"
+                          "You need to find money and pay off the debt!";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax));
+            player->setBankrot(0);
+            return ;
+        }
+        else { //playerBankrot == 0 && moneyPlayer < currentTax
+            QString str = "Player %1 goes bankrupt! Game over for him :(";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setBankrot(1);
+            return ;
+        }
+    }
+    else { //moneyPlayer >= currentTax
 
-//        QMessageBox::StandardButton reply;
-//        QString str = "Player %1 must pay player %2 to visit field %3 (price %4$)!";
-//        reply = QMessageBox::question(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax),
-//                                      QMessageBox::Yes|QMessageBox::No );
-//        if (reply == QMessageBox::Yes) {
+        QMessageBox::StandardButton reply;
+        QString str = "Player %1 must pay player %2 to visit field %3 (price %4$)!";
+        reply = QMessageBox::question(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax),
+                                      QMessageBox::Yes|QMessageBox::No );
+        if (reply == QMessageBox::Yes) {
 
-//            player->transferMoney(bought - 1, currentTax);
+            player->transferMoney(bought - 1, currentTax);
 
-//            QMessageBox::information(nullptr, "Payment", "The operation was successful!");
+            QMessageBox::information(nullptr, "Payment", "The operation was successful!");
 
-//            return std::move(player);
-//        }
-//        else { //reply == QMessageBox::No
+            return ;
+        }
+        else { //reply == QMessageBox::No
 
-//            QString str = "Player %1 goes bankrupt! Game over for him :(";
-//            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
-//            player->setBankrot(1);
-//            return std::move(player);
-//        }
-//    }
+            QString str = "Player %1 is too greedy to continuing playing the game, so he goes bankrupt!...";
+            QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
+            player->setBankrot(1);
+            return ;
+        }
+
+    }
 
 
-        return std::move(player);
+        return;
 
 
 
@@ -341,20 +342,20 @@ std::unique_ptr<AbstractPlayer> BasicField::pay(std::unique_ptr<AbstractPlayer> 
 
 }
 
-std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlayer> player) {
+void BasicField::action(std::shared_ptr<AbstractPlayer> player) {
 
     int numPlayer = player->getID();
 
     if (bought == 0)
-        player = buy(std::move(player));
+        buy(player);
     else if (bought != numPlayer)
-        player = pay(std::move(player));
+        pay(player);
     else {
         QString str = "Player %1 visited own field %2";
         QMessageBox::information(nullptr, "Own field", str.arg(numPlayer).arg(id));
     }
 
-    return std::move(player);
+    return ;
 }
 
 void BasicField::deserialize(const json& data)  {

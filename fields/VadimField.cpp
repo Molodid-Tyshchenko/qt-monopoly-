@@ -1,5 +1,5 @@
 #include "VadimField.h"
-std::unique_ptr<AbstractPlayer> VadimField::action(std::unique_ptr<AbstractPlayer> player) {
+void VadimField::action(std::shared_ptr<AbstractPlayer> player) {
 
     int idPlayer = player->getID() - 1;
 
@@ -8,7 +8,7 @@ std::unique_ptr<AbstractPlayer> VadimField::action(std::unique_ptr<AbstractPlaye
 
     player->setPos(9);
     player->changePos(idPlayer, 9);
-    return std::move(player);
+    return;
 }
 
 
@@ -26,7 +26,7 @@ void VadimField::changeColor(int pl_id)
 
 }
 
-std::unique_ptr<AbstractPlayer> VadimField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void VadimField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

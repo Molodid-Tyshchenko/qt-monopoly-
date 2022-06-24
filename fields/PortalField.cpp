@@ -1,6 +1,6 @@
 #include "PortalField.h"
 
-std::unique_ptr<AbstractPlayer> PortalField::action(std::unique_ptr<AbstractPlayer> player) {
+void PortalField::action(std::shared_ptr<AbstractPlayer> player) {
 
     std::random_device generation;
 
@@ -12,8 +12,10 @@ std::unique_ptr<AbstractPlayer> PortalField::action(std::unique_ptr<AbstractPlay
 
     player->setPos(newPos);
     player->changePos(idPlayer, newPos);
+    player->actionForNewPos(idPlayer, newPos);
+    player->changeTmpField(newPos);
 
-    return std::move(player);
+    return;
 }
 
 void PortalField::deserialize(const json& data) {
@@ -30,7 +32,7 @@ void PortalField::changeColor(int pl_id)
 
 }
 
-std::unique_ptr<AbstractPlayer> PortalField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void PortalField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

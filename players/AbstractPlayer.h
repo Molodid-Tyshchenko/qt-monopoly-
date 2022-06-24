@@ -41,9 +41,11 @@ public:
 
     void removeBusiness(std::string key, int idField);
     int makeTurn();
-    virtual void changePos(int id_t,int t_pos) = 0;
 
+    virtual void changePos(int id_t,int t_pos) = 0;
     void transferMoney(int, int);
+    void actionForNewPos (int, int);
+    void changeTmpField(int);
   
 protected:
     std::string name;
@@ -63,4 +65,7 @@ signals:
     void signal_changePos(int, int);
     void signal_changeMoney(int, int);
     void signal_transferMoney(int, int, int);
+    void signal_actionForNewPos(int, int);
+    void signal_changeTmpField(int);
+
 };
