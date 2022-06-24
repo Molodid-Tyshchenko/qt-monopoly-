@@ -203,3 +203,8 @@ int AbstractPlayer::makeTurn(){
 
     return pos;
 }
+
+void AbstractPlayer::transferMoney(int, int)
+{
+
+}

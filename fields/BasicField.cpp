@@ -285,6 +285,11 @@ std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPl
 
 }
 
+std::unique_ptr<AbstractPlayer> BasicField::pay(std::unique_ptr<AbstractPlayer> player)
+{
+
+}
+
 std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlayer> player) {
 
     if (getBought() == 0) {

@@ -294,6 +294,11 @@ void MapWindow::update_money(int id_t, int money_t)
     }
 }
 
+void MapWindow::transfer_money(int, int, int)
+{
+
+}
+
 
 void MapWindow::on_bField1_clicked()
 {
