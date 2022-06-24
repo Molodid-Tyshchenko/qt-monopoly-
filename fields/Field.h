@@ -20,12 +20,12 @@ public:
     int getBought();
 
     virtual void info() = 0;
-    virtual std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) = 0;
+    virtual void action(std::shared_ptr<AbstractPlayer> player) = 0;
     //virtual void setCostsValues() = 0;
     virtual void deserialize(const json& data) = 0;
     virtual void sendSignalToInfo(int) = 0;
     virtual void changeColor(int pl_id) = 0;
-    virtual std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) = 0;
+    virtual void pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action) = 0;
 
 
 //    virtual void setLevel(int level);

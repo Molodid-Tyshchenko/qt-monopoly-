@@ -21,21 +21,21 @@
 class Monopoly : public QObject {
   Q_OBJECT
 public:
-    //Monopoly(QWidget* w);
+//    Monopoly();
     void menu(int players_t, int bots_t);
     void startGame();   // function with initial data
     void updateGame();	// the game
     //std::vector<std::unique_ptr<AbstractPlayer>> get_players();
    // std::vector<std::unique_ptr<Field>> get_map();
-    std::vector<std::unique_ptr<AbstractPlayer>> players;
-    std::vector<std::unique_ptr<Field>> mapMonopoly;
+    std::vector<std::shared_ptr<AbstractPlayer>> players;
+    std::vector<std::shared_ptr<Field>> mapMonopoly;
     QWidget *myMapWindow;
     AbstractPlayer* getPlayer(int);
     int getNumberAllPlayers();
     int getCurrentPlayer();
 
-signals:
-    // through dice ? може бути може ні, подивимось
+
+
 private:
     int numberPlayers = 0;
     int numberBots = 0;
@@ -44,6 +44,17 @@ private:
     Dice Dice1;
     Dice Dice2;
 
+    bool lock = 0;
+    int tmpField;
+    bool gameOver = 0;
+
+signals:
+    void signal_changeTextButton(std::string);
+
+
+public slots:
+
+    void changeTmpField(int tmpField);
 
 };
 

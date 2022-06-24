@@ -66,18 +66,19 @@ public:
 
     void info() override;
 
-    std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
-    std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
+    void buy(std::shared_ptr<AbstractPlayer> player);
+    void sell(std::shared_ptr<AbstractPlayer> player);
     //std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
-    std::unique_ptr<AbstractPlayer> upgrade(std::unique_ptr<AbstractPlayer> player);
-    std::unique_ptr<AbstractPlayer> downgrade(std::unique_ptr<AbstractPlayer> player);
+    void upgrade(std::shared_ptr<AbstractPlayer> player);
+    void downgrade(std::shared_ptr<AbstractPlayer> player);
+    void pay(std::shared_ptr<AbstractPlayer> player);
 
-    std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) override;
+    void action(std::shared_ptr<AbstractPlayer> player) override;
     void setCostsValues() ;
     void deserialize(const json& data) override;
     void sendSignalToInfo(int) override ;
     void changeColor(int pl_id) override;
-    std::unique_ptr<AbstractPlayer> pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action) override;
+    void pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action) override;
 
 
 protected:

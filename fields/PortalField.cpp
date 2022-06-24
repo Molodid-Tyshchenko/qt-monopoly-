@@ -1,12 +1,21 @@
 #include "PortalField.h"
 
-std::unique_ptr<AbstractPlayer> PortalField::action(std::unique_ptr<AbstractPlayer> player) {
+void PortalField::action(std::shared_ptr<AbstractPlayer> player) {
 
-  std::random_device generation;
+    std::random_device generation;
 
-  player->setPos(generation() % 44);
+    int newPos = generation() % 44;
+    int idPlayer = player->getID() - 1;
 
-  return std::move(player);
+    QString str = "Player %1 will be teleported to field %2!";
+    QMessageBox::information(nullptr, "Portal", str.arg(idPlayer+1).arg(newPos));
+
+    player->setPos(newPos);
+    player->changePos(idPlayer, newPos);
+    player->actionForNewPos(idPlayer, newPos);
+    player->changeTmpField(newPos);
+
+    return;
 }
 
 void PortalField::deserialize(const json& data) {
@@ -23,7 +32,7 @@ void PortalField::changeColor(int pl_id)
 
 }
 
-std::unique_ptr<AbstractPlayer> PortalField::pressToButton(std::unique_ptr<AbstractPlayer> player, std::string action)
+void PortalField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action)
 {
 
 }

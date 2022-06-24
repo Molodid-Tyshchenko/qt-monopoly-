@@ -107,7 +107,7 @@ void InfoWindow::slotForButtons()
 
     std::string str = buttonText.toStdString();
 
-    m->players[idPlayer] = m->mapMonopoly[idField]->pressToButton(std::move(m->players[idPlayer]), str);
+    m->mapMonopoly[idField]->pressToButton(m->players[idPlayer], str);
 
 
 

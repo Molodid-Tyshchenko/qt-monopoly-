@@ -5,7 +5,7 @@
 
 #include "../factory/FactoryMethod.h"
 
-std::vector<std::unique_ptr<Field>> fieldCreation() {
+std::vector<std::shared_ptr<Field>> fieldCreation() {
  
     std::unordered_map<std::string, std::shared_ptr<FieldFactory> > map {
         make_pair("BasicField", std::make_shared<BasicFieldFactory>()),
@@ -18,7 +18,7 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
         make_pair("VadimField", std::make_shared<VadimFieldFactory>())
     };
 
-    std::vector<std::unique_ptr<Field>> vec;
+    std::vector<std::shared_ptr<Field>> vec;
 
 
     std::ifstream fin("C:/Users/starodubbb/Documents/GitHub/qt-monopoly-/resources/dataFields.json");
@@ -26,7 +26,7 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
     fin.close();
 
     for (json& fieldData : data) {
-       std::unique_ptr<Field> tmp = map[fieldData.at("class")]->createField();
+       std::shared_ptr<Field> tmp = map[fieldData.at("class")]->createField();
         tmp->deserialize(fieldData.at("properties"));
         vec.push_back(std::move(tmp));
     }
