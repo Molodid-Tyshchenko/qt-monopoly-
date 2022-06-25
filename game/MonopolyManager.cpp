@@ -1,7 +1,7 @@
 
 #include "../game/MonopolyManager.h"
 
-MonopolyManager::MonopolyManager() //таблиця потрібна для прокачки монополій, шляхом провірки чи всі поля належать гравцю.
+MonopolyManager::MonopolyManager()
 {
 	name = " ";
   

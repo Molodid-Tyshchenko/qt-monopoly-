@@ -50,19 +50,8 @@ void Test::test4() {
 	std::cout << "--------------------------------\n";
 }
 
-
-
-
-
-
-
-
 void Test::test5() {
     MainWindow w;
-
-
-
-
     w.show();
 }
 

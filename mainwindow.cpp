@@ -30,7 +30,7 @@ void MainWindow::on_pushButton_2_clicked()
                                                                       "before choosing numbers in slots!");
         return;
     }
-    m.menu(play_num,0);
+    m.menu(play_num);
     m.startGame();
     myMapWindow = new MapWindow(nullptr, &m);
     myMapWindow->set_play_num(play_num);

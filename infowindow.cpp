@@ -83,7 +83,6 @@ void InfoWindow::fromBasicField(std::string name, std::string type, int currentL
     ui->type->setText(QString::fromStdString(type));
     ui->currentLevel->setText(QString::number(currentLevel));
     ui->owner->setText(QString::number(owner));
-        //здесь должен быть владелец
     ui->buy->setText(QString::number(buy));
     ui->upgrade->setText(QString::number(upgrade));
     ui->downgrade->setText(QString::number(downgrade));

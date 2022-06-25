@@ -1,15 +1,10 @@
 #include "Monopoly.h"
 #include "QMessageBox"
 
-//Monopoly::Monopoly() {
 
-//}
-
-
-void Monopoly::menu(int players_t, int bots_t) {
+void Monopoly::menu(int players_t) {
     numberPlayers = players_t;
-    numberBots = bots_t;
-    numberAllPlayers = numberPlayers + numberBots;
+    numberAllPlayers = numberPlayers;
 }
 
 void Monopoly::startGame() {
@@ -20,16 +15,8 @@ void Monopoly::startGame() {
         players.push_back(std::make_shared<Player>(a));
         id++;
     }
-    for (int i = 0; i < numberBots; i++) {
-        Bot a("Bot", id);
-        players.push_back(std::make_shared<Bot>(a));
-        id++;
-    }
     stats = new Statistik(numberAllPlayers);
     mapMonopoly = fieldCreation();
-
-
-
 }
 
 AbstractPlayer* Monopoly::getPlayer(int i) {
@@ -51,34 +38,6 @@ void Monopoly::changeTmpField(int tmpField)
     this->tmpField = tmpField;
 }
 
-//void Monopoly::updateGame() {
-//	std::cout << "-----------------\n";
-//	std::cout << "The game begins\n";
-//	std::cout << "There are " << players.size() << " participants in the game\n";
-
-//  int number_players = players.size();
-//  int id_player = 0;
-
-//  Statistik stats(number_players);
-
-//  while(number_players > 1){
-//	  if(players[id_player]->getBankrot() == true){
-//       continue;
-//    }
-//	  int tmpField = players[id_player]->makeTurn();
-
-//    players[id_player] = mapMonopoly[tmpField]->action(std::move(players[id_player]));
-
-//	  stats.update_pt(id_player, players[id_player]->getPoints());
-
-//	  id_player++;
-
-//    id_player %= players.size();
-//	stats.info();
-//  }
-
-//}
-
 
 void Monopoly::updateGame() {
 
@@ -88,7 +47,7 @@ void Monopoly::updateGame() {
     }
 
 
-    if(players[currentPlayer]->getBankrot() == -1) {          //проверять на банкрота не обязательно, ибо на него проверка идет в конце функции
+    if(players[currentPlayer]->getBankrot() == -1) {
         tmpField = players[currentPlayer]->makeTurn();
         players[currentPlayer]->changePos(currentPlayer ,players[currentPlayer]->getPos());
         mapMonopoly[tmpField]->action(players[currentPlayer]);
@@ -139,16 +98,3 @@ void Monopoly::updateGame() {
     stats->update_pt(currentPlayer, players[currentPlayer]->getPoints());
 }
 
-
-
-
-
-
-
-
-//std::vector<std::unique_ptr<AbstractPlayer>> Monopoly::get_players(){
-//    return players;
-//}
-//std::vector<std::unique_ptr<Field>> Monopoly::get_map(){
-//    return mapMonopoly;
-//}

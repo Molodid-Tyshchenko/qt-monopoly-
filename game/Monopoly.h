@@ -22,11 +22,10 @@ class Monopoly : public QObject {
   Q_OBJECT
 public:
 //    Monopoly();
-    void menu(int players_t, int bots_t);
+    void menu(int players_t);
     void startGame();   // function with initial data
     void updateGame();	// the game
-    //std::vector<std::unique_ptr<AbstractPlayer>> get_players();
-   // std::vector<std::unique_ptr<Field>> get_map();
+
     std::vector<std::shared_ptr<AbstractPlayer>> players;
     std::vector<std::shared_ptr<Field>> mapMonopoly;
     QWidget *myMapWindow;

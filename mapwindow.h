@@ -88,10 +88,6 @@ private slots:
     void on_bField41_clicked();
     void on_bField42_clicked();
 
-
-
-
-
     void on_bField14_clicked();
 
     void on_bField19_clicked();
@@ -119,8 +115,6 @@ private slots:
     void on_bField38_clicked();
 
     void on_bField9_clicked();
-
-
 
     void on_pushButton_2_clicked();
 
