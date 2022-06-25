@@ -13,20 +13,12 @@ int main(int argc, char *argv[]){
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-
-    //:/new/prefix1/pl1.png
-//    MapWindow map(&w);
-//    map.show();
+    QResource::registerResource(":/new/prefix3/style.qss");
+    QFile qss(":/new/prefix3/style.qss");
+    qss.open(QFile::ReadOnly);
+    a.setStyleSheet(qss.readAll());
+    qss.close();
 
     return a.exec();
 
-  //  Test t;     // testing the program
-  //  t.tests();
-
-  //  Monopoly m; // the game
-  //  m.menu();
-  //  m.startGame();
-  //  m.updateGame();
-
-  //  return 0;
 }

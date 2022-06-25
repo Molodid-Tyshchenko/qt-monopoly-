@@ -1,4 +1,25 @@
-QPushButton {
-    background: lightgray;
+QLabel {
+    color: white;
 }
 
+QWidget {
+    background-color: rgb(68,68,68);
+    font-family: OCR A Extended;
+}
+QPushButton {
+    background: rgb(255,255,255);
+    color: rgb(68,68,68);
+}
+
+QLabel {
+    color: white;
+    font-size: 10pt;
+}
+
+QTextEdit {
+    color: white;
+}
+
+QSpinBox {
+    background: white;
+}

@@ -60,4 +60,13 @@
     <qresource prefix="/new/prefix2">
         <file>images/question.png</file>
     </qresource>
+    <qresource prefix="/new/prefix3">
+        <file>style.qss</file>
+    </qresource>
+    <qresource prefix="/new/prefix4">
+        <file>images/menu_icons/icon1.png</file>
+        <file>images/menu_icons/icon2.png</file>
+        <file>images/menu_icons/icon3.png</file>
+        <file>images/menu_icons/icon4.png</file>
+    </qresource>
 </RCC>

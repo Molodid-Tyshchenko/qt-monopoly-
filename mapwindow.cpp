@@ -33,6 +33,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     myGiftWin = new GiftWindow(nullptr, m);
     myPolyanaWin = new PolyanaWindow(nullptr, m);
     myPortalWin = new PortalWindow(nullptr, m);
+    myStatWin = new StatistikWindow(nullptr, m);
     mPlayers = m->getNumberAllPlayers();
     create_field();
 
@@ -617,4 +618,11 @@ void MapWindow::on_bField9_clicked()
     myPolyanaWin->show();
 }
 
+
+
+void MapWindow::on_pushButton_2_clicked()
+{
+    m->stats->info();
+    myStatWin->show();
+}
 

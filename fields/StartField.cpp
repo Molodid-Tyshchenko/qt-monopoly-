@@ -7,7 +7,7 @@ void StartField::action(std::shared_ptr<AbstractPlayer> player) {
     QMessageBox::information(nullptr, "Start field", str.arg(player->getID()));
 
     player->setCash(cash);
-
+    player->setPoints(player->getPoints() + 5);
 
     return ;
 }

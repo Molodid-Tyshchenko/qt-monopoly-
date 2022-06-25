@@ -13,28 +13,21 @@ void Monopoly::menu(int players_t, int bots_t) {
 }
 
 void Monopoly::startGame() {
-    //(255,255,255)
-    std::vector <std::string> color;
-    color.push_back("QPushButton { background-color: red; }");
-    color.push_back("QPushButton { background-color: yellow; }");
-    color.push_back("QPushButton { background-color: blue; }");
-    color.push_back("QPushButton { background-color: green; }");
 
     int id = 1;
     for (int i = 0; i < numberPlayers; i++) {
         Player a("Human", id);
-        a.setColor(color[i]);
         players.push_back(std::make_shared<Player>(a));
         id++;
     }
     for (int i = 0; i < numberBots; i++) {
         Bot a("Bot", id);
-        a.setColor(color[i + numberPlayers]);
         players.push_back(std::make_shared<Bot>(a));
         id++;
     }
-
+    stats = new Statistik(numberAllPlayers);
     mapMonopoly = fieldCreation();
+
 
 
 }
@@ -141,8 +134,9 @@ void Monopoly::updateGame() {
             QString str = "The turn goes to the player %1!";
             QMessageBox::information(nullptr, "Info", str.arg(currentPlayer+1));
             break;
-        }  
+        }          
     }
+    stats->update_pt(currentPlayer, players[currentPlayer]->getPoints());
 }
 
 

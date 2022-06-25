@@ -11,8 +11,5 @@ void Statistik::update_pt(int pl_id, int points) {
 }
 
 void Statistik::info() {
-	std::cout << "\n---Game Stats---\n";
-	for (int i = 0; i < pl_points.size(); i++) {
-		std::cout << "Player " << i + 1 << " has " << pl_points[i] << " points\n";
-	}
+    emit signal_stat(pl_points);
 }
