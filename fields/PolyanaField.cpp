@@ -22,4 +22,9 @@ void PolyanaField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::st
 {
 
 }
+
+void PolyanaField::changeLevel(int level)
+{
+
+}
 // functions for the PolyanaField class will be located here

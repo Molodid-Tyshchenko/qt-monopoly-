@@ -31,4 +31,9 @@ void VadimField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::stri
 {
 
 }
+
+void VadimField::changeLevel(int level)
+{
+
+}
 // functions for the VadimField class will be located here

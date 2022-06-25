@@ -26,6 +26,7 @@ public:
     virtual void sendSignalToInfo(int) = 0;
     virtual void changeColor(int pl_id) = 0;
     virtual void pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action) = 0;
+    virtual void changeLevel(int) = 0;
 
 
 //    virtual void setLevel(int level);

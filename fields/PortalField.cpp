@@ -36,4 +36,9 @@ void PortalField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::str
 {
 
 }
+
+void PortalField::changeLevel(int level)
+{
+
+}
 // functions for the PortalField class will be located here

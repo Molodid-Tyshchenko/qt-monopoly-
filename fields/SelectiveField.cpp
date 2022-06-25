@@ -32,27 +32,6 @@ int SelectiveField::getAmount() {
     return amount;
 }
 
-//std::unique_ptr<AbstractPlayer> SelectiveField::buy(std::unique_ptr<AbstractPlayer> player) {
-//  View display;
-//	int moneyPlayer = player->getCash();
-// 	if (moneyPlayer < getCost()) {
-//     display.noEnoughMoney();
-//		return std::move(player);
-//	}
-//	else {
-//		moneyPlayer -=  getCost();
-//		player->setCash(moneyPlayer);
-//		int idPlayer = player->getID();
-//		setBought(idPlayer);
-//		player->setPoints(player->getPoints() + 10);
-//		player->setBusiness(getGroup());
-//		return std::move(player);
-//	}
-//}
-
-
-
-
 
 
 void SelectiveField::buy(std::shared_ptr<AbstractPlayer> player) {
@@ -76,9 +55,7 @@ void SelectiveField::buy(std::shared_ptr<AbstractPlayer> player) {
             player->setPoints(player->getPoints() + 10);
             player->setBusiness(getGroup(), id);
             changeColor(player->getID()-1);
-            level = player->getBusiness(group);
-
-
+            player->changeLevelBusinessSelectiveField(group);
         }
         return;
     }
@@ -101,7 +78,7 @@ void SelectiveField::sell(std::shared_ptr<AbstractPlayer> player) {
         player->removeBusiness(getGroup(), id);
         player->setPoints(player->getPoints() - 5);
         changeColor(-1);
-        level = player->getBusiness(group);
+        player->changeLevelBusinessSelectiveField(group);
     }
 
     return;
@@ -114,14 +91,11 @@ void SelectiveField::pay(std::shared_ptr<AbstractPlayer> player) {
     int idPlayer = player->getID() - 1;
     int playerBankrot = player->getBankrot();
 
-
-
     if (moneyPlayer < currentTax) {
         if(playerBankrot == -1) {
-            QString str = "Player %1 enough money to pay player %2 to visit field %3 (price %4$)!\n"
+            QString str = "Player %1 has not enough money to pay player %2 to visit field %3 (price %4$)!\n"
                           "You need to find money and pay off the debt!";
             QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax));
-            player->setPoints(player->getPoints() + 2);
             player->setBankrot(0);
             return ;
         }
@@ -140,28 +114,26 @@ void SelectiveField::pay(std::shared_ptr<AbstractPlayer> player) {
         reply = QMessageBox::question(nullptr, "Payment", str.arg(idPlayer+1).arg(bought).arg(id).arg(currentTax),
                                       QMessageBox::Yes|QMessageBox::No );
         if (reply == QMessageBox::Yes) {
-            player->setPoints(player->getPoints() + 2);
-            player->transferMoney(bought - 1, currentTax);
 
+            player->transferMoney(bought - 1, currentTax);
+            player->setPoints(player->getPoints() + 2);
             QMessageBox::information(nullptr, "Payment", "The operation was successful!");
+            player->setBankrot(-1);
 
             return ;
         }
         else { //reply == QMessageBox::No
 
-            QString str = "Player %1 goes bankrupt! Game over for him :(";
+            QString str = "Player %1 is too greedy to continuing playing the game, so he goes bankrupt!...";
             QMessageBox::information(nullptr, "Payment", str.arg(idPlayer+1));
             player->setPoints(-100);
             player->setBankrot(1);
             return ;
         }
+
     }
 
-
         return;
-
-
-
 }
 
 void SelectiveField::action(std::shared_ptr<AbstractPlayer> player) {
@@ -178,7 +150,6 @@ void SelectiveField::action(std::shared_ptr<AbstractPlayer> player) {
     }
 
     return ;
-
 }
 
 void SelectiveField::deserialize(const json& data) {
@@ -219,5 +190,19 @@ void SelectiveField::setCostsValues()
     this->tax2 = 2*tax;
     this->tax3 = 2*tax2;
     this->currentTax = tax;
+}
+
+void SelectiveField::changeLevel(int level)
+{
+    this->level = level;
+    switch (level) {
+    case 1:
+        currentTax = tax;
+    case 2:
+        currentTax = tax2;
+    case 3:
+        currentTax = tax3;
+
+    }
 }
 // functions for the SelectiveField class will be located here

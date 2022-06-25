@@ -38,4 +38,9 @@ void GiftField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::strin
 {
 
 }
+
+void GiftField::changeLevel(int level)
+{
+
+}
 // functions for the GiftField class will be located here

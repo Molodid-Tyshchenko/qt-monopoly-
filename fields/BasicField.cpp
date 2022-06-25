@@ -128,6 +128,12 @@ void BasicField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::stri
     return;
 }
 
+void BasicField::changeLevel(int level)
+{
+
+
+}
+
 
 void BasicField::buy(std::shared_ptr<AbstractPlayer> player) {
 
@@ -322,6 +328,7 @@ void BasicField::pay(std::shared_ptr<AbstractPlayer> player)
             player->transferMoney(bought - 1, currentTax);
             player->setPoints(player->getPoints() + 2);
             QMessageBox::information(nullptr, "Payment", "The operation was successful!");
+            player->setBankrot(-1);
 
             return ;
         }

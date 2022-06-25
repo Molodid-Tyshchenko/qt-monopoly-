@@ -88,4 +88,9 @@ void QuestionField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::s
 {
 
 }
+
+void QuestionField::changeLevel(int level)
+{
+
+}
 // functions for the QuestionField class will be located here

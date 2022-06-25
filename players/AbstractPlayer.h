@@ -23,6 +23,7 @@ public:
     void setBot(bool bot);
     void setBusiness(std::string key, int idField);
     void SetLevelBusinessField(std::string key, int idField, int level);
+
     void setPoints(int points);
     void setColor(std::string color_t);
 
@@ -46,6 +47,7 @@ public:
     void transferMoney(int, int);
     void actionForNewPos (int, int);
     void changeTmpField(int);
+    void changeLevelBusinessSelectiveField(std::string key);
   
 protected:
     std::string name;
@@ -58,7 +60,7 @@ protected:
     bool bot = true;
     std::string color;
 
-    std::unordered_map<std::string, std::pair<int,int>> business;
+    std::multimap<std::string, std::pair<int,int>> business;
 
 signals:
     void signal(QString, QString);
@@ -67,5 +69,6 @@ signals:
     void signal_transferMoney(int, int, int);
     void signal_actionForNewPos(int, int);
     void signal_changeTmpField(int);
+    void signal_changeLevelBusinessSelectiveField(std::vector<int>, int);
 
 };

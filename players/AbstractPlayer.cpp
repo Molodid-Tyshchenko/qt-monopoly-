@@ -102,7 +102,7 @@ void AbstractPlayer::setBusiness(std::string key, int idField) {
 void AbstractPlayer::SetLevelBusinessField(std::string key, int idField, int level)
 {
     int count = business.count(key);
-    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    auto it = business.find(key);
     for(int i = 0; i < count ; i++, it++) {
         if(it->second.first == idField) {
             it->second.second = level;
@@ -110,9 +110,11 @@ void AbstractPlayer::SetLevelBusinessField(std::string key, int idField, int lev
         }
     }
 }
+
+
 void AbstractPlayer::removeBusiness(std::string key, int idField) {
     int count = business.count(key);
-    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    auto it = business.find(key);
 
     for(int i = 0; i < count ; i++) {
         if(it->second.first == idField) {
@@ -167,7 +169,7 @@ int AbstractPlayer::getBusiness(std::string key) {
 int AbstractPlayer::getLevelBusinessField(std::string key, int idField)
 {
     int count = business.count(key);
-    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    auto it = business.find(key);
     for(int i = 0; i < count ; i++, it++) {
         if(it->second.first == idField)
             return it->second.second;
@@ -178,7 +180,7 @@ int AbstractPlayer::getLevelBusinessField(std::string key, int idField)
 bool AbstractPlayer::checkLevelBusinessField(std::string key, int level)
 {
     int count = business.count(key);
-    std::unordered_map <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+    auto it = business.find(key);
     for(int i = 0; i < count ; i++, it++) {
         if(it->second.second != level)
             return false;
@@ -218,4 +220,16 @@ void AbstractPlayer::actionForNewPos(int idPlayer, int idField)
 void AbstractPlayer::changeTmpField(int tmpField)
 {
     emit signal_changeTmpField(tmpField);
+}
+
+void AbstractPlayer::changeLevelBusinessSelectiveField(std::string key)
+{
+    std::vector<int> vec;
+
+    int count = business.count(key);
+    auto it = business.find(key);
+    for(int i = 0; i < count ; i++, it++)
+        vec.push_back(it->second.first);
+
+    emit signal_changeLevelBusinessSelectiveField(vec, count);
 }

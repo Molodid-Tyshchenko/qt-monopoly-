@@ -44,7 +44,9 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     connect(m->players[0].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
     connect(m->players[0].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
     connect(m->players[0].get(), &AbstractPlayer::signal_actionForNewPos, this, &MapWindow::action_for_new_pos);
+    connect(m->players[0].get(), &AbstractPlayer::signal_changeLevelBusinessSelectiveField, this, &MapWindow::changeLevelSelectiveField);
     connect(m->players[0].get(), &AbstractPlayer::signal_changeTmpField, m, &Monopoly::changeTmpField);
+
 
 
     connect(m->players[1].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
@@ -52,6 +54,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
     connect(m->players[1].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
     connect(m->players[1].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
     connect(m->players[1].get(), &AbstractPlayer::signal_actionForNewPos, this, &MapWindow::action_for_new_pos);
+    connect(m->players[1].get(), &AbstractPlayer::signal_changeLevelBusinessSelectiveField, this, &MapWindow::changeLevelSelectiveField);
     connect(m->players[1].get(), &AbstractPlayer::signal_changeTmpField, m, &Monopoly::changeTmpField);
 
     ui->pl3->setHidden(true);
@@ -65,6 +68,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[2].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
         connect(m->players[2].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
         connect(m->players[2].get(), &AbstractPlayer::signal_actionForNewPos, this, &MapWindow::action_for_new_pos);
+        connect(m->players[2].get(), &AbstractPlayer::signal_changeLevelBusinessSelectiveField, this, &MapWindow::changeLevelSelectiveField);
         connect(m->players[2].get(), &AbstractPlayer::signal_changeTmpField, m, &Monopoly::changeTmpField);
 
         ui->pl3->setHidden(false);
@@ -77,6 +81,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[2].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
         connect(m->players[2].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
         connect(m->players[2].get(), &AbstractPlayer::signal_actionForNewPos, this, &MapWindow::action_for_new_pos);
+        connect(m->players[2].get(), &AbstractPlayer::signal_changeLevelBusinessSelectiveField, this, &MapWindow::changeLevelSelectiveField);
         connect(m->players[2].get(), &AbstractPlayer::signal_changeTmpField, m, &Monopoly::changeTmpField);
 
         connect(m->players[3].get(), &AbstractPlayer::signal, this, &MapWindow::diceValue);
@@ -84,6 +89,7 @@ MapWindow::MapWindow(QWidget *parent, Monopoly* t_m) :
         connect(m->players[3].get(), &AbstractPlayer::signal_changeMoney, this, &MapWindow::update_money);
         connect(m->players[3].get(), &AbstractPlayer::signal_transferMoney, this, &MapWindow::transfer_money);
         connect(m->players[3].get(), &AbstractPlayer::signal_actionForNewPos, this, &MapWindow::action_for_new_pos);
+        connect(m->players[3].get(), &AbstractPlayer::signal_changeLevelBusinessSelectiveField, this, &MapWindow::changeLevelSelectiveField);
         connect(m->players[3].get(), &AbstractPlayer::signal_changeTmpField, m, &Monopoly::changeTmpField);
 
         ui->pl3->setHidden(false);
@@ -337,6 +343,23 @@ void MapWindow::action_for_new_pos(int idPlayer, int idField)
 void MapWindow::changeTextButton(std::string text)
 {
     ui->bRollDice->setText(QString::fromStdString(text));
+}
+
+void MapWindow::changeLevelSelectiveField(std::vector<int> vec, int level)
+{
+//    int count = business.count(key);
+//    std::multimap <std::string, std::pair<int,int>> :: iterator it = business.find(key);
+//    for(int i = 0; i < count ; i++, it++) {
+//        if(it->second.first == idField)
+//            return it->second.second;
+//    }
+//    return -1;
+
+    for (auto it : vec) {
+        m->mapMonopoly.at(it)->changeLevel(level);
+    }
+
+
 }
 
 

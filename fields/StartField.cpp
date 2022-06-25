@@ -31,4 +31,9 @@ void StartField::pressToButton(std::shared_ptr<AbstractPlayer> player, std::stri
 {
 
 }
+
+void StartField::changeLevel(int level)
+{
+
+}
 // functions for the StartField class will be located here

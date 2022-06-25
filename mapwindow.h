@@ -132,6 +132,7 @@ public slots:
     void transfer_money(int, int, int);
     void action_for_new_pos(int, int);
     void changeTextButton(std::string);
+    void changeLevelSelectiveField(std::vector<int> vec, int);
 
 };
 
