@@ -4,7 +4,6 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
 #include "../game/Monopoly.h"

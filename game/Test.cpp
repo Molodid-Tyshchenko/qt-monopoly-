@@ -8,13 +8,6 @@ void Test::tests() {
 }
 
 void Test::test1() {
-	std::cout << "Test 1:\n";
-	std::cout << "check class constructor AI, ";
-	std::cout << "the output should be\nname: Andrey\nid: 0\n\noutput\n";
-	Bot a("Andrey",0);
-	std::cout << "name: " << a.getName() << std::endl;
-	std::cout << "id: " << a.getID() << std::endl;
-	std::cout << "--------------------------------\n";
 }
 
 void Test::test2() {

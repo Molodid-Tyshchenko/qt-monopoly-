@@ -9,10 +9,8 @@
 #include <string>
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
-#include "../game/MonopolyManager.h"
 #include "../game/Monopoly.h"
 
 class BasicField : public Field {
