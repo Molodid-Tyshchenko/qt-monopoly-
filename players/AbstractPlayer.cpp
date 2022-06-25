@@ -10,17 +10,6 @@ AbstractPlayer::AbstractPlayer() {
   bot = true;
   points = 0;
   std::string color = "none";
-  
-//  std::vector<int> tempV = { };
-
-//	std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
-//		"Physics",  "DSA",
-//	"MathematicalAnalysis", "Circuitry", "Programming" };
-//	int k_iter = 0;
-//	while (k_iter < 9) {
-//		business.insert(std::make_pair(groups[k_iter], tempV));
-//		k_iter++;
-//	}
 }
 
 AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
@@ -32,18 +21,6 @@ AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 	skip = 0;
 	points = 0;
     std::string color = "none";
-
-//    std::vector<int> tempV = { };
-
-//      std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
-//          "Physics",  "DSA",
-//      "MathematicalAnalysis", "Circuitry", "Programming" };
-//      int k_iter = 0;
-//      while (k_iter < 9) {
-//          business.insert(std::make_pair(groups[k_iter], tempV));
-//          k_iter++;
-//      }
-
 }
 
 AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {

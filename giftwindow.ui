@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
-    <height>136</height>
+    <width>435</width>
+    <height>137</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,17 +16,20 @@
   <widget class="QLabel" name="name">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>30</y>
-     <width>101</width>
+     <width>131</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14pt;</string>
    </property>
    <property name="text">
     <string>Gift Field</string>
@@ -35,24 +38,33 @@
   <widget class="QLabel" name="info">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>80</y>
-     <width>321</width>
-     <height>21</height>
+     <x>20</x>
+     <y>70</y>
+     <width>461</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12pt;</string>
+   </property>
    <property name="text">
-    <string>By standing there you can recieve a gift money!</string>
+    <string>By standing there you can recieve a gift!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignJustify|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="id_d">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>210</x>
      <y>30</y>
      <width>63</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12pt;</string>
    </property>
    <property name="text">
     <string>id:</string>
@@ -61,14 +73,20 @@
   <widget class="QLabel" name="id">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>300</x>
      <y>30</y>
      <width>63</width>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12pt;</string>
+   </property>
    <property name="text">
     <string>id</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>

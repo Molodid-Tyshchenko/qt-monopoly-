@@ -101,11 +101,11 @@ font-size: 16pt;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 20pt;</string>
+    <string notr="true">font-size: 17pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -125,11 +125,11 @@ font-size: 16pt;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 20pt;</string>
+    <string notr="true">font-size: 17pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -149,11 +149,11 @@ font-size: 16pt;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 20pt;</string>
+    <string notr="true">font-size: 17pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -173,11 +173,11 @@ font-size: 16pt;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 20pt;</string>
+    <string notr="true">font-size: 17pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -799,7 +799,7 @@ font-size: 16pt;</string>
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255,0);
+    <string notr="true">background-color: rgb(255, 255, 255);
 color: black;
 </string>
    </property>
@@ -1715,7 +1715,7 @@ color: black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 16pt;</string>
+    <string notr="true">font-size: 13pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -1731,7 +1731,7 @@ color: black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 16pt;</string>
+    <string notr="true">font-size: 13pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -1747,7 +1747,7 @@ color: black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 16pt;</string>
+    <string notr="true">font-size: 13pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -1766,7 +1766,7 @@ color: black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 16pt;</string>
+    <string notr="true">font-size: 13pt;</string>
    </property>
    <property name="text">
     <string/>
@@ -2482,7 +2482,8 @@ color: black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255,0);</string>
+    <string notr="true">background-color: rgb(255, 255, 255,0);
+color: black;</string>
    </property>
    <property name="text">
     <string>omega</string>
@@ -2695,7 +2696,7 @@ color: black;
 </string>
    </property>
    <property name="text">
-    <string>histo.</string>
+    <string>histo</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

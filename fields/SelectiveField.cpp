@@ -153,6 +153,7 @@ void SelectiveField::action(std::shared_ptr<AbstractPlayer> player) {
 }
 
 void SelectiveField::deserialize(const json& data) {
+    data.at("name").get_to(name);
     data.at("id").get_to(id);
     data.at("group").get_to(group);
     data.at("cost").get_to(cost);

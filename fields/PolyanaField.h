@@ -25,11 +25,4 @@ public:
     void changeColor(int pl_id) override;
     void pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action) override;
     void changeLevel(int) override;
-
-
-private:
-
-
-//signals:
-//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };
