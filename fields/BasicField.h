@@ -9,10 +9,8 @@
 #include <string>
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
-#include "../game/MonopolyManager.h"
 #include "../game/Monopoly.h"
 
 class BasicField : public Field {
@@ -28,10 +26,6 @@ public:
     bought = 0;
         level = 1;
     };
-
-
-
-
 
     void setLevel(int level);
     void setCostUpgrade(int costUpgrade);
@@ -68,7 +62,6 @@ public:
 
     void buy(std::shared_ptr<AbstractPlayer> player);
     void sell(std::shared_ptr<AbstractPlayer> player);
-    //std::unique_ptr<AbstractPlayer> pay(std::unique_ptr<AbstractPlayer> player);
     void upgrade(std::shared_ptr<AbstractPlayer> player);
     void downgrade(std::shared_ptr<AbstractPlayer> player);
     void pay(std::shared_ptr<AbstractPlayer> player);
@@ -97,11 +90,7 @@ protected:
     int tax4;
     int tax5;
     int currentTax;
-
     int amount;
-
-signals:
-//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };
 
 

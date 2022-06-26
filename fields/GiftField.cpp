@@ -1,10 +1,6 @@
 #include "GiftField.h"
 
 void GiftField::action(std::shared_ptr<AbstractPlayer> player) {
-//  View display;
-//  display.gift();
-
-
 
     std::random_device generation;
     int value = (generation() % 50 + 1) * 100;

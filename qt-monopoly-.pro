@@ -21,7 +21,6 @@ SOURCES += \
     game/Actions.cpp \
     game/Dice.cpp \
     game/Monopoly.cpp \
-    game/MonopolyManager.cpp \
     game/Statistik.cpp \
     game/Test.cpp \
     giftwindow.cpp \
@@ -30,7 +29,6 @@ SOURCES += \
     mainwindow.cpp \
     mapwindow.cpp \
     players/AbstractPlayer.cpp \
-    players/Bot.cpp \
     players/Player.cpp \
     polyanawindow.cpp \
     portalwindow.cpp \
@@ -53,7 +51,6 @@ HEADERS += \
     game/Actions.h \
     game/Dice.h \
     game/Monopoly.h \
-    game/MonopolyManager.h \
     game/Statistik.h \
     game/Test.h \
     giftwindow.h \
@@ -62,7 +59,6 @@ HEADERS += \
     mainwindow.h \
     mapwindow.h \
     players/AbstractPlayer.h \
-    players/Bot.h \
     players/Player.h \
     polyanawindow.h \
     portalwindow.h \

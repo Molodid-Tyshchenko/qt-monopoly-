@@ -194,37 +194,32 @@ MapWindow::~MapWindow()
 
 
 void MapWindow::set_play_num(int p_t){
-    // зараз тут буде жахливий код, головне не помри від інфаркту пж
+
    QString money = QString::number(m->players.at(0)->getCash());
    QString pos = QString::number(m->players.at(0)->getPos());
    ui->play1->setText("Player 1");
    ui->money1->setText(money+ "$");
-   //ui->pos1->setText(pos);
 
    money = QString::number(m->players.at(1)->getCash());
    pos = QString::number(m->players.at(1)->getPos());
    ui->play2->setText("Player 2");
    ui->money2->setText(money+ "$");
-   //ui->pos2->setText(pos);
 
    if (p_t == 3){
        money = QString::number(m->players.at(2)->getCash());
        pos = QString::number(m->players.at(2)->getPos());
        ui->play3->setText("Player 3");
        ui->money3->setText(money + "$");
-       //ui->pos3->setText(pos);
    }
    else if (p_t == 4) {
        money = QString::number(m->players.at(2)->getCash());
        pos = QString::number(m->players.at(2)->getPos());
        ui->play3->setText("Player 3");
        ui->money3->setText(money + "$");
-       //ui->pos3->setText(pos);
 
        money = QString::number(m->players.at(3)->getCash());
        pos = QString::number(m->players.at(3)->getPos());
        ui->play4->setText("Player 4");
-       //ui->pos4->setText(pos);
        ui->money4->setText(money+ "$");
    }
     playebles = p_t;
@@ -243,7 +238,6 @@ void MapWindow::diceValue(QString value1, QString value2)
 }
 
 void MapWindow::changeColor(int id_t, int color_t){
-    //myPushButton->setStyleSheet("color: blue");
     QString temp;
     switch(color_t) {
     case 0:{
@@ -277,22 +271,18 @@ void MapWindow::update_pos(int id_t, int pos_t)
     int y_t = map_storage.at(pos_t)->y();
     switch(id_t){
     case 0:
-        //ui->pos1->setText(QString::number(pos_t));
         ui->pl1->move(x_t+5,y_t+5);
         break;
 
     case 1:
-        //ui->pos2->setText(QString::number(pos_t));
         ui->pl2->move(x_t+5,y_t+40);
         break;
 
     case 2:
-        //ui->pos3->setText(QString::number(pos_t));
         ui->pl3->move(x_t+40,y_t+5);
         break;
 
     case 3:
-        //ui->pos4->setText(QString::number(pos_t));
         ui->pl4->move(x_t+40,y_t+40);
         break;
 
@@ -347,19 +337,9 @@ void MapWindow::changeTextButton(std::string text)
 
 void MapWindow::changeLevelSelectiveField(std::vector<int> vec, int level)
 {
-//    int count = business.count(key);
-//    std::multimap <std::string, std::pair<int,int>> :: iterator it = business.find(key);
-//    for(int i = 0; i < count ; i++, it++) {
-//        if(it->second.first == idField)
-//            return it->second.second;
-//    }
-//    return -1;
-
     for (auto it : vec) {
         m->mapMonopoly.at(it)->changeLevel(level);
     }
-
-
 }
 
 

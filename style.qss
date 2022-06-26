@@ -11,6 +11,11 @@ QPushButton {
     color: rgb(68,68,68);
 }
 
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
 QLabel {
     color: white;
     font-size: 10pt;
@@ -23,3 +28,4 @@ QTextEdit {
 QSpinBox {
     background: white;
 }
+

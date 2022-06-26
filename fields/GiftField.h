@@ -4,7 +4,6 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
 #include "../game/Monopoly.h"
@@ -28,9 +27,4 @@ public:
     void pressToButton(std::shared_ptr<AbstractPlayer> player, std::string action) override;
     void changeLevel(int) override;
 
-
-private:
-
-//signals:
-//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

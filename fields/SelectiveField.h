@@ -3,7 +3,6 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
 #include "../game/Monopoly.h"
@@ -55,6 +54,4 @@ protected:
     int currentTax;
     int amount;
 
-//signals:
-//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int);
 };

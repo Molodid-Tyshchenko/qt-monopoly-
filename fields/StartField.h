@@ -3,7 +3,6 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/Bot.h"
 #include "../players/Player.h"
 
 class StartField : public Field {
@@ -27,8 +26,4 @@ public:
 
 private:
 
-
-
-//signals:
-//    void signal(std::string, std::string, int, int, int, int, int, int, int, int, int, int) ;
 };
